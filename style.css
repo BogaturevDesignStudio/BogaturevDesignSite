@@ -168,7 +168,7 @@ h2 {
   }
 
   .project {
-    height: auto; /* убираем фиксированную высоту */
+    height: 40vh; /* убираем фиксированную высоту */
   }
 
   .skills-list {
@@ -3158,4 +3158,5 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
