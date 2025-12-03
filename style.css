@@ -3154,3 +3154,8 @@ html, body {
   left: 0;
   top: 0;
 }
+/* 👇 вставляешь сюда, после всех медиа */
+.body-no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
