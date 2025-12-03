@@ -1036,7 +1036,6 @@ footer {
 .modal-content {
   z-index: 1;
   width: 100%;
-  padding: 40px;
   background-color: transparent; /* убираем белый фон */
   background-color: #fff;
   box-sizing: border-box;
@@ -3159,3 +3158,4 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
