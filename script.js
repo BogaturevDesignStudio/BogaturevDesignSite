@@ -25,6 +25,23 @@
 
 
 // Функция для отслеживания прокрутки и добавления/удаления класса "visible"
+let scrollPosition = 0;
+
+function disableScroll() {
+  scrollPosition = window.pageYOffset;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollPosition}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.overflow = '';
+  window.scrollTo(0, scrollPosition);
+}
 window.addEventListener('scroll', function() {
   const projects = document.querySelectorAll('.project');
 
@@ -45,6 +62,8 @@ modalBtns.forEach(btn => {
     const projectId = btn.getAttribute('data-project');
     const modal = document.getElementById(`${projectId}-modal`);
     modal.style.display = "block";  // Показываем модальное окно
+    // 🔥 Блокируем прокрутку сайта
+    disableScroll();
   });
 });
 
@@ -56,6 +75,8 @@ closeBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const modal = btn.closest('.modal');
     modal.style.display = "none";  // Скрываем модальное окно
+    // 🔥 Возвращаем прокрутку
+    enableScroll();
   });
 });
 const allModals = document.querySelectorAll('.modal');
@@ -87,6 +108,8 @@ document.addEventListener('keydown', function(e) {
         modal.style.display = 'none';
       }
     });
+    // 🔥 При закрытии через ESC — тоже вернуть прокрутку!
+    enableScroll();
   }
 });
 /*скрипт кнопки смотреть работы*/
@@ -1079,4 +1102,5 @@ document.addEventListener('DOMContentLoaded', () => {
       langSelect.setAttribute('aria-expanded', 'false');
     });
   }
+
 });
