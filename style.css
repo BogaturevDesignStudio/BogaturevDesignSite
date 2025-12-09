@@ -1170,6 +1170,9 @@ footer {
   .project p {
     font-size: 14px;
   }
+ .project img {
+    height: auto; /* подстраиваем высоту под содержимое */
+  }
   .close-btn {
     right: 10px;
     font-size: 80px;
@@ -1178,14 +1181,27 @@ footer {
     width: 40px;
   }
 }
+/* Очень маленькие экраны (до 425px) */
+@media (max-width: 425px) {
+ .project img {
+    height: auto; /* подстраиваем высоту под содержимое */
+  }
+}
+/* Очень маленькие экраны (до 375px) */
+@media (max-width: 375px) {
+ .project img {
+    height: auto; /* подстраиваем высоту под содержимое */
+  }
+}
 @media (max-width: 320px) {
+ .project img {
+    height: auto; /* подстраиваем высоту под содержимое */
+  }
   /* Текст "Язык" */
   span[data-i18n="language"] {
     font-size: 14px;
     padding: 6px 10px;
   }
-
-  
 }
 
 /*закончилась адаптация 7*/
@@ -3158,5 +3174,6 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
