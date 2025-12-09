@@ -1195,7 +1195,7 @@ footer {
 }
 @media (max-width: 320px) {
  .project img {
-    height: auto; /* подстраиваем высоту под содержимое */
+    height: 20vh; /* подстраиваем высоту под содержимое */
   }
   /* Текст "Язык" */
   span[data-i18n="language"] {
@@ -3174,6 +3174,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
