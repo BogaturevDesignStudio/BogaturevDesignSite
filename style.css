@@ -192,13 +192,32 @@ h2 {
   .project p {
     font-size: 14px;
   }
-
+.project {
+    height: 40vh; /* убираем фиксированную высоту */
+  }
   .skills-list li {
     font-size: 12px;
     padding: 6px 12px;
   }
 }
-
+/* Очень маленькие экраны (до 425px) */
+@media (max-width: 425px) {
+.project {
+    height: 40vh; /* убираем фиксированную высоту */
+  }
+}
+/* Очень маленькие экраны (до 375px) */
+@media (max-width: 375px) {
+.project {
+    height: 40vh; /* убираем фиксированную высоту */
+  }
+}
+/* Очень маленькие экраны (до 320px) */
+@media (max-width: 320px) {
+.project {
+    height: 40vh; /* убираем фиксированную высоту */
+  }
+}
 /*закончилась адаптация 2*/
 footer {
    background: none !important; /* убираем наследование */
@@ -3174,6 +3193,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
