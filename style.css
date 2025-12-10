@@ -1222,6 +1222,10 @@ footer {
  .project img {
     height: 25vh; /* подстраиваем высоту под содержимое */
   }
+ .project p {
+    font-size: 14px;
+   line-height: 1.3;
+  }
   /* Текст "Язык" */
   span[data-i18n="language"] {
     font-size: 14px;
@@ -3199,6 +3203,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
