@@ -192,7 +192,7 @@ h2 {
 
   .project p {
     font-size: 14px;
-   line-height: 1.3;
+   line-height: 1.6;
   }
 .project {
     height: 45vh; /* убираем фиксированную высоту */
@@ -3207,6 +3207,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
