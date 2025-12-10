@@ -153,7 +153,7 @@ h2 {
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
   .project {
-    height: 25vw; /* чтобы карточки были выше на планшетах */
+    height: 53vh; /* чтобы карточки были выше на планшетах */
   }
   .skills-list {
     gap: 15px;
@@ -1152,7 +1152,7 @@ footer {
     column-gap: 30px;
   }
   .project img {
-    height: 200px; /* уменьшаем высоту изображения */
+    height: 30vh; /* уменьшаем высоту изображения */
   }
   .close-btn {
     right: 40px;
@@ -3207,6 +3207,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
