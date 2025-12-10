@@ -1206,7 +1206,7 @@ footer {
 @media (max-width: 425px) {
  .project p {
     font-size: 14px;
-   line-height: 1.9;
+   line-height: 1.6;
   }
  .project img {
     height: 30vh; /* подстраиваем высоту под содержимое */
@@ -3207,6 +3207,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
