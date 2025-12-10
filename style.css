@@ -150,6 +150,11 @@ h2 {
 /*вверху часть 2 адаптация сайта */
 /* === АДАПТАЦИЯ === */
 /* Планшеты (до 1024px) */
+@media (max-width: 2560px) {
+  .project {
+    height: 40vh; /* чтобы карточки были выше на планшетах */
+  }
+}
 @media (max-width: 1440px) {
   .project {
     height: auto; /* чтобы карточки были выше на планшетах */
@@ -1148,7 +1153,11 @@ footer {
 }
 /*вверху часть 7 адаптация сайта */
 /* === АДАПТИВНОСТЬ PROJECT GRID И MODAL === */
-
+@media (max-width: 2560px) {
+.project img {
+    height: 30vh; /* уменьшаем высоту изображения */
+  }
+ }
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
   .project-grid {
@@ -3212,6 +3221,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
