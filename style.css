@@ -3207,7 +3207,7 @@ html, body {
 .scroll-text-wrapper,
 .scroll-text {
   max-width: 100%; /* чтобы не растягивались за экран */
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 #dragToUnlock {
   touch-action: none; /* отключает системный скролл при свайпе */
@@ -3221,6 +3221,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
