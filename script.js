@@ -409,7 +409,7 @@ if ("ontouchstart" in window) {
       contactTitle: "Связаться со мной",
       contactText : "Свяжись со мной любым удобным способом — письмом, звонком или сообщением. Обещаю ответить лично в течение 24 часов.",
       contactButton: "Написать письмо",
-      footer: "&copy; 2025 Женя Богатырёв"
+      footer: "&copy; 2025 Евгений Богатырёв"
     },
     en: {
        aboutShow: "About Me",
@@ -477,7 +477,7 @@ if ("ontouchstart" in window) {
       contactTitle: "Contact Me",
       contactText : "Contact me in any convenient way — by email, call, or message. I promise to respond personally within 24 hours.",
       contactButton: "Send Email",
-      footer: "&copy; 2025 Zhenya Bogatyrev"
+      footer: "&copy; 2025 Evgeniy Bogaturev "
     },
     uk: {
       aboutShow: "Про мене",
@@ -545,7 +545,7 @@ if ("ontouchstart" in window) {
       contactTitle: "Зв'язатися зі мною",
       contactText : "Зв’яжіться зі мною будь-яким зручним способом — листом, дзвінком або повідомленням. Обіцяю відповісти особисто протягом 24 годин.",
       contactButton: "Написати листа",
-      footer: "&copy; 2025 Женя Богатирьов"
+      footer: "&copy; 2025 Євгеній Богатирьов"
     }
   };
 
@@ -1104,3 +1104,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
