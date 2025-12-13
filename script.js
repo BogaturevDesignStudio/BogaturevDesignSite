@@ -1104,4 +1104,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+// Функция для проверки, мобильное ли устройство
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Находим все ссылки mailto
+const mailLinks = document.querySelectorAll('a[href^="mailto:"]');
+
+mailLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    // Если мобильное устройство, стандартное поведение
+    if (isMobile()) return;
+
+    e.preventDefault(); // Отменяем стандартный mailto
+
+    // Получаем адрес и тему из ссылки
+    const mailto = link.getAttribute('href'); // mailto:example@gmail.com?subject=Тема
+    const paramsIndex = mailto.indexOf('?');
+    let to = mailto.slice(7, paramsIndex > -1 ? paramsIndex : undefined);
+    let subject = '';
+
+    if (paramsIndex > -1) {
+      const searchParams = new URLSearchParams(mailto.slice(paramsIndex + 1));
+      subject = searchParams.get('subject') || '';
+    }
+
+    // Открываем Gmail в новой вкладке
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}`;
+    window.open(gmailUrl, '_blank');
+  });
+});
+
+
 
