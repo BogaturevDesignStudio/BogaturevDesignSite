@@ -3235,7 +3235,7 @@ html, body {
 
 
 /* Для адаптивных заголовков и текстов */
-.main-header,
+.main-header
  {
   max-width: 100%; /* чтобы не растягивались за экран */
   overflow: hidden;
@@ -3252,6 +3252,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
