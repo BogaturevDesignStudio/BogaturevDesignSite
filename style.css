@@ -155,6 +155,15 @@ h2 {
     height: 40vh; /* чтобы карточки были выше на планшетах */
   }
 }
+@media (max-width: 1920px) {
+  .project {
+    height: 45vh; /* чтобы карточки были выше на планшетах */
+  }
+ .project p {
+    font-size: 14px;
+   line-height: 1.6;
+ }
+ }
 @media (max-width: 1440px) {
   .project {
     height: 50vh; /* чтобы карточки были выше на планшетах */
@@ -3244,6 +3253,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
