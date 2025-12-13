@@ -157,7 +157,11 @@ h2 {
 }
 @media (max-width: 1440px) {
   .project {
-    height: auto; /* чтобы карточки были выше на планшетах */
+    height: 50vh; /* чтобы карточки были выше на планшетах */
+  }
+ .project p {
+    font-size: 14px;
+   line-height: 1.6;
   }
 }
 /* Планшеты (до 1024px) */
@@ -1158,6 +1162,11 @@ footer {
     height: 30vh; /* уменьшаем высоту изображения */
   }
  }
+@media (max-width: 1440px) {
+.project img {
+    height: 33vh; /* уменьшаем высоту изображения */
+  }
+}
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
   .project-grid {
@@ -3235,6 +3244,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
