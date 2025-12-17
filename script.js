@@ -348,7 +348,7 @@ if ("ontouchstart" in window) {
   aboutHide: "Скрыть обо мне",
   skillsShow:"Мои навыки",
   my_skills:"Мои навыки",
-  opisanye1:"Разработка дизайна металлической банки Jumbo 115 (4,2 л) для промышленного применения.Проект включал создание концепции оформления в соответствии с фирменным стилем заказчика, подбор цветовой палитры, разработку графики и шрифтовых решений. Дизайн адаптирован под технологию печати по металлу с учётом цветопередачи и точности совмещения слоёв. Итоговый макет оптимизирован для массового производства и обеспечивает узнаваемость бренда на рынке",
+  opisanye1:"Разработка дизайна металлической банки PF 115 (4,2 л) для промышленного применения.Проект включал создание концепции оформления в соответствии с фирменным стилем заказчика, подбор цветовой палитры, разработку графики и шрифтовых решений. Дизайн адаптирован под технологию печати по металлу с учётом цветопередачи и точности совмещения слоёв. Итоговый макет оптимизирован для массового производства и обеспечивает узнаваемость бренда на рынке",
   opisanye2:"Допечатная подготовка, или препресс, — это комплекс технологических процессов, необходимых для подготовки макета к печати. Она включает в себя редактуру, верстку, цветоделение, создание цветопробы, вывод печатных форм (в офсетной печати) и другие операции. Цель допечатной подготовки – преобразовать дизайн-макет в вид, соответствующий требованиям конкретного печатного оборудования и технологии печати.",
   opisanye3:"<br>✅ Полностью кастомная верстка, без шаблонов<br>✅ Модальные окна для проектов<br>✅ Языковая адаптация (i18n / мультиязычность)<br>✅ Кастомные hover-эффекты и анимации<br>✅ Респонсивность (адаптивность для мобилок/планшетов)<br>✅ Уникальный дизайн (не взятый из шаблона)",
   opisanye4:"Создание фирменного стиля бренда — комплексная разработка визуальной айдентики, которая помогает компании выделиться на рынке и выстроить узнаваемый образ. Включает создание логотипа, подбор цветовой палитры, шрифтов, графических элементов и правил их использования. Каждый проект создаётся с учётом ценностей бренда, целевой аудитории и особенностей ниши, чтобы визуальная идентичность не только выглядела современно, но и работала на развитие бизнеса.",
@@ -416,7 +416,7 @@ if ("ontouchstart" in window) {
   aboutHide: "Hide About Me",
   skillsShow:"My Skills",
   my_skills:"My Skills",
-  opisanye1:"Design development of the Jumbo 115 (4.2 L) metal can for industrial use.The project included creating a design concept in line with the client’s corporate identity, selecting a color palette, and developing graphic and typographic solutions. The design was adapted to metal printing technology, taking into account color accuracy and layer registration. The final layout was optimized for mass production and ensures strong brand recognition in the market.",
+  opisanye1:"Design development of the PF 115 (4.2 L) metal can for industrial use.The project included creating a design concept in line with the client’s corporate identity, selecting a color palette, and developing graphic and typographic solutions. The design was adapted to metal printing technology, taking into account color accuracy and layer registration. The final layout was optimized for mass production and ensures strong brand recognition in the market.",
   opisanye2:"Prepress is a set of technological processes required to prepare a layout for printing. It includes editing, typesetting, color separation, proof creation, plate making (in offset printing), and other operations. The goal of prepress is to transform the design layout into a form that meets the requirements of specific printing equipment and printing technology.",
   opisanye3:"<br>✅ Fully custom layout, no templates<br>✅ Modal windows for projects<br>✅ Language adaptation (i18n / multilingual support)<br>✅ Custom hover effects and animations<br>✅ Responsiveness (mobile/tablet friendly)<br>✅ Unique design (not taken from a template)",
   opisanye4:"Brand identity design is a comprehensive development of visual identity that helps a company stand out in the market and build a recognizable image. It includes creating a logo, selecting a color palette, typography, graphic elements, and usage guidelines. Each project is created with the brand’s values, target audience, and industry specifics in mind, ensuring that the visual identity not only looks modern but also supports business growth.",
@@ -484,7 +484,7 @@ if ("ontouchstart" in window) {
   aboutHide: "Приховати про мене",
   skillsShow:"Мої навички",
   my_skills:"Мої навички",
-  opisanye1:"Розробка дизайну металевої банки Jumbo 115 (4,2 л) для промислового використання.Проєкт включав створення концепції оформлення відповідно до фірмового стилю замовника, підбір кольорової палітри, розробку графіки та шрифтових рішень. Дизайн адаптований під технологію друку по металу з урахуванням передачі кольорів та точності суміщення шарів. Кінцевий макет оптимізований для масового виробництва та забезпечує впізнаваність бренду на ринку.",
+  opisanye1:"Розробка дизайну металевої банки PF 115 (4,2 л) для промислового використання.Проєкт включав створення концепції оформлення відповідно до фірмового стилю замовника, підбір кольорової палітри, розробку графіки та шрифтових рішень. Дизайн адаптований під технологію друку по металу з урахуванням передачі кольорів та точності суміщення шарів. Кінцевий макет оптимізований для масового виробництва та забезпечує впізнаваність бренду на ринку.",
   opisanye2:"Допечатна підготовка, або препрес, — це комплекс технологічних процесів, необхідних для підготовки макета до друку. Вона включає редактуру, верстку, кольороподіл, створення кольоропроби, вивід друкарських форм (в офсетному друці) та інші операції. Мета допечатної підготовки – перетворити дизайн-макет у вигляд, що відповідає вимогам конкретного друкарського обладнання та технології друку.",
   opisanye3:"<br>✅ Повністю кастомна верстка, без шаблонів<br>✅ Модальні вікна для проєктів<br>✅ Мовна адаптація (i18n / багатомовність)<br>✅ Кастомні hover-ефекти та анімації<br>✅ Респонсивність (адаптивність для мобільних/планшетів)<br>✅ Унікальний дизайн (не взятий із шаблону)",
   opisanye4:"Створення фірмового стилю бренду — комплексна розробка візуальної айдентики, яка допомагає компанії вирізнитися на ринку та сформувати впізнаваний образ. Включає створення логотипа, підбір кольорової палітри, шрифтів, графічних елементів і правил їх використання. Кожен проєкт створюється з урахуванням цінностей бренду, цільової аудиторії та особливостей ніші, щоб візуальна ідентичність не лише виглядала сучасно, але й працювала на розвиток бізнесу.",
@@ -1135,6 +1135,7 @@ mailLinks.forEach(link => {
     window.open(gmailUrl, '_blank');
   });
 });
+
 
 
 
