@@ -3203,6 +3203,10 @@ img:fullscreen {
   }
   }
 @media (max-width: 320px) {
+ .modal-images img {
+    width: 90vw;
+    max-height: 125px;
+  }
   .modal-bg-wrapper img {
     width: 100%;
    height: 150vh;
@@ -3252,6 +3256,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
