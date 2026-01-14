@@ -1013,27 +1013,6 @@ document.addEventListener("keyup", (e) => {
     if (overlay) overlay.style.display = "none";
   }
 });
-
-// Берём только картинки из модального окна
-document.querySelectorAll('.modal-images img').forEach(img => {
-  img.addEventListener('click', function () {
-    if (!document.fullscreenElement) {
-      // Открываем картинку на весь экран
-      if (this.requestFullscreen) {
-        this.requestFullscreen();
-      } else if (this.webkitRequestFullscreen) { // Safari
-        this.webkitRequestFullscreen();
-      } else if (this.msRequestFullscreen) { // IE/Edge
-        this.msRequestFullscreen();
-      }
-    } else {
-      // Выходим из полноэкранного режима
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }
-    }
-  });
-});
 // настройка кнопки языка на мобилках
 document.addEventListener('DOMContentLoaded', () => {
   const langSelect = document.querySelector('.lang-select');
@@ -1135,6 +1114,7 @@ mailLinks.forEach(link => {
     window.open(gmailUrl, '_blank');
   });
 });
+
 
 
 
