@@ -3141,7 +3141,7 @@ img:fullscreen {
   }
   .modal-images img {
     width: 80vw;
-    max-height: 250px;
+    max-height: 150px;
   }
   #fullscreenOverlay {
     padding: 20px;
@@ -3256,6 +3256,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
