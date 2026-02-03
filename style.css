@@ -1185,6 +1185,7 @@ footer {
   }
   .project img {
     height: 30vh; /* уменьшаем высоту изображения */
+    filter: none;
   }
   .close-btn {
     right: 40px;
@@ -1205,6 +1206,7 @@ footer {
   }
   .project img {
     height: 70vh; /* подстраиваем высоту под содержимое */
+    filter: none;
   }
   .close-btn {
     right: 20px;
@@ -1225,6 +1227,7 @@ footer {
   }
  .project img {
     height: 30vh; /* подстраиваем высоту под содержимое */
+  filter: none;
   }
   .close-btn {
     right: 10px;
@@ -1242,12 +1245,14 @@ footer {
   }
  .project img {
     height: 30vh; /* подстраиваем высоту под содержимое */
+  filter: none;
   }
 }
 /* Очень маленькие экраны (до 375px) */
 @media (max-width: 375px) {
  .project img {
     height: 30vh; /* подстраиваем высоту под содержимое */
+  filter: none;
   }
  .project p {
     font-size: 14px;
@@ -1257,6 +1262,7 @@ footer {
 @media (max-width: 320px) {
  .project img {
     height: 25vh; /* подстраиваем высоту под содержимое */
+  filter: none;
   }
  .project p {
     font-size: 14px;
@@ -3256,6 +3262,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
