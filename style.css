@@ -1790,7 +1790,7 @@ filter: blur(40px);
   .dropdown-content a {
     height: 5vh;          /* регулируешь высоту пункта */
     padding: 8px 12px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-size: 14px;
   }
@@ -1856,7 +1856,7 @@ filter: blur(40px);
   .dropdown-content a {
     height: 4.8vh;          /* регулируешь высоту пункта */
     padding: 8px 12px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-size: 14px;
   }
@@ -1922,7 +1922,7 @@ filter: blur(40px);
   .dropdown-content a {
     height: 30px;          /* регулируешь высоту пункта */
     padding: 8px 12px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-size: 14px;
   }
@@ -1991,7 +1991,7 @@ filter: blur(40px);
   .dropdown-content a {
     height: 23px;          /* регулируешь высоту пункта */
     padding: 8px 12px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-size: 14px;
   }
@@ -3262,6 +3262,7 @@ html, body {
   overflow: hidden;
   height: 100vh;
 }
+
 
 
 
