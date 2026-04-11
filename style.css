@@ -3046,7 +3046,7 @@ img:fullscreen {
   box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1); /* легкая тень для объема */
 }
 .modal-bg-wrapper img {
-  width: 100%;
+  width: 120%;
   height: 100%;
   object-fit: cover;    /* сохраняет пропорции, масштабирует и при необходимости обрезает */
   }
