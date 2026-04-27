@@ -2973,7 +2973,7 @@ filter: blur(40px);
   left: 5vh;
   display: flex;
   flex-direction: column;
-  gap: 1rem;  /* расстояние между картинками */
+  gap: 3rem;  /* расстояние между картинками */
   z-index: 1; /* чтобы были поверх фона */
 }
 
