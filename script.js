@@ -361,7 +361,7 @@ if ("ontouchstart" in window) {
   prepressTitle: "Предпечатная подготовка",  /* ✅ Новый перевод */
   Fullstackdevelopment:"Создаю и разрабатываю сайты",
   developfolio:"Современные сайты под ключ",
-  BrandIdentity:"Брендинг",
+  BrandIdentity:"Брендинг и Фирменный стиль",
   EcommerceDesign:"Дизайн для электронной коммерции",
   Ecommercfolio:"Дизайн для маркетплейсов",
   MotionGraphics:"Моушн-графика",
@@ -442,7 +442,7 @@ if ("ontouchstart" in window) {
    Illustrationfolio:"Hand-drawn or vector illustration, infographics for presentations and social media",
    portfoliopackaging:"Packaging design that captures attention and highlights the value of the product",
    prepressfolio:"Professional preparation of layouts for printing with all technical requirements in mind",
-   Brandfolio:"Branding",
+   Brandfolio:"Branding & Brand Identity",
   skillsHide: "Hide Skills",
   skills: "Photoshop",
   skillsI: "Illustrator",
