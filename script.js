@@ -358,6 +358,7 @@ if ("ontouchstart" in window) {
   opisanye8:"Дизайн для маркетинга — визуальные решения, которые привлекают внимание, вызывают эмоции и стимулируют продажи.",
   opisanye9:"Иллюстрации и инфографика — разработка наглядных и эстетичных визуальных материалов, которые помогают доносить сложную информацию простыми и понятными образами. Создаю графику, которая повышает вовлечённость аудитории и усиливает восприятие бренда.",
   packaging_design: "Дизайн упаковки",
+  UXDesign:"UI/UX дизайн",
   prepressTitle: "Предпечатная подготовка",  /* ✅ Новый перевод */
   Fullstackdevelopment:"Создаю и разрабатываю сайты",
   developfolio:"Современные сайты под ключ",
@@ -426,6 +427,7 @@ if ("ontouchstart" in window) {
   opisanye8:"Marketing design is about visual solutions that attract attention, evoke emotions, and drive sales.",
   opisanye9:"Illustrations and infographics are the creation of clear and aesthetic visual materials that help convey complex information in simple and understandable ways. I design graphics that increase audience engagement and strengthen brand perception.",
   packaging_design: "Packaging Design",
+  UXDesign:"UI/UX Design",
    prepressTitle: "Pre-press preparation",
    Fullstackdevelopment:"Full-stack development",
    developfolio:"Modern websites delivered turnkey",
@@ -494,6 +496,7 @@ if ("ontouchstart" in window) {
   opisanye8:"Дизайн для маркетингу — це візуальні рішення, які привертають увагу, викликають емоції та стимулюють продажі.",
   opisanye9:"Ілюстрації та інфографіка — розробка наочних і естетичних візуальних матеріалів, які допомагають доносити складну інформацію простими та зрозумілими образами. Створюю графіку, що підвищує залученість аудиторії та посилює сприйняття бренду.",
   packaging_design: "Дизайн упаковки",
+  UXDesign:"UI/UX дизайн",
   prepressTitle: "Додрукарська підготовка",
   Fullstackdevelopment:"Створюю та розробляю сайти",
   developfolio:"Сучасні сайти під ключ",
