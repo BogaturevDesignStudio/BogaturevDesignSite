@@ -63,15 +63,25 @@ gap:25px;
 
 /* CARD */
 .card{
-background: linear-gradient(145deg, #111, #0a0a0a);
-border:1px solid #1f1f1f;
-border-radius:18px;
-padding:28px;
-transition:0.3s;
-position:relative;
-overflow:hidden;
-}
+    background: linear-gradient(145deg, #111, #0a0a0a);
+    border:1px solid #1f1f1f;
+    border-radius:18px;
+    padding:28px;
+    transition:0.3s;
+    position:relative;
+    overflow:hidden;
 
+    display:flex;
+    flex-direction:column;
+}
+.card p{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.6;
+    margin-top:10px;
+
+    flex:1;
+}
 .card:hover{
 transform:translateY(-10px);
 border-color:#333;
@@ -112,15 +122,16 @@ margin-top:10px;
 
 /* button */
 .btn{
-display:inline-block;
-margin-top:18px;
-padding:12px 16px;
-background:#fff;
-color:#000;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-transition:0.2s;
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 16px;
+    background:#fff;
+    color:#000;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.2s;
+    text-align:center;
 }
 
 .btn:hover{
@@ -143,18 +154,61 @@ padding:60px;
 color:#666;
 font-size:13px;
 }
+ /*==================================================
+                КНОПКА НАЗАД
+         ==================================================*/
 
+        .back-arrow{
+    position:fixed;
+    left:25px;
+    top:50%;
+    transform:translateY(-50%);
+    width:100px;
+    height:500px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+
+    color:#fff;
+    font-size:34px;
+    cursor:pointer;
+
+    transition:.25s;
+    z-index:9999;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+     text-decoration: none;
+}
+
+.back-arrow:hover{
+    transform:translateY(-50%) scale(1.12);
+    background:#ffffff;
+    color:#111;
+}
+
+.back-arrow:active{
+    transform:translateY(-50%) scale(.95);
+}
 </style>
 
 </head>
 
 <body>
-
+<a href="https://bogaturevdesign.com/" class="back-arrow" aria-label="Назад">
+    &#8592;
+</a>
 <div class="glow"></div>
 
 <div class="hero">
-<h1>Допечатная подготовка</h1>
-<p>Точные системы подготовки файлов для печати </p>
+<h1>Дизайн и допечатная подготовка</h1>
+<p>Точные системы подготовки файлов для печати и фирменного стиля</p>
 </div>
 
 <div class="line"></div>
@@ -168,7 +222,7 @@ font-size:13px;
 <div class="tag">PREPRESS</div>
 <h3>Подготовка PDF/X</h3>
 <p>Профессиональная подготовка файлов к печати с технической точностью и проверкой всех параметров.</p>
-<a href="prepress.html" class="btn">Открыть услугу</a>
+<a href="PREPRESS.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD 2 -->
@@ -176,7 +230,7 @@ font-size:13px;
 <div class="tag">COLOR SYSTEM</div>
 <h3>CMYK инженерия</h3>
 <p>Конвертация и настройка цветов для печати с контролем визуальной точности.</p>
-<a href="cmyk.html" class="btn">Открыть услугу</a>
+<a href="COLOR SYSTEM.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD 3 -->
@@ -184,7 +238,7 @@ font-size:13px;
 <div class="tag">VECTOR SYSTEM</div>
 <h3>Векторизация логотипов</h3>
 <p>Перевод изображений и логотипов в масштабируемый вектор без потери качества.</p>
-<a href="vector.html" class="btn">Открыть услугу</a>
+<a href="VECTOR SYSTEM.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD 4 (future service) -->
@@ -192,23 +246,30 @@ font-size:13px;
 <div class="tag">BRAND SYSTEM</div>
 <h3>Подготовка упаковки к печати</h3>
 <p>Проверка и подготовка макетов упаковки под требования типографии</p>
-<a href="packaging preparation.html" class="btn">Открыть услугу</a>
+<a href="BRAND SYSTEM.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD 5 (future service) -->
 <div class="card">
-<div class="tag">BRAND SYSTEM</div>
+<div class="tag">label SYSTEM</div>
 <h3>Подготовка этикеток к печати</h3>
 <p>Профессиональная допечатная подготовка этикеток для типографий</p>
-<a href="label preparation5.html" class="btn">Открыть услугу</a>
+<a href="label SYSTEM.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD 6 (future service) -->
 <div class="card">
-<div class="tag">BRAND SYSTEM</div>
+<div class="tag">large-format printing</div>
 <h3>Подготовка макетов для широкоформатной печати</h3>
 <p>Профессиональная подготовка файлов для широкоформатной продукции</p>
-<a href="Preparation for large-format printing6.html" class="btn">Открыть услугу</a>
+<a href="Preparation for large-format printing.html" class="btn">Открыть услугу</a>
+</div>
+<!-- CARD 6 (future service) -->
+<div class="card">
+<div class="tag">Print Imposition</div>
+<h3>Спуск полос</h3>
+<p>Профессиональная раскладка макетов на печатном листе</p>
+<a href="Print Imposition.html" class="btn">Открыть услугу</a>
 </div>
 </div>
 
