@@ -11,22 +11,24 @@
             min-height: 100vh;
            display: flex;
            flex-direction: column;
-            background-image: url("C:/Users/Евгений/Desktop/Logo na sait 1.jpg");
-            background-size: cover;        /* растянуть на весь экран */
-    background-position: center;   /* центрировать */
-    background-repeat: no-repeat;  /* не повторять */
-    background-attachment: fixed;  /* необязательно, эффект параллакса */
+           background-color: #1c1c1c;
+             /*background-image: url("C:/Users/Евгений/Desktop/Logo na sait 1.jpg");
+         /*   background-size: cover;        /* растянуть на весь экран */
+   /* background-position: center;   /* центрировать */
+  /*  background-repeat: no-repeat;  /* не повторять */
+  /*  background-attachment: fixed;  /* необязательно, эффект параллакса */
         }
 
         header {
     position: relative;
-    background-image: url("C:/Users/Евгений/Desktop/Logo na sait 1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 100px 20px;
+    background-color: #1c1c1c;
+   /* background-image: url("C:/Users/Евгений/Desktop/Logo na sait 1.jpg");
+   /* background-size: cover;
+   /* background-position: center;
+   /* background-repeat: no-repeat;
+   padding: 100px 20px;
     text-align: center;
-    overflow: hidden;
+   overflow: hidden;
 }
 
 header::before {
