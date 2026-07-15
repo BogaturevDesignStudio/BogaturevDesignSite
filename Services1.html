@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Services | Graphic Design | Bogaturev Design</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body{
+margin:0;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* HERO */
+.hero{
+padding:120px 20px 60px;
+text-align:center;
+background: radial-gradient(circle at top, #1a1a1a, #050505);
+}
+
+.hero h1{
+font-size:56px;
+margin:0;
+letter-spacing:1px;
+}
+
+.hero p{
+color:#aaa;
+margin-top:15px;
+font-size:16px;
+}
+
+/* floating glow */
+.glow{
+position:absolute;
+width:600px;
+height:600px;
+background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
+top:-200px;
+left:50%;
+transform:translateX(-50%);
+filter: blur(30px);
+z-index:-1;
+}
+
+/* GRID */
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+    background: linear-gradient(145deg, #111, #0a0a0a);
+    border:1px solid #1f1f1f;
+    border-radius:18px;
+    padding:28px;
+    transition:0.3s;
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+}
+.card p{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.6;
+    margin-top:10px;
+
+    flex:1;
+}
+.card:hover{
+transform:translateY(-10px);
+border-color:#333;
+}
+
+/* light streak */
+.card::before{
+content:"";
+position:absolute;
+width:200px;
+height:200px;
+background: radial-gradient(circle, rgba(255,255,255,0.06), transparent 70%);
+top:-50px;
+right:-50px;
+transform:rotate(25deg);
+}
+
+/* tag */
+.tag{
+font-size:11px;
+color:#888;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+/* text */
+.card h3{
+margin:0;
+font-size:20px;
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
+line-height:1.6;
+margin-top:10px;
+}
+
+/* button */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 16px;
+    background:#fff;
+    color:#000;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.2s;
+    text-align:center;
+}
+
+.btn:hover{
+background:#ddd;
+transform:scale(1.03);
+}
+
+/* divider */
+.line{
+height:1px;
+background:#1a1a1a;
+margin:0 auto;
+max-width:900px;
+}
+
+/* footer */
+footer{
+text-align:center;
+padding:60px;
+color:#666;
+font-size:13px;
+}
+/*==================================================
+                КНОПКА НАЗАД
+         ==================================================*/
+
+        .back-arrow{
+    position:fixed;
+    left:25px;
+    top:50%;
+    transform:translateY(-50%);
+    width:100px;
+    height:500px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+
+    color:#fff;
+    font-size:34px;
+    cursor:pointer;
+
+    transition:.25s;
+    z-index:9999;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+     text-decoration: none;
+}
+
+.back-arrow:hover{
+    transform:translateY(-50%) scale(1.12);
+    background:#ffffff;
+    color:#111;
+}
+
+.back-arrow:active{
+    transform:translateY(-50%) scale(.95);
+}
+</style>
+</head>
+
+<body>
+    <a href="https://bogaturevdesign.com/" class="back-arrow" aria-label="Назад">
+    &#8592;
+</a>
+<div class="glow"></div>
+
+<div class="hero">
+<h1>Разработка дизайна</h1>
+<p>Воплощение настроения и характера  бизнеса в визуальном формате</p>
+</div>
+
+<div class="line"></div>
+
+<div class="container">
+<div class="grid">
+
+<!-- CARD -->
+<div class="card">
+<div class="tag">LOGO DESIGN</div>
+<h3>Разработка логотипов</h3>
+<p>Создание уникальных логотипов для компаний, брендов и личных проектов.</p>
+<a href="logo-design.html" class="btn">Открыть услугу</a>
+</div>
+
+<!-- CARD -->
+<div class="card">
+<div class="tag">BUSINESS CARD DESIGN</div>
+<h3>Дизайн визиток</h3>
+<p>Современный дизайн визитных карточек с подготовкой к печати.</p>
+<a href="business-card.html" class="btn">Открыть услугу</a>
+</div>
+
+<!-- CARD -->
+<div class="card">
+<div class="tag">LEAFLET DESIGN</div>
+<h3>Дизайн листовок и флаеров</h3>
+<p>Разработка рекламных листовок, флаеров и другой полиграфической продукции.</p>
+<a href="flyer.html" class="btn">Открыть услугу</a>
+</div>
+
+<!-- CARD -->
+<div class="card">
+<div class="tag">ADVERTISING DESIGN</div>
+<h3>Дизайн баннеров</h3>
+<p>Создание баннеров для наружной рекламы, печати и интернета.</p>
+<a href="banner.html" class="btn">Открыть услугу</a>
+</div>
+
+<!-- CARD -->
+<div class="card">
+<div class="tag">PRESENTATION DESIGN</div>
+<h3>Дизайн презентаций</h3>
+<p>Создание современных презентаций для бизнеса, инвесторов, коммерческих предложений и выступлений.</p>
+<a href="packaging-design.html" class="btn">Открыть услугу</a>
+</div>
+
+<!-- CARD -->
+<div class="card">
+<div class="tag">LABEL DESIGN</div>
+<h3>Дизайн этикеток</h3>
+<p>Создание этикеток для косметики, напитков, пищевой продукции и других товаров.</p>
+<a href="label-design.html" class="btn">Открыть услугу</a>
+</div>
+<!-- CARD -->
+<div class="card">
+  <div class="tag">EDITORIAL DESIGN</div>
+  <h3>Дизайн брошюр и каталогов</h3>
+  <p>Разработка многостраничных каталогов, буклетов, брошюр и презентационных материалов для печати и цифрового использования.</p>
+<a href="vector.html" class="btn">Открыть услугу</a>
+</div>
+
+<!-- CARD -->
+<div class="card">
+  <div class="tag">MENU DESIGN</div>
+  <h3>Дизайн меню</h3>
+  <p>Создание стильных меню для ресторанов, кафе, баров и других заведений.</p>
+<a href="logo-fix.html" class="btn">Открыть услугу</a>
+</div>
+
+</div>
+</div>
+<footer>
+© 2026 — Precision Design Studio
+</footer>
+</body>
+</html>
