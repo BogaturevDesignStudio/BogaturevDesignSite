@@ -158,42 +158,102 @@ font-size:13px;
          ==================================================*/
 
         .back-arrow{
-    position:fixed;
-    left:25px;
-    top:50%;
-    transform:translateY(-50%);
-    width:100px;
-    height:500px;
+    position: fixed;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    width: 100px;
+    height: 500px;
 
-    border:none;
-    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
+    text-decoration: none;
 
-    color:#fff;
-    font-size:34px;
-    cursor:pointer;
+    font-size: 34px;
+    color: rgba(255,255,255,.95);
 
-    transition:.25s;
-    z-index:9999;
+    border-radius: 50px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.35);
-     text-decoration: none;
+    /* Стекло Apple */
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    /* Светлая рамка */
+    border: 1px solid rgba(255,255,255,.18);
+
+    /* Тени */
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        inset 0 1px 1px rgba(255,255,255,.35),
+        inset 0 -1px 2px rgba(255,255,255,.05);
+
+    cursor: pointer;
+
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        background .35s,
+        box-shadow .35s,
+        color .35s;
+
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Блик */
+.back-arrow::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.22),
+        transparent 35%,
+        transparent 70%,
+        rgba(255,255,255,.06)
+    );
+
+    pointer-events:none;
 }
 
 .back-arrow:hover{
-    transform:translateY(-50%) scale(1.12);
-    background:#ffffff;
-    color:#111;
+
+    transform:translateY(-50%) scale(1.05);
+
+    background:rgba(255,255,255,.14);
+
+    color:#fff;
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,.42),
+        inset 0 1px 2px rgba(255,255,255,.45),
+        0 0 35px rgba(255,255,255,.08);
 }
 
 .back-arrow:active{
-    transform:translateY(-50%) scale(.95);
+
+    transform:translateY(-50%) scale(.97);
+
+    background:rgba(255,255,255,.18);
+
+    transition:.08s;
+}
+.back-arrow::after{
+    content:"";
+    position:absolute;
+    inset:2px;
+    border-radius:48px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    opacity:.8;
+
+    pointer-events:none;
+}
 }
 </style>
 </head>
@@ -219,7 +279,7 @@ font-size:13px;
 <div class="tag">LOGO DESIGN</div>
 <h3>Разработка логотипов</h3>
 <p>Создание уникальных логотипов для компаний, брендов и личных проектов.</p>
-<a href="logo-design.html" class="btn">Открыть услугу</a>
+<a href="Logo design.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD -->
@@ -227,7 +287,7 @@ font-size:13px;
 <div class="tag">BUSINESS CARD DESIGN</div>
 <h3>Дизайн визиток</h3>
 <p>Современный дизайн визитных карточек с подготовкой к печати.</p>
-<a href="business-card.html" class="btn">Открыть услугу</a>
+<a href="businness card design.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD -->
@@ -235,7 +295,7 @@ font-size:13px;
 <div class="tag">LEAFLET DESIGN</div>
 <h3>Дизайн листовок и флаеров</h3>
 <p>Разработка рекламных листовок, флаеров и другой полиграфической продукции.</p>
-<a href="flyer.html" class="btn">Открыть услугу</a>
+<a href="leaflet design.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD -->
@@ -243,7 +303,7 @@ font-size:13px;
 <div class="tag">ADVERTISING DESIGN</div>
 <h3>Дизайн баннеров</h3>
 <p>Создание баннеров для наружной рекламы, печати и интернета.</p>
-<a href="banner.html" class="btn">Открыть услугу</a>
+<a href="Adertising design.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD -->
@@ -251,7 +311,7 @@ font-size:13px;
 <div class="tag">PRESENTATION DESIGN</div>
 <h3>Дизайн презентаций</h3>
 <p>Создание современных презентаций для бизнеса, инвесторов, коммерческих предложений и выступлений.</p>
-<a href="packaging-design.html" class="btn">Открыть услугу</a>
+<a href="Presentation design.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD -->
@@ -259,14 +319,14 @@ font-size:13px;
 <div class="tag">LABEL DESIGN</div>
 <h3>Дизайн этикеток</h3>
 <p>Создание этикеток для косметики, напитков, пищевой продукции и других товаров.</p>
-<a href="label-design.html" class="btn">Открыть услугу</a>
+<a href="Label design.html" class="btn">Открыть услугу</a>
 </div>
 <!-- CARD -->
 <div class="card">
   <div class="tag">EDITORIAL DESIGN</div>
   <h3>Дизайн брошюр и каталогов</h3>
   <p>Разработка многостраничных каталогов, буклетов, брошюр и презентационных материалов для печати и цифрового использования.</p>
-<a href="vector.html" class="btn">Открыть услугу</a>
+<a href="editotial design.html" class="btn">Открыть услугу</a>
 </div>
 
 <!-- CARD -->
@@ -274,7 +334,7 @@ font-size:13px;
   <div class="tag">MENU DESIGN</div>
   <h3>Дизайн меню</h3>
   <p>Создание стильных меню для ресторанов, кафе, баров и других заведений.</p>
-<a href="logo-fix.html" class="btn">Открыть услугу</a>
+<a href="menu design.html" class="btn">Открыть услугу</a>
 </div>
 
 </div>
