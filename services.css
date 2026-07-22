@@ -167,42 +167,101 @@ header .subtitle {
          ==================================================*/
 
         .back-arrow{
-    position:fixed;
-    left:25px;
-    top:50%;
-    transform:translateY(-50%);
-    width:100px;
-    height:500px;
+    position: fixed;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    width: 100px;
+    height: 500px;
 
-    border:none;
-    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
+    text-decoration: none;
 
-    color:#fff;
-    font-size:34px;
-    cursor:pointer;
+    font-size: 34px;
+    color: rgba(255,255,255,.95);
 
-    transition:.25s;
-    z-index:9999;
+    border-radius: 50px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.35);
-     text-decoration: none;
+    /* Стекло Apple */
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    /* Светлая рамка */
+    border: 1px solid rgba(255,255,255,.18);
+
+    /* Тени */
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        inset 0 1px 1px rgba(255,255,255,.35),
+        inset 0 -1px 2px rgba(255,255,255,.05);
+
+    cursor: pointer;
+
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        background .35s,
+        box-shadow .35s,
+        color .35s;
+
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Блик */
+.back-arrow::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.22),
+        transparent 35%,
+        transparent 70%,
+        rgba(255,255,255,.06)
+    );
+
+    pointer-events:none;
 }
 
 .back-arrow:hover{
-    transform:translateY(-50%) scale(1.12);
-    background:#ffffff;
-    color:#111;
+
+    transform:translateY(-50%) scale(1.05);
+
+    background:rgba(255,255,255,.14);
+
+    color:#fff;
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,.42),
+        inset 0 1px 2px rgba(255,255,255,.45),
+        0 0 35px rgba(255,255,255,.08);
 }
 
 .back-arrow:active{
-    transform:translateY(-50%) scale(.95);
+
+    transform:translateY(-50%) scale(.97);
+
+    background:rgba(255,255,255,.18);
+
+    transition:.08s;
+}
+.back-arrow::after{
+    content:"";
+    position:absolute;
+    inset:2px;
+    border-radius:48px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    opacity:.8;
+
+    pointer-events:none;
 }
 /*==================================================
                 FOOTER
