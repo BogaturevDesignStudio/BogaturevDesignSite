@@ -3359,6 +3359,46 @@ box-shadow:0 0 0 0 rgba(29,255,92,0);
 }
 
 }
+/* =========================
+   Мобильная версия
+========================= */
+
+@media (max-width: 480px) {
+
+    .contact-btn{
+        right:15px;
+        bottom:20px;
+        top:auto;
+        transform:none;
+
+        width:60px;
+        height:60px;
+
+        padding:0;
+        border-radius:50%;
+
+        justify-content:center;
+    }
+
+    /* Скрываем текст */
+    .contact-text{
+        display:none;
+    }
+
+    /* Центрируем иконку */
+    .contact-icon{
+        width:48px;
+        height:48px;
+        margin:0;
+
+        font-size:24px;
+    }
+
+    /* Чтобы при наведении не прыгала */
+    .contact-btn:hover{
+        transform:scale(1.05);
+    }
+}
 
 
 
