@@ -376,39 +376,7 @@ footer {
   background-color: #000000; /* светло-жёлтый */
 }
 
-.header-photo {
-  width: 50px; /* Размер фото */
-  height: 50px;
-  border-radius: 50%; /* Округлое фото */
-  object-fit: cover; /* Чтобы фото не искажалось */
-}
-/* Стили для фото в правой части */
-.photo-area {
-  display: flex;
-  align-items: center; /* Центрируем фото по вертикали */
-  margin-left: auto; /* Оставляем пространство между логотипом и фото */
-  position: absolute; /* Фиксируем фото */
-  top: 50%; /* Центрируем по вертикали */
-  right: 60px; /* Отступ от правого края экрана */
-  transform: translateY(-50%); /* Центрируем по вертикали относительно высоты */
-}
 
-/* Оформление фото */
-.header-photo {
-  width: 100px; /* Размер фото */
-  height: 100px;
-  border-radius: 50%; /* Округлое фото */
-  object-fit: cover; /* Чтобы фото не искажалось */
-  border: 3px solid #3498db; /* Синий бордер вокруг фото */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень вокруг фото */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
-}
-
-/* Эффект при наведении */
-.header-photo:hover {
-  transform: scale(1.1); /* Увеличение фото при наведении */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Увеличенная тень при наведении */
-}
 .line-between {
   border: none;
   border-top: 2px solid #444;
