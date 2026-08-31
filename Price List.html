@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Прайс — Евгений Богатырёв</title>
+
+<meta name="description" content="Стоимость услуг дизайна, допечатной подготовки, брендинга, упаковки, маркетплейсов и разработки сайтов.">
+
+<style>
+
+/* =====================================================
+   ОСНОВА
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   ФОНОВАЯ АТМОСФЕРА
+   ===================================================== */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  left: -300px;
+  top: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.06),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  right: -300px;
+  bottom: 0;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.05),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+/* =====================================================
+   КНОПКА МЕНЮ
+   ===================================================== */
+
+.menu-button {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 10000;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  background: rgba(0,0,0,0.72);
+
+  border: 1px solid rgba(255,255,255,0.22);
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.menu-button:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+
+.menu-button span {
+  width: 24px;
+  height: 2px;
+
+  background: #fff;
+
+  border-radius: 2px;
+
+  transition: 0.3s ease;
+}
+
+.menu-button.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =====================================================
+   ЗАТЕМНЕНИЕ
+   ===================================================== */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.55);
+
+  z-index: 9998;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =====================================================
+   БОКОВОЕ МЕНЮ
+   ===================================================== */
+
+.side-navigation {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  width: 320px;
+  height: 100vh;
+
+  padding: 100px 30px 30px;
+
+  background: rgba(15,15,15,0.96);
+
+  border-left: 1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  z-index: 9999;
+
+  transform: translateX(100%);
+
+  transition: transform 0.35s ease;
+
+  overflow-y: auto;
+}
+
+.side-navigation.active {
+  transform: translateX(0);
+}
+
+.side-navigation-title {
+  margin-bottom: 25px;
+
+  color: rgba(255,255,255,0.55);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.side-navigation-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.side-nav-link {
+  display: block;
+
+  padding: 13px 14px;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  border-radius: 9px;
+
+  transition: 0.25s ease;
+}
+
+.side-nav-link:hover {
+  background: rgba(255,255,255,0.08);
+
+  padding-left: 20px;
+}
+
+.side-navigation-divider {
+  height: 1px;
+
+  margin: 25px 0;
+
+  background: rgba(255,255,255,0.16);
+}
+
+.side-nav-service {
+  display: block;
+
+  padding: 10px 14px;
+
+  color: rgba(255,255,255,0.65);
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  border-radius: 8px;
+
+  transition: 0.25s ease;
+}
+
+.side-nav-service:hover {
+  color: #fff;
+
+  background: rgba(255,255,255,0.07);
+
+  padding-left: 20px;
+}
+
+.side-nav-contact {
+  display: block;
+
+  margin-top: 25px;
+
+  padding: 14px;
+
+  border: 1px solid rgba(255,255,255,0.35);
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  transition: 0.25s ease;
+}
+
+.side-nav-contact:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+
+/* =====================================================
+   ГЛАВНЫЙ БЛОК
+   ===================================================== */
+
+.price-header {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding:
+    150px 30px
+    80px;
+}
+
+.price-label {
+  color: rgba(255,255,255,0.45);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 25px;
+}
+
+.price-header h1 {
+  margin: 0;
+
+  font-size: clamp(60px, 10vw, 150px);
+
+  line-height: 0.85;
+
+  letter-spacing: -7px;
+
+  font-weight: 800;
+}
+
+.price-header h1 span {
+  color: rgba(255,255,255,0.28);
+}
+
+.price-intro {
+  max-width: 600px;
+
+  margin-top: 45px;
+
+  color: rgba(255,255,255,0.65);
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   СЕТКА ЦЕН
+   ===================================================== */
+
+.price-section {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 40px 30px 120px;
+}
+
+.section-title {
+  margin-bottom: 35px;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,0.45);
+
+  text-transform: uppercase;
+}
+
+.price-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =====================================================
+   КАРТОЧКА
+   ===================================================== */
+
+.price-card {
+  position: relative;
+
+  min-height: 270px;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.025)
+    );
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.price-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -80px;
+  top: -80px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.12),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255,255,255,0.3);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.11),
+      rgba(255,255,255,0.035)
+    );
+}
+
+.price-number {
+  color: rgba(255,255,255,0.35);
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+.price-card h2 {
+  margin: 35px 0 15px;
+
+  font-size: 28px;
+
+  line-height: 1.1;
+}
+
+.price-card p {
+  max-width: 480px;
+
+  color: rgba(255,255,255,0.58);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.price-value {
+  margin-top: 30px;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.price-value span {
+  color: rgba(255,255,255,0.4);
+
+  font-size: 12px;
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   БОЛЬШАЯ КАРТОЧКА
+   ===================================================== */
+
+.price-card.featured {
+  grid-column: span 2;
+
+  min-height: 330px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.price-card.featured h2 {
+  font-size: 40px;
+}
+
+
+/* =====================================================
+   ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
+   ===================================================== */
+
+.additional {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 30px 120px;
+}
+
+.additional-list {
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.additional-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  color: rgba(255,255,255,0.75);
+
+  transition: 0.25s ease;
+}
+
+.additional-item:hover {
+  padding-left: 10px;
+
+  color: #fff;
+}
+
+.additional-price {
+  white-space: nowrap;
+
+  color: #fff;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   ЧТО ВХОДИТ
+   ===================================================== */
+
+.process {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 30px 120px;
+}
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.process-card {
+  padding: 30px;
+
+  min-height: 190px;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.035);
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.process-card-number {
+  font-size: 11px;
+
+  color: rgba(255,255,255,0.35);
+
+  letter-spacing: 2px;
+}
+
+.process-card h3 {
+  margin: 30px 0 12px;
+
+  font-size: 18px;
+}
+
+.process-card p {
+  margin: 0;
+
+  color: rgba(255,255,255,0.5);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   ФОРМИРОВАНИЕ ЦЕНЫ
+   ===================================================== */
+
+.note {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 30px 120px;
+}
+
+.note-box {
+  padding: 50px;
+
+  border-radius: 22px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.025)
+    );
+}
+
+.note-box h2 {
+  margin: 0 0 20px;
+
+  font-size: 32px;
+}
+
+.note-box p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,0.6);
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   КОНТАКТ
+   ===================================================== */
+
+.contact {
+  text-align: center;
+
+  padding:
+    100px 30px
+    140px;
+}
+
+.contact-label {
+  margin-bottom: 25px;
+
+  color: rgba(255,255,255,0.4);
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+}
+
+.contact h2 {
+  margin: 0;
+
+  font-size: clamp(45px, 8vw, 100px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+}
+
+.contact p {
+  max-width: 550px;
+
+  margin: 35px auto;
+
+  color: rgba(255,255,255,0.55);
+
+  line-height: 1.6;
+}
+
+.contact-button {
+  display: inline-block;
+
+  padding: 16px 30px;
+
+  border: 1px solid rgba(255,255,255,0.4);
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #fff;
+
+  color: #000;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+  padding: 30px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  text-align: center;
+
+  color: rgba(255,255,255,0.35);
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+  .menu-button {
+    top: 15px;
+    right: 15px;
+  }
+
+  .side-navigation {
+    width: 85%;
+    max-width: 320px;
+  }
+
+  .price-header {
+    padding:
+      120px 20px
+      60px;
+  }
+
+  .price-header h1 {
+    font-size: 70px;
+
+    letter-spacing: -4px;
+  }
+
+  .price-intro {
+    font-size: 16px;
+  }
+
+  .price-section,
+  .additional,
+  .process,
+  .note {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card.featured {
+    grid-column: span 1;
+  }
+
+  .price-card.featured h2 {
+    font-size: 30px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .additional-item {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .note-box {
+    padding: 30px;
+  }
+
+  .contact {
+    padding:
+      80px 20px
+      100px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     КНОПКА МЕНЮ
+     ===================================================== -->
+
+<button
+  class="menu-button"
+  id="menuButton"
+  aria-label="Открыть меню"
+  type="button"
+>
+
+  <span></span>
+  <span></span>
+  <span></span>
+
+</button>
+
+
+<!-- =====================================================
+     ЗАТЕМНЕНИЕ
+     ===================================================== -->
+
+<div
+  class="menu-overlay"
+  id="menuOverlay"
+></div>
+
+
+<!-- =====================================================
+     МЕНЮ
+     ===================================================== -->
+
+<aside
+  class="side-navigation"
+  id="sideNavigation"
+>
+
+  <div class="side-navigation-title">
+    НАВИГАЦИЯ
+  </div>
+
+
+  <nav class="side-navigation-links">
+
+    <a
+      href="index.html"
+      class="side-nav-link"
+    >
+      Главная
+    </a>
+
+    <a
+      href="index.html#projects"
+      class="side-nav-link"
+    >
+      Портфолио
+    </a>
+
+    <a
+      href="index.html#skillsSection"
+      class="side-nav-link"
+    >
+      Навыки
+    </a>
+
+    <a
+      href="#"
+      class="side-nav-link"
+    >
+      Прайс
+    </a>
+
+    <a
+      href="index.html#contact"
+      class="side-nav-link"
+    >
+      Контакты
+    </a>
+
+  </nav>
+
+
+  <div class="side-navigation-divider"></div>
+
+
+  <a
+    href="Services1.html"
+    class="side-nav-service"
+  >
+    Графический дизайн
+  </a>
+
+  <a
+    href="services.html"
+    class="side-nav-service"
+  >
+    Допечатная подготовка
+  </a>
+
+  <a
+    href="services3.html"
+    class="side-nav-service"
+  >
+    Брендинг
+  </a>
+
+  <a
+    href="Marketplace design.html"
+    class="side-nav-service"
+  >
+    Маркетплейсы
+  </a>
+
+  <a
+    href="Pacing design.html"
+    class="side-nav-service"
+  >
+    Дизайн упаковки
+  </a>
+
+
+  <a
+    href="index.html#contact"
+    class="side-nav-contact"
+  >
+    ОБСУДИТЬ ПРОЕКТ
+  </a>
+
+</aside>
+
+
+
+<!-- =====================================================
+     ШАПКА
+     ===================================================== -->
+
+<header class="price-header">
+
+  <div class="price-label">
+    УСЛУГИ / 2026
+  </div>
+
+  <h1>
+    PRICE<span>.</span>
+  </h1>
+
+  <p class="price-intro">
+    Стоимость зависит от задачи, объёма работы
+    и сложности проекта. Ниже указаны ориентировочные
+    цены на основные услуги.
+  </p>
+
+</header>
+
+
+
+<!-- =====================================================
+     ОСНОВНЫЕ УСЛУГИ
+     ===================================================== -->
+
+<section class="price-section">
+
+  <div class="section-title">
+    Основные услуги
+  </div>
+
+
+  <div class="price-grid">
+
+
+    <!-- ГРАФИЧЕСКИЙ ДИЗАЙН -->
+
+    <article class="price-card">
+
+      <div class="price-number">
+        01 / DESIGN
+      </div>
+
+      <h2>
+        Графический дизайн
+      </h2>
+
+      <p>
+        Рекламные материалы, баннеры,
+        каталоги, презентации, полиграфия
+        и другие графические решения.
+      </p>
+
+      <div class="price-value">
+        от 1 000 грн
+      </div>
+
+    </article>
+
+
+
+    <!-- ПРЕПРЕСС -->
+
+    <article class="price-card">
+
+      <div class="price-number">
+        02 / PREPRESS
+      </div>
+
+      <h2>
+        Допечатная подготовка
+      </h2>
+
+      <p>
+        Проверка и подготовка файлов
+        к офсетной, цифровой и другой
+        печати с учётом технических требований.
+      </p>
+
+      <div class="price-value">
+        от 500 грн
+      </div>
+
+    </article>
+
+
+
+    <!-- УПАКОВКА -->
+
+    <article class="price-card">
+
+      <div class="price-number">
+        03 / PACKAGING
+      </div>
+
+      <h2>
+        Дизайн упаковки
+      </h2>
+
+      <p>
+        Разработка дизайна упаковки,
+        этикеток, коробок и других
+        рекламных носителей продукта.
+      </p>
+
+      <div class="price-value">
+        от 3 000 грн
+      </div>
+
+    </article>
+
+
+
+    <!-- БРЕНДИНГ -->
+
+    <article class="price-card">
+
+      <div class="price-number">
+        04 / BRANDING
+      </div>
+
+      <h2>
+        Брендинг
+      </h2>
+
+      <p>
+        Логотип, фирменный стиль,
+        цветовая палитра, типографика
+        и визуальная система бренда.
+      </p>
+
+      <div class="price-value">
+        от 5 000 грн
+      </div>
+
+    </article>
+
+
+
+    <!-- МАРКЕТПЛЕЙСЫ -->
+
+    <article class="price-card">
+
+      <div class="price-number">
+        05 / MARKETPLACE
+      </div>
+
+      <h2>
+        Маркетплейсы
+      </h2>
+
+      <p>
+        Инфографика, карточки товаров,
+        рекламные изображения и
+        визуальное оформление товара.
+      </p>
+
+      <div class="price-value">
+        от 700 грн
+      </div>
+
+    </article>
+
+
+
+    <!-- САЙТЫ -->
+
+    <article class="price-card">
+
+      <div class="price-number">
+        06 / WEB
+      </div>
+
+      <h2>
+        Создание сайтов
+      </h2>
+
+      <p>
+        Современные адаптивные сайты
+        с уникальным дизайном,
+        анимациями и необходимым функционалом.
+      </p>
+
+      <div class="price-value">
+        от 8 000 грн
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
+     ===================================================== -->
+
+<section class="additional">
+
+  <div class="section-title">
+    Дополнительные работы
+  </div>
+
+
+  <div class="additional-list">
+
+
+    <div class="additional-item">
+
+      <span>
+        Векторизация изображения
+      </span>
+
+      <span class="additional-price">
+        от 500 грн
+      </span>
+
+    </div>
+
+
+    <div class="additional-item">
+
+      <span>
+        Восстановление / доработка логотипа
+      </span>
+
+      <span class="additional-price">
+        от 500 грн
+      </span>
+
+    </div>
+
+
+    <div class="additional-item">
+
+      <span>
+        Подготовка PDF / PDF-X
+      </span>
+
+      <span class="additional-price">
+        от 500 грн
+      </span>
+
+    </div>
+
+
+    <div class="additional-item">
+
+      <span>
+        Конвертация RGB → CMYK
+      </span>
+
+      <span class="additional-price">
+        от 300 грн
+      </span>
+
+    </div>
+
+
+    <div class="additional-item">
+
+      <span>
+        Подготовка макета к нестандартной печати
+      </span>
+
+      <span class="additional-price">
+        рассчитывается отдельно
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ЧТО ВХОДИТ
+     ===================================================== -->
+
+<section class="process">
+
+  <div class="section-title">
+    Как проходит работа
+  </div>
+
+
+  <div class="process-grid">
+
+
+    <div class="process-card">
+
+      <div class="process-card-number">
+        01
+      </div>
+
+      <h3>
+        Задача
+      </h3>
+
+      <p>
+        Обсуждаем задачу, формат,
+        сроки и требования к проекту.
+      </p>
+
+    </div>
+
+
+
+    <div class="process-card">
+
+      <div class="process-card-number">
+        02
+      </div>
+
+      <h3>
+        Разработка
+      </h3>
+
+      <p>
+        Создаю дизайн и согласовываю
+        основные решения с заказчиком.
+      </p>
+
+    </div>
+
+
+
+    <div class="process-card">
+
+      <div class="process-card-number">
+        03
+      </div>
+
+      <h3>
+        Результат
+      </h3>
+
+      <p>
+        Передаю готовые файлы,
+        подготовленные под необходимые задачи.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ФОРМИРОВАНИЕ ЦЕНЫ
+     ===================================================== -->
+
+<section class="note">
+
+  <div class="note-box">
+
+    <h2>
+      Почему нет одной цены?
+    </h2>
+
+    <p>
+      Каждый проект отличается по объёму,
+      сложности и требованиям. Поэтому указанные
+      суммы являются ориентировочными.
+      После обсуждения задачи я называю точную
+      стоимость работы до начала проекта.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     КОНТАКТ
+     ===================================================== -->
+
+<section class="contact">
+
+  <div class="contact-label">
+    ЕСТЬ ПРОЕКТ?
+  </div>
+
+  <h2>
+    Давайте<br>
+    обсудим.
+  </h2>
+
+  <p>
+    Расскажите о задаче — я оценю объём работы,
+    предложу решение и назову точную стоимость.
+  </p>
+
+  <a
+    href="index.html#contact"
+    class="contact-button"
+  >
+    ОБСУДИТЬ ПРОЕКТ
+  </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+  © 2026 Евгений Богатырёв
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+const menuButton =
+  document.getElementById("menuButton");
+
+const sideNavigation =
+  document.getElementById("sideNavigation");
+
+const menuOverlay =
+  document.getElementById("menuOverlay");
+
+
+
+/* Открытие меню */
+
+function openMenu() {
+
+  menuButton.classList.add("active");
+
+  sideNavigation.classList.add("active");
+
+  menuOverlay.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+
+}
+
+
+
+/* Закрытие меню */
+
+function closeMenu() {
+
+  menuButton.classList.remove("active");
+
+  sideNavigation.classList.remove("active");
+
+  menuOverlay.classList.remove("active");
+
+  document.body.style.overflow = "";
+
+}
+
+
+
+/* Кнопка */
+
+menuButton.addEventListener("click", function() {
+
+  if (
+    sideNavigation.classList.contains("active")
+  ) {
+
+    closeMenu();
+
+  } else {
+
+    openMenu();
+
+  }
+
+});
+
+
+
+/* Затемнение */
+
+menuOverlay.addEventListener(
+  "click",
+  closeMenu
+);
+
+
+
+/* Ссылки меню */
+
+document
+  .querySelectorAll(".side-navigation a")
+  .forEach(function(link) {
+
+    link.addEventListener(
+      "click",
+      closeMenu
+    );
+
+  });
+
+
+
+/* ESC */
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (event.key === "Escape") {
+
+      closeMenu();
+
+    }
+
+  }
+);
+
+</script>
+
+
+</body>
+</html>
+```
