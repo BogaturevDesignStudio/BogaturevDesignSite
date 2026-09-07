@@ -1617,7 +1617,10 @@ filter: blur(40px);
   
   margin-bottom: 15px;
   color: #000;
-
+ font-family: "Play", sans-serif;
+ font-weight: 700;
+ line-height: 1.6;
+ font-size: 50px;
 }
 /* Обёртка для заголовка с полупрозрачной подложкой */
 .design-title-bg {
