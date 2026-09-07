@@ -1628,7 +1628,7 @@ filter: blur(40px);
   top: -50px; /* выглядывает из-за отрицательного значения */
   left: 50%;
   transform: translateX(-50%);
-  width: 50vh;
+  width: max-content;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 30px 40px;
   border-radius: 0 0 20px 20px; /* скругление только снизу */
