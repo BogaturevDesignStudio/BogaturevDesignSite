@@ -486,7 +486,7 @@ if ("ontouchstart" in window) {
       select_sector:"Select a sector",
       spin_button:"Spin",
       reset_spin:"Reset Spin",
-      designStudio: "Design Studio",
+      designStudio: "Prepress Design Studio",
       service1: "Graphic Design",
       service2: "Print-Ready File Preparation",
       service3: "Branding & Visual Identity",
