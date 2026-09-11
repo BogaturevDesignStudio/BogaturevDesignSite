@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- 🟢 МЕНЯТЬ
+         Название проекта + категория.
+
+         ВЛИЯЕТ:
+         • название вкладки браузера
+         • SEO
+         • название страницы в поиске Google
+    -->
+
+    <title>
+        PF 115 — Packaging Design | Bogaturev Design
+    </title>
+
+
+    <!-- 🟢 МЕНЯТЬ
+         Краткое описание именно ЭТОГО проекта.
+
+         ВЛИЯЕТ:
+         • SEO
+         • описание страницы в поисковой выдаче Google
+
+         Желательно 120–160 символов.
+    -->
+
+    <meta
+        name="description"
+        content="PF 115 industrial packaging design project by Bogaturev Design. Graphic design, packaging and prepress preparation."
+    >
+
+
+    <!-- 🟢 МЕНЯТЬ
+         Здесь меняется только имя HTML-файла.
+
+         Например:
+         pf115.html
+         ↓
+         metal-label.html
+
+         ВЛИЯЕТ:
+         • URL страницы
+         • canonical для Google
+
+         ⚠️ Если страница уже была опубликована и проиндексирована,
+         URL без необходимости НЕ менять.
+    -->
+
+    <link
+        rel="canonical"
+        href="https://bogaturevdesign.com/portfolio/pf115.html"
+    >
+
+
+    <!-- 🔴 НЕ ТРОГАТЬ
+         Подключение общих стилей портфолио.
+    -->
+
+    <link rel="stylesheet" href="portfolio.css">
+
+</head>
+
+
+<body>
+
+
+<main class="project-page">
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <div class="project-topbar">
+
+
+        <!-- 🔴 НЕ ТРОГАТЬ
+             Возврат обратно в портфолио.
+        -->
+
+        <a
+            class="back-link"
+            href="portfolio.html"
+        >
+            ← Back to Portfolio
+        </a>
+
+
+        <!-- 🔴 НЕ ТРОГАТЬ
+             Счётчик автоматически заполняется project.js.
+
+             Например:
+             01 / 05
+             02 / 05
+             05 / 05
+
+             НЕ МЕНЯТЬ ВРУЧНУЮ.
+        -->
+
+        <div class="project-counter">
+            01 / 04
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER PROJECT
+    ====================================================== -->
+
+    <header class="project-header">
+
+
+        <div class="project-header-main">
+
+
+            <!-- 🟢 МЕНЯТЬ
+                 Категория проекта.
+
+                 Должна соответствовать categoryName
+                 в projects.js.
+
+                 ВЛИЯЕТ:
+                 • отображаемая категория на странице проекта
+                 • визуальная информация о проекте
+            -->
+
+            <div class="project-eyebrow">
+                Packaging Design
+            </div>
+
+
+            <!-- 🟢 МЕНЯТЬ
+                 Название проекта.
+
+                 ВЛИЯЕТ:
+                 • главный H1 страницы
+                 • видимый заголовок проекта
+            -->
+
+            <h1>
+                PF 115
+            </h1>
+
+        </div>
+
+
+        <div class="project-meta">
+
+
+            <!-- =================================================
+                 CLIENT
+            ================================================== -->
+
+            <div class="meta-item">
+
+                <!-- 🔴 НЕ ТРОГАТЬ -->
+                <span class="meta-label">
+                    Client
+                </span>
+
+
+                <!-- 🟢 МЕНЯТЬ
+                     Имя клиента / компании / Personal Project.
+
+                     ВЛИЯЕТ:
+                     • информация о проекте
+                -->
+
+                <div class="meta-value">
+                    PF 115
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 YEAR
+            ================================================== -->
+
+            <div class="meta-item">
+
+                <!-- 🔴 НЕ ТРОГАТЬ -->
+                <span class="meta-label">
+                    Year
+                </span>
+
+
+                <!-- 🟢 МЕНЯТЬ
+                     Год выполнения проекта.
+                -->
+
+                <div class="meta-value">
+                    2026
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ROLE
+            ================================================== -->
+
+            <div class="meta-item">
+
+                <!-- 🔴 НЕ ТРОГАТЬ -->
+                <span class="meta-label">
+                    Role
+                </span>
+
+
+                <!-- 🟢 МЕНЯТЬ
+                     Твоя роль в проекте.
+
+                     Например:
+                     Graphic Designer
+                     Prepress Designer
+                     Graphic Designer & Prepress
+                -->
+
+                <div class="meta-value">
+                    Graphic Designer
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TYPE
+            ================================================== -->
+
+            <div class="meta-item">
+
+                <!-- 🔴 НЕ ТРОГАТЬ -->
+                <span class="meta-label">
+                    Type
+                </span>
+
+
+                <!-- 🟢 МЕНЯТЬ
+                     Тип проекта.
+
+                     Например:
+                     Packaging
+                     Label Design
+                     Branding
+                     Prepress
+                     Logo Design
+                -->
+
+                <div class="meta-value">
+                    Industrial Packaging
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO IMAGE
+    ====================================================== -->
+
+
+    <!-- 🟢 МЕНЯТЬ
+         Главное изображение проекта.
+
+         ВАЖНО:
+         Одна и та же ссылка должна быть:
+         1. в data-viewer-image
+         2. в src
+
+         data-viewer-image = большая версия для увеличения.
+         src = изображение, которое видно на странице.
+
+         ВЛИЯЕТ:
+         • главное изображение проекта
+         • Image Viewer
+         • zoom
+         • drag
+    -->
+
+    <div
+        class="project-hero"
+        data-viewer-image="ССЫЛКА_НА_HERO_ИЗОБРАЖЕНИЕ"
+    >
+
+        <img
+            src="ССЫЛКА_НА_HERO_ИЗОБРАЖЕНИЕ"
+
+            <!-- 🟢 МЕНЯТЬ
+                 Описание изображения.
+
+                 ВЛИЯЕТ:
+                 • SEO изображений
+                 • доступность
+            -->
+
+            alt="PF 115 packaging design"
+        >
+
+    </div>
+
+
+    <!-- =====================================================
+         PROJECT DESCRIPTION
+    ====================================================== -->
+
+    <section class="project-content">
+
+
+        <div class="project-content-section">
+
+
+            <!-- 🔴 НЕ ТРОГАТЬ
+                 Заголовок блока.
+            -->
+
+            <h2>
+                About
+            </h2>
+
+
+            <!-- 🟢 МЕНЯТЬ
+                 Описание конкретного проекта.
+
+                 Здесь рассказываешь:
+                 • что это за проект
+                 • задача
+                 • что было сделано
+                 • особенности
+                 • результат
+
+                 ВЛИЯЕТ:
+                 • содержание страницы
+                 • SEO
+                 • понимание проекта потенциальным клиентом
+            -->
+
+            <p>
+                PF 115 is an industrial packaging project focused on
+                creating a clear and production-ready visual solution
+                for a metal can. The design combines strong graphic
+                hierarchy with practical print-production requirements.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             MY ROLE
+        ================================================== -->
+
+        <div class="project-content-section">
+
+
+            <!-- 🔴 НЕ ТРОГАТЬ -->
+            <h2>
+                My Role
+            </h2>
+
+
+            <!-- 🟢 МЕНЯТЬ
+                 Добавляй / удаляй теги в зависимости
+                 от того, что реально делал в проекте.
+
+                 Например:
+                 Graphic Design
+                 Packaging
+                 Prepress
+                 Art Direction
+                 Vectorization
+            -->
+
+            <div class="role-list">
+
+                <span class="role-tag">
+                    Graphic Design
+                </span>
+
+                <span class="role-tag">
+                    Packaging
+                </span>
+
+                <span class="role-tag">
+                    Prepress
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
+
+
+    <section class="project-gallery">
+
+
+        <!-- =================================================
+             IMAGE 1
+        ================================================== -->
+
+
+        <!-- 🟢 МЕНЯТЬ
+             Ссылка на изображение.
+
+             data-viewer-image = большая версия
+             src = версия для страницы
+
+             alt = описание изображения.
+
+             ВЛИЯЕТ:
+             • галерея
+             • Image Viewer
+             • zoom
+             • drag
+             • SEO изображений
+        -->
+
+        <div
+            class="gallery-item full-width"
+            data-viewer-image="ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_1"
+        >
+
+            <img
+                src="ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_1"
+                alt="PF 115 packaging"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <!-- =================================================
+             IMAGE 2
+        ================================================== -->
+
+
+        <!-- 🟢 МЕНЯТЬ
+             Если нужна вторая картинка.
+
+             Если картинка не нужна — весь этот блок
+             можно удалить.
+        -->
+
+        <div
+            class="gallery-item"
+            data-viewer-image="ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_2"
+        >
+
+            <img
+                src="ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_2"
+                alt="PF 115 packaging detail"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <!-- =================================================
+             IMAGE 3
+        ================================================== -->
+
+
+        <!-- 🟢 МЕНЯТЬ
+             Третье изображение.
+
+             Можно:
+             • заменить
+             • удалить
+             • скопировать блок и добавить 4-е, 5-е и т.д.
+        -->
+
+        <div
+            class="gallery-item"
+            data-viewer-image="ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_3"
+        >
+
+            <img
+                src="ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_3"
+                alt="PF 115 design detail"
+                loading="lazy"
+            >
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+
+    <!-- 🔴 НЕ ТРОГАТЬ
+         Previous / Next заполняются автоматически
+         через projects.js + project.js.
+
+         НЕ МЕНЯТЬ:
+         • href
+         • названия проектов
+         • счётчик
+
+         При добавлении нового проекта система
+         сама пересчитает навигацию.
+    -->
+
+    <nav class="project-navigation">
+
+
+        <a
+            class="project-nav-link"
+            href="#"
+        >
+
+            <span class="project-nav-label">
+                Previous Project
+            </span>
+
+            <span class="project-nav-title">
+                Automatically generated
+            </span>
+
+        </a>
+
+
+        <a
+            class="project-nav-link next"
+            href="#"
+        >
+
+            <span class="project-nav-label">
+                Next Project
+            </span>
+
+            <span class="project-nav-title">
+                Automatically generated
+            </span>
+
+        </a>
+
+    </nav>
+
+
+</main>
+
+
+<!-- =========================================================
+     IMAGE VIEWER
+========================================================== -->
+
+
+<!-- 🔴 НЕ ТРОГАТЬ
+     Это общая система просмотра изображений.
+
+     Отвечает за:
+     • увеличение
+     • уменьшение
+     • колесо мыши
+     • перетаскивание
+     • touch
+     • double click
+     • закрытие
+-->
+
+<div
+    class="image-viewer"
+    id="imageViewer"
+>
+
+
+    <button
+        class="viewer-close"
+        id="viewerClose"
+        aria-label="Close image viewer"
+    >
+        ×
+    </button>
+
+
+    <div class="viewer-hint">
+        Scroll to zoom · Drag to move
+    </div>
+
+
+    <div
+        class="viewer-stage"
+        id="viewerStage"
+    >
+
+        <img
+            class="viewer-image"
+            id="viewerImage"
+            src=""
+            alt=""
+        >
+
+    </div>
+
+
+    <div class="viewer-controls">
+
+
+        <button
+            class="viewer-control"
+            id="zoomOut"
+            aria-label="Zoom out"
+        >
+            −
+        </button>
+
+
+        <div
+            class="viewer-zoom-value"
+            id="zoomValue"
+        >
+            100%
+        </div>
+
+
+        <button
+            class="viewer-control"
+            id="zoomIn"
+            aria-label="Zoom in"
+        >
+            +
+        </button>
+
+
+        <button
+            class="viewer-control"
+            id="zoomReset"
+            aria-label="Reset zoom"
+        >
+            ↺
+        </button>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================== -->
+
+
+<!-- 🔴 НЕ ТРОГАТЬ
+
+     projects.js
+     = общая база всех проектов.
+
+     project.js
+     = Image Viewer + автоматическая навигация.
+
+     Порядок загрузки ВАЖЕН.
+-->
+
+<script src="projects.js"></script>
+<script src="project.js"></script>
+
+
+</body>
+</html>
