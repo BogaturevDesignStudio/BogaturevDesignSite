@@ -130,19 +130,6 @@ document.addEventListener('keydown', function(e) {
   }
 });
 /*скрипт кнопки смотреть работы*/
-const toggleBtn = document.getElementById("toggle-projects-btn");
-  const projectsSection = document.getElementById("projects");
-  let isVisible = false;
-
-  toggleBtn.addEventListener("click", () => {
-    isVisible = !isVisible;
-    projectsSection.classList.toggle("show", isVisible);
-    toggleBtn.textContent = isVisible ? "Скрыть работы" : "Смотреть работы";
-    
-    if (isVisible) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
   /* скрипт кнопки "Обо мне" */
 const toggleAboutBtn = document.getElementById("toggle-about-btn");
 const aboutSection = document.getElementById("about");
