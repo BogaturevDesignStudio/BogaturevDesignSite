@@ -12,7 +12,18 @@ const projects = [
         url: "shawarma-tent-prepress.html",
         hero: "images/prepress-1/shawarma-tent-final-print.jpg"
     },
-
+    {
+    id: "my-logo",
+    title: "My Logo Project",
+    category: "logo",
+    categoryName: "Logo Design",
+    client: "Commercial Project",
+    year: "2026",
+    type: "Logo Design",
+    role: "Graphic Designer",
+    url: "my-logo.html",
+    hero: "images/logo-1/logo-final.jpg"
+    },
     {
         id: "bbq",
         title: "BBQ Chef",
