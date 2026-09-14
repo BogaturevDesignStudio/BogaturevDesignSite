@@ -21,7 +21,7 @@ const projects = [
     year: "2026",
     type: "Logo Design",
     role: "Graphic Designer",
-    url: "tent-company-logo.html",
+    url: "tent-production-logo.html",
     hero: "images/tent-company-logo/tent-logo-design.jpg"
 },
     {
