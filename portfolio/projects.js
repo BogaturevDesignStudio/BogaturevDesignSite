@@ -22,7 +22,7 @@ const projects = [
     type: "Logo Design",
     role: "Graphic Designer",
     url: "tent-company-logo.html",
-    hero: "images/tent-company-logo/Logo Tent company.jpg"
+    hero: "images/tent-company-logo/tent-logo-design.jpg"
 },
     {
         id: "bbq",
