@@ -10,7 +10,7 @@ const projects = [
         type: "Industrial Packaging",
         role: "Graphic Designer",
         url: "shawarma-tent-prepress.html",
-        hero: "https://images.unsplash.com/photo-1606914469633-b4c8f8f5c6e9?auto=format&fit=crop&w=1800&q=85"
+        hero: "images/prepress-1/shawarma-tent-final-print.jpg"
     },
 
     {
