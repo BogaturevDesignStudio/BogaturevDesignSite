@@ -3,7 +3,7 @@ const projects = [
     {
         id: "pf115",
         title: "PF 115",
-        category: "packaging",
+        category: "prepress",
         categoryName: "Packaging Design",
         client: "PF 115",
         year: "2026",
