@@ -9,7 +9,7 @@ const projects = [
         year: "2026",
         type: "Industrial Packaging",
         role: "Graphic Designer",
-        url: "pf115.html",
+        url: "shawarma-tent-prepress.html",
         hero: "https://images.unsplash.com/photo-1606914469633-b4c8f8f5c6e9?auto=format&fit=crop&w=1800&q=85"
     },
 
