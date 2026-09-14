@@ -1,14 +1,14 @@
 const projects = [
 
     {
-        id: "pf115",
-        title: "PF 115",
+        id: "shawarma-tent-prepress",
+        title: "Shawarma Tent Prepress",
         category: "prepress",
-        categoryName: "Packaging Design",
-        client: "PF 115",
+        categoryName: "Prepress",
+        client: "Commercial Project",
         year: "2026",
-        type: "Industrial Packaging",
-        role: "Graphic Designer",
+        type: "Large Format Prepress",
+        role: "Prepress Designer",
         url: "shawarma-tent-prepress.html",
         hero: "images/prepress-1/shawarma-tent-final-print.jpg"
     },
