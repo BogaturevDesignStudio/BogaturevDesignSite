@@ -839,4 +839,9 @@ body {
     .viewer-controls {
         bottom: 18px;
     }
+   .project-video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 }
