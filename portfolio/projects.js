@@ -25,6 +25,18 @@ const projects = [
     hero: "images/tent-production-logo/tent-logo-design.jpg"
 },
     {
+    id: "tent-lettering",
+    title: "Tent Lettering",
+    category: "prepress",
+    categoryName: "Prepress",
+    client: "Client Project",
+    year: "2026",
+    type: "Tent Graphics",
+    role: "Prepress Designer",
+    url: "tent-prepress.html",
+    hero: "images/prepress-2/tent-lettering-final.jpg"
+},
+    {
         id: "bbq",
         title: "BBQ Chef",
         category: "branding",
