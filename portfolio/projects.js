@@ -74,14 +74,14 @@ const projects = [
     {
     id: "oro-professional",
     title: "ORO Professional",
-    category: "branding",
+    category: "logo",
     categoryName: "Logo Design",
     client: "ORO Professional",
     year: "2026",
     type: "Logo Design",
     role: "Graphic Designer",
     url: "oro-professional.html",
-    hero: "images/..."
+    hero: "images/branding/oro-professional-logo.jpg"
 },
     {
         id: "bbq",
