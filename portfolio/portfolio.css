@@ -839,7 +839,11 @@ body {
     .viewer-controls {
         bottom: 18px;
     }
-   .project-video {
+   .kraft-video {
+    grid-column: 1 / -1;
+}
+
+.kraft-video .project-video {
     display: block;
     width: 100%;
     height: auto;
