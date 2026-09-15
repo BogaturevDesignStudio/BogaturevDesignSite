@@ -9,7 +9,7 @@ const projects = [
     type: "Packaging Design",
     role: "Graphic Designer & Prepress",
     url: "kraft-packaging.html",
-    hero: "images/packaging/kraft-packaging-final.jpg"
+    hero: "images/packaging/kraft-packaging-design.jpg"
 },
     {
         id: "shawarma-tent-prepress",
