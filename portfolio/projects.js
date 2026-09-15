@@ -1,5 +1,16 @@
 const projects = [
-
+    {
+    id: "kraft-packaging",
+    title: "Kraft Packaging",
+    category: "packaging",
+    categoryName: "Packaging Design",
+    client: "Client Project",
+    year: "2026",
+    type: "Packaging Design",
+    role: "Graphic Designer & Prepress",
+    url: "kraft-packaging.html",
+    hero: "images/packaging-2/kraft-packaging-final.jpg"
+},
     {
         id: "shawarma-tent-prepress",
         title: "Shawarma Tent Prepress",
