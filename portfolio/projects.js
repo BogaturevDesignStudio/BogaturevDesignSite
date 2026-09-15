@@ -36,6 +36,18 @@ const projects = [
     url: "tent-prepress.html",
     hero: "images/prepress-2/tent-lettering-final.jpg"
 },
+ {
+    id: "sticker-sheet-prepress",
+    title: "Sticker Sheet — Prepress",
+    category: "prepress",
+    categoryName: "Prepress",
+    client: "Client Project",
+    year: "2026",
+    type: "Sticker Prepress",
+    role: "Prepress Designer",
+    url: "sticker-sheet-prepress.html",
+    hero: "images/prepress-3/sticker-sheet-final.jpg"
+},
     {
         id: "bbq",
         title: "BBQ Chef",
