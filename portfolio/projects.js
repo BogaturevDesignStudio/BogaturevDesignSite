@@ -69,7 +69,7 @@ const projects = [
     type: "Gift Card Prepress",
     role: "Prepress Designer",
     url: "gift-card-prepress.html",
-    hero: "images/prepress-4/gift-cards-front.jpg"
+    hero: "images/prepress-4/gift-card-final-front.jpg"
 },
     {
         id: "bbq",
