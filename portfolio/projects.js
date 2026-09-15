@@ -81,7 +81,7 @@ const projects = [
     type: "Logo Design",
     role: "Graphic Designer",
     url: "oro-professional.html",
-    hero: "images/branding/oro-professional-logo.jpg"
+    hero: "images/logo-ORO/oro-professional-logo.jpg"
 },
     {
         id: "bbq",
