@@ -60,6 +60,18 @@ const projects = [
     hero: "images/prepress-3/sticker-sheet-final.png"
 },
     {
+    id: "gift-card-prepress",
+    title: "Gift Card",
+    category: "prepress",
+    categoryName: "Prepress",
+    client: "Client Project",
+    year: "2026",
+    type: "Gift Card Prepress",
+    role: "Prepress Designer",
+    url: "gift-card-prepress.html",
+    hero: "images/prepress-4/gift-cards-front.jpg"
+},
+    {
         id: "bbq",
         title: "BBQ Chef",
         category: "branding",
