@@ -72,6 +72,18 @@ const projects = [
     hero: "images/prepress-4/gift-card-final-front.jpg"
 },
     {
+    id: "oro-professional",
+    title: "ORO Professional",
+    category: "branding",
+    categoryName: "Logo Design",
+    client: "ORO Professional",
+    year: "2026",
+    type: "Logo Design",
+    role: "Graphic Designer",
+    url: "oro-professional.html",
+    hero: "images/..."
+},
+    {
         id: "bbq",
         title: "BBQ Chef",
         category: "branding",
