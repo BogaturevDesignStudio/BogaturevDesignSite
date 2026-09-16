@@ -57,7 +57,7 @@ const projects = [
     type: "Sticker Prepress",
     role: "Prepress Designer",
     url: "sticker-sheet-prepress.html",
-    hero: "images/prepress-3/sticker-sheet-final.png"
+    hero: "images/prepress-3/sticker-sheet.jpg"
 },
     {
     id: "gift-card-prepress",
