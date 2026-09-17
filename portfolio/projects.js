@@ -93,7 +93,7 @@ year: "2026",
 type: "Envelope Design",
 role: "Graphic Designer",
 url: "retro-envelope-design.html",
-hero: "retro-envelope-design.jpg"
+hero: "images/retro-envelope/retro-envelope-design.jpg"
 },
     {
         id: "bbq",
