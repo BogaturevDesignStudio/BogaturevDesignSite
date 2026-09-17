@@ -84,6 +84,18 @@ const projects = [
     hero: "images/logo-ORO/oro-professional-logo.jpg"
 },
     {
+id: "retro-envelope-design",
+title: "Retro Envelope Design",
+category: "graphic",
+categoryName: "Graphic Design",
+client: "Client Project",
+year: "2026",
+type: "Envelope Design",
+role: "Graphic Designer",
+url: "retro-envelope-design.html",
+hero: "retro-envelope-design.jpg"
+},
+    {
         id: "bbq",
         title: "BBQ Chef",
         category: "branding",
