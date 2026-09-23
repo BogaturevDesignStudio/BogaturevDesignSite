@@ -129,22 +129,6 @@ document.addEventListener('keydown', function(e) {
     enableScroll();
   }
 });
-/*скрипт кнопки смотреть работы*/
-  /* скрипт кнопки "Обо мне" */
-const toggleAboutBtn = document.getElementById("toggle-about-btn");
-const aboutSection = document.getElementById("about");
-const scrollTextSection = document.getElementById("scroll-text-section"); // ⬅ добавим ссылку на блок
-let isAboutVisible = false;
-
-toggleAboutBtn.addEventListener("click", () => {
-  isAboutVisible = !isAboutVisible;
-  aboutSection.classList.toggle("show", isAboutVisible);
-  toggleAboutBtn.textContent = isAboutVisible ? "Скрыть обо мне" : "Обо мне";
-  
-  if (isAboutVisible) {
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
-  }
-});
 /*джава скрипт*/
     const container = document.getElementById('skillsContainer');
     const section = document.getElementById('skillsSection');
