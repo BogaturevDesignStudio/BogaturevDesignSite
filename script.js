@@ -150,8 +150,11 @@ let isSkillsVisible = false;
 toggleSkillsBtn.addEventListener("click", () => {
   isSkillsVisible = !isSkillsVisible;
 
-skillsSection.classList.toggle("show", isSkillsVisible);
-  toggleSkillsBtn.textContent = isSkillsVisible ? "Скрыть навыки" : "Мои навыки";
+  skillsSection.style.display = isSkillsVisible ? "block" : "none";
+
+  toggleSkillsBtn.textContent = isSkillsVisible
+    ? "Скрыть навыки"
+    : "Мои навыки";
 
   if (isSkillsVisible) {
     skillsSection.scrollIntoView({ behavior: "smooth" });
