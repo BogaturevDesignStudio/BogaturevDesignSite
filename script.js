@@ -531,6 +531,19 @@ if ("ontouchstart" in window) {
   
   let lang = localStorage.getItem('lang') || 'ru';
 
+   // Кнопка "Мои навыки"
+  const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
+  const skillsSection = document.getElementById("skillsSection");
+  let isSkillsVisible = false;
+
+
+  // "Обо мне" теперь ведёт на отдельную страницу
+  // Старый JS-переключатель больше не используется.
+  const toggleAboutBtn = document.getElementById("toggle-about-btn");
+  const aboutSection = document.getElementById("about");
+  let isAboutVisible = false;
+
+
   function setLanguage(newLang) {
     lang = newLang;
     localStorage.setItem('lang', lang);
@@ -538,59 +551,63 @@ if ("ontouchstart" in window) {
     // Обновляем все элементы с data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
+
       if (translations[lang] && translations[lang][key]) {
         el.innerHTML = translations[lang][key];
       }
     });
 
-    // Обновляем кнопку просмотра проектов
-   
-// Кнопка "Мои навыки"
-const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
-const skillsSection = document.getElementById("skillsSection");
-let isSkillsVisible = false;
+    // Обновляем текст кнопки "Мои навыки"
+    if (toggleSkillsBtn) {
+      const btnKeySkills = isSkillsVisible
+        ? "skillsHide"
+        : "skillsShow";
 
-// "Обо мне" теперь ведёт на отдельную страницу /prepress-designer.html
-// Старый JS-переключатель "Обо мне" больше не нужен.
-const toggleAboutBtn = document.getElementById("toggle-about-btn");
-const aboutSection = document.getElementById("about");
-let isAboutVisible = false;
-
-
-// Обновляем кнопку "Мои навыки"
-if (toggleSkillsBtn) {
-  const btnKeySkills = isSkillsVisible ? "skillsHide" : "skillsShow";
-  toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
-}
-
-
-// Кнопка "Мои навыки"
-if (toggleSkillsBtn && skillsSection) {
-  toggleSkillsBtn.addEventListener("click", () => {
-    isSkillsVisible = !isSkillsVisible;
-    skillsSection.style.display = isSkillsVisible ? "block" : "none";
-
-    const btnKey = isSkillsVisible ? "skillsHide" : "skillsShow";
-    toggleSkillsBtn.innerHTML = translations[lang][btnKey];
-
-    if (isSkillsVisible) {
-      skillsSection.scrollIntoView({ behavior: "smooth" });
+      toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
     }
+  }
+
+
+  // Кнопка "Мои навыки"
+  if (toggleSkillsBtn && skillsSection) {
+    toggleSkillsBtn.addEventListener("click", () => {
+
+      isSkillsVisible = !isSkillsVisible;
+
+      skillsSection.style.display =
+        isSkillsVisible ? "block" : "none";
+
+      const btnKey = isSkillsVisible
+        ? "skillsHide"
+        : "skillsShow";
+
+      toggleSkillsBtn.innerHTML =
+        translations[lang][btnKey];
+
+      if (isSkillsVisible) {
+        skillsSection.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  }
+
+
+  // Переключение языка
+  document.querySelectorAll('[data-lang]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const selectedLang = e.currentTarget.dataset.lang;
+
+      setLanguage(selectedLang);
+    });
   });
-}
 
 
-// Переключение языка
-document.querySelectorAll('[data-lang]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    setLanguage(e.target.dataset.lang);
-  });
-});
+  // Инициализация страницы с сохранённым языком
+  setLanguage(lang);
 
-
-// Инициализация страницы с нужным языком
-setLanguage(lang);
 });
 //фоновая анимация//
   
