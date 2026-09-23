@@ -130,19 +130,20 @@ document.addEventListener('keydown', function(e) {
   }
 });
 /*джава скрипт*/
-    const container = document.getElementById('skillsContainer');
-    const section = document.getElementById('skillsSection');
+const container = document.getElementById('skillsContainer');
+const section = document.getElementById('skillsSection');
 
-    section.addEventListener('mousemove', (e) => {
-      const rect = section.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const scrollAmount = (x / rect.width - 0.5) * 2; // от -1 до 1
-      const maxTranslateX = (container.scrollWidth - rect.width);
-      const translateX = -maxTranslateX * (scrollAmount * 0.5 + 0.5); // от 0 до -max
+if (container && section) {
+  section.addEventListener('mousemove', (e) => {
+    const rect = section.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const scrollAmount = (x / rect.width - 0.5) * 2;
+    const maxTranslateX = (container.scrollWidth - rect.width);
+    const translateX = -maxTranslateX * (scrollAmount * 0.5 + 0.5);
 
-      container.style.transform = `translateX(${translateX}px)`;
-    });
-
+    container.style.transform = `translateX(${translateX}px)`;
+  });
+}
 const skillsWrap = document.getElementById("skillsContainer");
 const skillsSectionMobile = document.getElementById("skillsSection");
 
