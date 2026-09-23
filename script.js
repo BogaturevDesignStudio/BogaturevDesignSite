@@ -145,20 +145,6 @@ toggleAboutBtn.addEventListener("click", () => {
     aboutSection.scrollIntoView({ behavior: 'smooth' });
   }
 });
- const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
-const skillsSection = document.getElementById("skillsSection");
-let isSkillsVisible = false;
-
-toggleSkillsBtn.addEventListener("click", () => {
-  isSkillsVisible = !isSkillsVisible;
-
-skillsSection.classList.toggle("show", isSkillsVisible);
-  toggleSkillsBtn.textContent = isSkillsVisible ? "Скрыть навыки" : "Мои навыки";
-
-  if (isSkillsVisible) {
-    skillsSection.scrollIntoView({ behavior: "smooth" });
-  }
-});
 /*джава скрипт*/
     const container = document.getElementById('skillsContainer');
     const section = document.getElementById('skillsSection');
