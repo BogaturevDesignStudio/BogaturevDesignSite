@@ -552,7 +552,10 @@ if ("ontouchstart" in window) {
     const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
     toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
   }
-    
+    // Кнопка "Мои навыки"
+const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
+const skillsSection = document.getElementById("skillsSection");
+let isSkillsVisible = false;
     // Кнопка "Обо мне"
 const toggleAboutBtn = document.getElementById("toggle-about-btn");
 const aboutSection = document.getElementById("about");
