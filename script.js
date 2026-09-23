@@ -129,20 +129,6 @@ document.addEventListener('keydown', function(e) {
     enableScroll();
   }
 });
-/*скрипт кнопки смотреть работы*/
-const toggleBtn = document.getElementById("toggle-projects-btn");
-  const projectsSection = document.getElementById("projects");
-  let isVisible = false;
-
-  toggleBtn.addEventListener("click", () => {
-    isVisible = !isVisible;
-    projectsSection.classList.toggle("show", isVisible);
-    toggleBtn.textContent = isVisible ? "Скрыть работы" : "Смотреть работы";
-    
-    if (isVisible) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
   const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
 const skillsSection = document.getElementById("skillsSection");
 let isSkillsVisible = false;
