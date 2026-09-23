@@ -583,22 +583,6 @@ if (isVisible) {
       projectsSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
-    // Кнопка "Обо мне"
-const toggleAboutBtn = document.getElementById("toggle-about-btn");
-const aboutSection = document.getElementById("about");
-let isAboutVisible = false;
-
-toggleAboutBtn.addEventListener("click", () => {
-  isAboutVisible = !isAboutVisible;
-  aboutSection.style.display = isAboutVisible ? "block" : "none";
-
-  const btnKey = isAboutVisible ? "aboutHide" : "aboutShow";
-  toggleAboutBtn.innerHTML = translations[lang][btnKey];
-
-  if (isAboutVisible) {
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  }
-});
   document.querySelectorAll('[data-lang]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
