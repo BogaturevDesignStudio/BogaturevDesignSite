@@ -143,22 +143,7 @@ const toggleBtn = document.getElementById("toggle-projects-btn");
       projectsSection.scrollIntoView({ behavior: 'smooth' });
     }
   });
-  /* скрипт кнопки "Обо мне" */
-const toggleAboutBtn = document.getElementById("toggle-about-btn");
-const aboutSection = document.getElementById("about");
-const scrollTextSection = document.getElementById("scroll-text-section"); // ⬅ добавим ссылку на блок
-let isAboutVisible = false;
-
-toggleAboutBtn.addEventListener("click", () => {
-  isAboutVisible = !isAboutVisible;
-  aboutSection.classList.toggle("show", isAboutVisible);
-  toggleAboutBtn.textContent = isAboutVisible ? "Скрыть обо мне" : "Обо мне";
-  
-  if (isAboutVisible) {
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
-  }
-});
- const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
+  const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
 const skillsSection = document.getElementById("skillsSection");
 let isSkillsVisible = false;
 
