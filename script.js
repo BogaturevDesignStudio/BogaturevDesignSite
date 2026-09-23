@@ -607,15 +607,6 @@ toggleSkillsBtn.addEventListener("click", () => {
   // Инициализация страницы с нужным языком
   setLanguage(lang);
 });
-toggleSkillsBtn.addEventListener("click", () => {
-  isSkillsVisible = !isSkillsVisible;
-  console.log('Skills visible:', isSkillsVisible);
-  skillsSection.classList.toggle("show", isSkillsVisible);
-  toggleSkillsBtn.textContent = isSkillsVisible ? "Скрыть навыки" : "Мои навыки";
-  if (isSkillsVisible) {
-    skillsSection.scrollIntoView({ behavior: "smooth" });
-  }
-});
 //фоновая анимация//
   
   const blobs = document.querySelectorAll('.blob'); 
