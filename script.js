@@ -546,32 +546,39 @@ if ("ontouchstart" in window) {
     // Обновляем кнопку просмотра проектов
    
 
-    const btnKeyAbout = isAboutVisible ? 'aboutHide' : 'aboutShow';
-     toggleAboutBtn.innerHTML = translations[lang][btnKeyAbout];
+   if (toggleAboutBtn) {
+  const btnKeyAbout = isAboutVisible ? 'aboutHide' : 'aboutShow';
+  toggleAboutBtn.innerHTML = translations[lang][btnKeyAbout];
+}
 
-    const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
-    toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
-  }
+if (toggleSkillsBtn) {
+  const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
+  toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
+}
     // Кнопка "Мои навыки"
 const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
 const skillsSection = document.getElementById("skillsSection");
 let isSkillsVisible = false;
     // Кнопка "Обо мне"
+// Сейчас "Обо мне" ведёт на отдельную страницу /prepress-designer.html,
+// поэтому старый JS-переключатель больше не нужен.
 const toggleAboutBtn = document.getElementById("toggle-about-btn");
 const aboutSection = document.getElementById("about");
 let isAboutVisible = false;
 
-toggleAboutBtn.addEventListener("click", () => {
-  isAboutVisible = !isAboutVisible;
-  aboutSection.style.display = isAboutVisible ? "block" : "none";
+if (toggleAboutBtn && aboutSection) {
+  toggleAboutBtn.addEventListener("click", () => {
+    isAboutVisible = !isAboutVisible;
+    aboutSection.style.display = isAboutVisible ? "block" : "none";
 
-  const btnKey = isAboutVisible ? "aboutHide" : "aboutShow";
-  toggleAboutBtn.innerHTML = translations[lang][btnKey];
+    const btnKey = isAboutVisible ? "aboutHide" : "aboutShow";
+    toggleAboutBtn.innerHTML = translations[lang][btnKey];
 
-  if (isAboutVisible) {
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  }
-});
+    if (isAboutVisible) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}
 
 if (toggleSkillsBtn && skillsSection) {
   toggleSkillsBtn.addEventListener("click", () => {
