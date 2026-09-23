@@ -570,17 +570,19 @@ toggleAboutBtn.addEventListener("click", () => {
   }
 });
 
-toggleSkillsBtn.addEventListener("click", () => {
-  isSkillsVisible = !isSkillsVisible;
-  skillsSection.style.display = isSkillsVisible ? "block" : "none";
+if (toggleSkillsBtn && skillsSection) {
+  toggleSkillsBtn.addEventListener("click", () => {
+    isSkillsVisible = !isSkillsVisible;
+    skillsSection.style.display = isSkillsVisible ? "block" : "none";
 
-  const btnKey = isSkillsVisible ? "skillsHide" : "skillsShow";
-  toggleSkillsBtn.innerHTML = translations[lang][btnKey];
+    const btnKey = isSkillsVisible ? "skillsHide" : "skillsShow";
+    toggleSkillsBtn.innerHTML = translations[lang][btnKey];
 
-  if (isSkillsVisible) {
-    skillsSection.scrollIntoView({ behavior: "smooth" });
-  }
-});
+    if (isSkillsVisible) {
+      skillsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}
 
   document.querySelectorAll('[data-lang]').forEach(link => {
     link.addEventListener('click', e => {
