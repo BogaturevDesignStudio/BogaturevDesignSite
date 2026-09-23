@@ -539,7 +539,6 @@ const skillsSection = document.getElementById("skillsSection");
 
 let isVisible = false;
 let isSkillsVisible = false;
-let lang = localStorage.getItem('lang') || 'ru';
 
 function setLanguage(newLang) {
   lang = newLang;
