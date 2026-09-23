@@ -531,84 +531,77 @@ if ("ontouchstart" in window) {
   
   let lang = localStorage.getItem('lang') || 'ru';
 
-   // Кнопка "Мои навыки"
-  const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
-  const skillsSection = document.getElementById("skillsSection");
-  let isSkillsVisible = false;
+  const toggleBtn = document.getElementById("toggle-projects-btn");
+const projectsSection = document.getElementById("projects");
 
+const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
+const skillsSection = document.getElementById("skillsSection");
 
-  // "Обо мне" теперь ведёт на отдельную страницу
-  // Старый JS-переключатель больше не используется.
-  const toggleAboutBtn = document.getElementById("toggle-about-btn");
-  const aboutSection = document.getElementById("about");
-  let isAboutVisible = false;
+let isVisible = false;
+let isSkillsVisible = false;
+let lang = localStorage.getItem('lang') || 'ru';
 
+function setLanguage(newLang) {
+  lang = newLang;
+  localStorage.setItem('lang', lang);
 
-  function setLanguage(newLang) {
-    lang = newLang;
-    localStorage.setItem('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
 
-    // Обновляем все элементы с data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.dataset.i18n;
-
-      if (translations[lang] && translations[lang][key]) {
-        el.innerHTML = translations[lang][key];
-      }
-    });
-
-    // Обновляем текст кнопки "Мои навыки"
-    if (toggleSkillsBtn) {
-      const btnKeySkills = isSkillsVisible
-        ? "skillsHide"
-        : "skillsShow";
-
-      toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
+    if (translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
     }
-  }
-
-
-  // Кнопка "Мои навыки"
-  if (toggleSkillsBtn && skillsSection) {
-    toggleSkillsBtn.addEventListener("click", () => {
-
-      isSkillsVisible = !isSkillsVisible;
-
-      skillsSection.style.display =
-        isSkillsVisible ? "block" : "none";
-
-      const btnKey = isSkillsVisible
-        ? "skillsHide"
-        : "skillsShow";
-
-      toggleSkillsBtn.innerHTML =
-        translations[lang][btnKey];
-
-      if (isSkillsVisible) {
-        skillsSection.scrollIntoView({
-          behavior: "smooth"
-        });
-      }
-    });
-  }
-
-
-  // Переключение языка
-  document.querySelectorAll('[data-lang]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-
-      const selectedLang = e.currentTarget.dataset.lang;
-
-      setLanguage(selectedLang);
-    });
   });
 
+  if (toggleBtn) {
+    const btnKey = isVisible ? 'hide' : 'show';
+    toggleBtn.innerHTML = translations[lang][btnKey];
+  }
 
-  // Инициализация страницы с сохранённым языком
-  setLanguage(lang);
+  if (toggleSkillsBtn) {
+    const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
+    toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
+  }
+}
 
+if (toggleBtn && projectsSection) {
+  toggleBtn.addEventListener("click", () => {
+    isVisible = !isVisible;
+
+    projectsSection.classList.toggle("show", isVisible);
+
+    const btnKey = isVisible ? 'hide' : 'show';
+    toggleBtn.innerHTML = translations[lang][btnKey];
+
+    if (isVisible) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
+if (toggleSkillsBtn && skillsSection) {
+  toggleSkillsBtn.addEventListener("click", () => {
+    isSkillsVisible = !isSkillsVisible;
+
+    skillsSection.classList.toggle("show", isSkillsVisible);
+
+    const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
+    toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
+
+    if (isSkillsVisible) {
+      skillsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}
+
+document.querySelectorAll('[data-lang]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    setLanguage(e.currentTarget.dataset.lang);
+  });
 });
+
+setLanguage(lang);
 //фоновая анимация//
   
   const blobs = document.querySelectorAll('.blob'); 
