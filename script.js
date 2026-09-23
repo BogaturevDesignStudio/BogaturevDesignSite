@@ -545,41 +545,26 @@ if ("ontouchstart" in window) {
 
     // Обновляем кнопку просмотра проектов
    
-
-   if (toggleAboutBtn) {
-  const btnKeyAbout = isAboutVisible ? 'aboutHide' : 'aboutShow';
-  toggleAboutBtn.innerHTML = translations[lang][btnKeyAbout];
-}
-
-if (toggleSkillsBtn) {
-  const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
-  toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
-}
-    // Кнопка "Мои навыки"
+// Кнопка "Мои навыки"
 const toggleSkillsBtn = document.getElementById("toggle-skills-btn");
 const skillsSection = document.getElementById("skillsSection");
 let isSkillsVisible = false;
-    // Кнопка "Обо мне"
-// Сейчас "Обо мне" ведёт на отдельную страницу /prepress-designer.html,
-// поэтому старый JS-переключатель больше не нужен.
+
+// "Обо мне" теперь ведёт на отдельную страницу /prepress-designer.html
+// Старый JS-переключатель "Обо мне" больше не нужен.
 const toggleAboutBtn = document.getElementById("toggle-about-btn");
 const aboutSection = document.getElementById("about");
 let isAboutVisible = false;
 
-if (toggleAboutBtn && aboutSection) {
-  toggleAboutBtn.addEventListener("click", () => {
-    isAboutVisible = !isAboutVisible;
-    aboutSection.style.display = isAboutVisible ? "block" : "none";
 
-    const btnKey = isAboutVisible ? "aboutHide" : "aboutShow";
-    toggleAboutBtn.innerHTML = translations[lang][btnKey];
-
-    if (isAboutVisible) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  });
+// Обновляем кнопку "Мои навыки"
+if (toggleSkillsBtn) {
+  const btnKeySkills = isSkillsVisible ? "skillsHide" : "skillsShow";
+  toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
 }
 
+
+// Кнопка "Мои навыки"
 if (toggleSkillsBtn && skillsSection) {
   toggleSkillsBtn.addEventListener("click", () => {
     isSkillsVisible = !isSkillsVisible;
@@ -594,15 +579,18 @@ if (toggleSkillsBtn && skillsSection) {
   });
 }
 
-  document.querySelectorAll('[data-lang]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      setLanguage(e.target.dataset.lang);
-    });
-  });
 
-  // Инициализация страницы с нужным языком
-  setLanguage(lang);
+// Переключение языка
+document.querySelectorAll('[data-lang]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    setLanguage(e.target.dataset.lang);
+  });
+});
+
+
+// Инициализация страницы с нужным языком
+setLanguage(lang);
 });
 //фоновая анимация//
   
