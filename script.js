@@ -544,9 +544,6 @@ if ("ontouchstart" in window) {
     }
   };
 
-  const toggleBtn = document.getElementById("toggle-projects-btn");
-  const projectsSection = document.getElementById("projects");
-  let isVisible = false;
   let lang = localStorage.getItem('lang') || 'ru';
 
   function setLanguage(newLang) {
@@ -561,24 +558,10 @@ if ("ontouchstart" in window) {
       }
     });
 
-    // Обновляем кнопку просмотра проектов
-    const btnKey = isVisible ? 'hide' : 'show';
-    toggleBtn.innerHTML = translations[lang][btnKey];
-    const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
-    toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
+   // Обновляем кнопку навыков
+const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
+toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
   }
-
-  toggleBtn.addEventListener("click", () => {
-    isVisible = !isVisible;
-    projectsSection.style.display = isVisible ? "block" : "none";
-
-    // Обновляем текст кнопки с текущим языком
-    const btnKey = isVisible ? 'hide' : 'show';
-    toggleBtn.innerHTML = translations[lang][btnKey];
-if (isVisible) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
   document.querySelectorAll('[data-lang]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
