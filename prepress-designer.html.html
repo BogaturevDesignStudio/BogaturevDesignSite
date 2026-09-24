@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About — Bogaturev Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#151719;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    color:#fff;
+}
+
+#scene{
+    position:fixed;
+    inset:0;
+}
+
+canvas{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+#loading{
+    position:fixed;
+    inset:0;
+    z-index:20;
+    background:#151719;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    letter-spacing:4px;
+    color:#aaa;
+}
+
+#loading.hide{
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .8s ease;
+}
+
+/* UI */
+
+#ui{
+    position:fixed;
+    inset:0;
+    z-index:10;
+    pointer-events:none;
+}
+
+.logo{
+    position:absolute;
+    top:34px;
+    left:42px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#fff;
+    text-decoration:none;
+    cursor:pointer;
+    pointer-events:auto;
+}
+
+.logo span{
+    color:#d71920;
+}
+
+.scene-number{
+    position:absolute;
+
+    top:30px;
+    right:32px;
+
+    font-size:12px;
+    letter-spacing:3px;
+
+    color:#ffffff;
+
+    padding:12px 16px;
+
+    background:rgba(10,11,12,.65);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+}
+
+.scene-title{
+    position:absolute;
+
+    left:32px;
+    bottom:38px;
+
+    font-size:clamp(52px,7vw,110px);
+    line-height:.88;
+
+    font-weight:700;
+    letter-spacing:-4px;
+
+    max-width:55%;
+
+    color:#ffffff;
+
+    padding:
+        18px 26px
+        20px 26px;
+
+    background:rgba(10,11,12,.62);
+
+    border-left:3px solid #d71920;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.45);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    text-shadow:
+        0 3px 18px rgba(0,0,0,.8);
+}
+
+.scene-title span{
+    color:#d71920;
+}
+
+.scene-description{
+    position:absolute;
+
+    right:32px;
+    bottom:38px;
+
+    width:min(520px,38vw);
+
+    padding:
+        24px 28px
+        26px 28px;
+
+    font-size:18px;
+    line-height:1.65;
+
+    font-weight:400;
+
+    color:#f0f0f0;
+
+    background:rgba(10,11,12,.72);
+
+    border-right:3px solid #d71920;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.5);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    text-shadow:
+        0 2px 12px rgba(0,0,0,.8);
+}
+
+.scroll{
+    position:absolute;
+
+    left:50%;
+    top:28px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:4px;
+
+    color:#ffffff;
+
+    padding:12px 18px;
+
+    background:rgba(10,11,12,.68);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.4);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+}
+
+.scroll::after{
+    content:"";
+
+    width:34px;
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            #d71920,
+            rgba(215,25,32,0)
+        );
+
+    animation:
+        scrollPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollPulse{
+
+    0%{
+        transform:translateX(0);
+        opacity:.35;
+    }
+
+    50%{
+        transform:translateX(7px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateX(0);
+        opacity:.35;
+    }
+
+}
+
+.scroll-line{
+    width:1px;
+    height:70px;
+    background:#555;
+    margin-top:15px;
+}
+/* =========================================================
+   MOBILE SLIDER
+========================================================= */
+
+.mobile-slider{
+    display:none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .mobile-slider{
+        position:absolute;
+
+        left:22px;
+        right:22px;
+        bottom:22px;
+
+        display:block;
+
+        padding:14px 16px 12px;
+
+        background:rgba(10,11,12,.78);
+
+        border:1px solid rgba(255,255,255,.12);
+
+        box-shadow:
+            0 10px 35px rgba(0,0,0,.45);
+
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+
+        pointer-events:auto;
+    }
+
+
+    .mobile-slider-track{
+        position:relative;
+
+        width:100%;
+        height:3px;
+
+        background:#444;
+
+        cursor:pointer;
+    }
+
+
+    .mobile-slider-progress{
+        position:absolute;
+
+        left:0;
+        top:0;
+
+        width:0%;
+        height:100%;
+
+        background:#d71920;
+
+        box-shadow:
+            0 0 10px rgba(215,25,32,.5);
+    }
+
+
+    .mobile-slider-thumb{
+        position:absolute;
+
+        top:50%;
+        left:0%;
+
+        width:18px;
+        height:18px;
+
+        transform:
+            translate(-50%,-50%);
+
+        border-radius:50%;
+
+        background:#151719;
+
+        border:2px solid #d71920;
+
+        box-shadow:
+            0 0 0 4px rgba(215,25,32,.12),
+            0 4px 15px rgba(0,0,0,.5);
+    }
+
+
+    .mobile-slider-label{
+        display:flex;
+
+        justify-content:space-between;
+        align-items:center;
+
+        margin-top:11px;
+
+        font-size:9px;
+        font-weight:600;
+
+        letter-spacing:2px;
+
+        color:#aaa;
+    }
+
+
+    .mobile-slider-label span:nth-child(2){
+        color:#fff;
+    }
+
+
+    .logo{
+        top:22px;
+        left:22px;
+    }
+
+
+    .scene-number{
+        top:22px;
+        right:22px;
+    }
+
+
+    .scene-title{
+        left:22px;
+        right:22px;
+
+        bottom:105px;
+
+        max-width:none;
+
+        font-size:
+            clamp(38px,12vw,58px);
+
+        line-height:.9;
+
+        letter-spacing:-2px;
+
+        padding:
+            14px 18px
+            16px 18px;
+    }
+
+
+    .scene-description{
+        display:none;
+    }
+
+
+    .scroll{
+        display:none;
+    }
+
+}
+/* mobile */
+
+@media(max-width:700px){
+
+    .logo{
+        top:22px;
+        left:22px;
+    }
+
+    .scene-number{
+        top:22px;
+        right:22px;
+    }
+
+    .scene-title{
+    left:22px;
+    right:22px;
+    bottom:130px;
+
+    max-width:none;
+
+    font-size:30px;
+    line-height:.95;
+    letter-spacing:-1.2px;
+
+    padding:10px 14px 11px;
+
+    border-left:2px solid #d71920;
+
+    background:rgba(10,11,12,.78);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.4);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+}
+
+
+.scene-description{
+    display:block;
+
+    left:22px;
+    right:22px;
+    bottom:22px;
+
+    width:auto;
+
+    padding:10px 14px 11px;
+
+    font-size:11px;
+    line-height:1.35;
+
+    color:#e8e8e8;
+
+    background:rgba(10,11,12,.78);
+
+    border-right:2px solid #d71920;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.4);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+}
+.mobile-slider{
+        display:none;
+    }
+
+    .scroll{
+        right:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="loading">LOADING EXPERIENCE</div>
+
+<div id="scene"></div>
+
+<div id="ui">
+
+    <a href="https://bogaturevdesign.com/#" class="logo">
+    bogaturevdesign<span>.</span>com
+</a>
+
+    <div class="scene-number" id="sceneNumber">
+        01 / 07
+    </div>
+
+    <div class="scene-title" id="sceneTitle">
+    PREPRESS DESIGNER
+</div>
+
+<div class="scene-description" id="sceneDescription">
+    I’m Evgeniy Bogatyrev — a prepress specialist and graphic designer.
+    I prepare visual projects for real print production, combining design
+    knowledge with practical prepress experience.
+</div>
+
+    <div class="scroll" id="scrollHint">
+    SCROLL TO EXPLORE
+</div>
+
+</div>
+<div class="mobile-slider" id="mobileSlider">
+    <div class="mobile-slider-track">
+        <div class="mobile-slider-progress" id="mobileSliderProgress"></div>
+        <div class="mobile-slider-thumb" id="mobileSliderThumb"></div>
+    </div>
+
+    <div class="mobile-slider-label">
+        <span>01</span>
+        <span>DRAG TO EXPLORE</span>
+        <span>07</span>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+<script>
+
+/* =========================================================
+   BASIC SETUP
+========================================================= */
+
+const scene = new THREE.Scene();
+
+scene.background = new THREE.Color(0x151719);
+
+scene.fog = new THREE.Fog(
+    0x151719,
+    24,
+    75
+);
+
+
+const camera = new THREE.PerspectiveCamera(
+    42,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    200
+);
+
+camera.position.set(
+    17,
+    11,
+    25
+);
+
+
+const renderer = new THREE.WebGLRenderer({
+    antialias:true,
+    powerPreference:"high-performance"
+});
+
+renderer.setPixelRatio(
+    Math.min(window.devicePixelRatio,2)
+);
+
+renderer.setSize(
+    window.innerWidth,
+    window.innerHeight
+);
+
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.35;
+
+document
+    .getElementById("scene")
+    .appendChild(renderer.domElement);
+
+
+/* =========================================================
+   LIGHTING
+========================================================= */
+
+/* General room light */
+
+const ambient = new THREE.HemisphereLight(
+    0xffffff,
+    0x555555,
+    2.5
+);
+
+scene.add(ambient);
+
+
+/* Main industrial ceiling light */
+
+const mainLight = new THREE.DirectionalLight(
+    0xffffff,
+    4
+);
+
+mainLight.position.set(
+    3,
+    18,
+    8
+);
+
+mainLight.castShadow = true;
+
+mainLight.shadow.mapSize.width = 2048;
+mainLight.shadow.mapSize.height = 2048;
+
+scene.add(mainLight);
+
+
+/* Front fill */
+
+const frontLight = new THREE.DirectionalLight(
+    0xdde6ff,
+    2
+);
+
+frontLight.position.set(
+    0,
+    7,
+    22
+);
+
+scene.add(frontLight);
+
+
+/* Red accent */
+
+const redLight = new THREE.PointLight(
+    0xd71920,
+    12,
+    28
+);
+
+redLight.position.set(
+    -10,
+    6,
+    4
+);
+
+scene.add(redLight);
+
+
+/* Back light */
+
+const backLight = new THREE.PointLight(
+    0xffffff,
+    7,
+    35
+);
+
+backLight.position.set(
+    8,
+    10,
+    -15
+);
+
+scene.add(backLight);
+
+/* =========================================================
+   MOBILE LIGHT
+========================================================= */
+
+let mobileFillLight = null;
+
+if(window.innerWidth <= 700){
+
+    mobileFillLight =
+        new THREE.DirectionalLight(
+            0xffffff,
+            8.0
+        );
+
+    mobileFillLight.position.set(
+        0,
+        16,
+        20
+    );
+
+    scene.add(mobileFillLight);
+
+}
+/* =========================================================
+   MOBILE FRONT FILL
+========================================================= */
+
+/* =========================================================
+   MOBILE FRONT FILL
+========================================================= */
+
+let mobileFrontFill = null;
+
+if(window.innerWidth <= 700){
+
+    mobileFrontFill =
+        new THREE.DirectionalLight(
+            0xffffff,
+            10.0
+        );
+
+    mobileFrontFill.position.set(
+        0,
+        10,
+        30
+    );
+
+    scene.add(mobileFrontFill);
+
+}
+/* =========================================================
+   MATERIALS
+========================================================= */
+
+const metalLight = new THREE.MeshStandardMaterial({
+    color:0xbfc3c7,
+    metalness:.82,
+    roughness:.28
+});
+
+const metalDark = new THREE.MeshStandardMaterial({
+    color:0x34383c,
+    metalness:.85,
+    roughness:.25
+});
+
+const blackMetal = new THREE.MeshStandardMaterial({
+    color:0x16191c,
+    metalness:.8,
+    roughness:.2
+});
+
+const redMetal = new THREE.MeshStandardMaterial({
+    color:0xb70f17,
+    metalness:.7,
+    roughness:.28
+});
+
+const rubber = new THREE.MeshStandardMaterial({
+    color:0x101112,
+    metalness:.15,
+    roughness:.65
+});
+
+const glass = new THREE.MeshPhysicalMaterial({
+    color:0x6f8490,
+    metalness:.1,
+    roughness:.12,
+    transparent:true,
+    opacity:.45
+});
+
+const whitePaper = new THREE.MeshStandardMaterial({
+    color:0xffffff,
+    roughness:.6,
+    metalness:0
+});
+
+const printedPaper = new THREE.MeshStandardMaterial({
+    color:0xf4f4f4,
+    roughness:.5
+});
+
+
+/* =========================================================
+   HELPERS
+========================================================= */
+
+function box(
+    w,
+    h,
+    d,
+    material,
+    x,
+    y,
+    z
+){
+
+    const geometry =
+        new THREE.BoxGeometry(
+            w,
+            h,
+            d
+        );
+
+    const mesh =
+        new THREE.Mesh(
+            geometry,
+            material
+        );
+
+    mesh.position.set(
+        x,
+        y,
+        z
+    );
+
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+
+    machine.add(mesh);
+
+    return mesh;
+}
+
+
+function cylinder(
+    radius,
+    length,
+    material,
+    x,
+    y,
+    z,
+    rotationX=0,
+    rotationY=0,
+    rotationZ=0
+){
+
+    const geometry =
+        new THREE.CylinderGeometry(
+            radius,
+            radius,
+            length,
+            48
+        );
+
+    const mesh =
+        new THREE.Mesh(
+            geometry,
+            material
+        );
+
+    mesh.position.set(
+        x,
+        y,
+        z
+    );
+
+    mesh.rotation.set(
+        rotationX,
+        rotationY,
+        rotationZ
+    );
+
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+
+    machine.add(mesh);
+
+    return mesh;
+}
+
+
+/* =========================================================
+   MACHINE
+========================================================= */
+
+const machine = new THREE.Group();
+
+machine.position.y = 0;
+
+scene.add(machine);
+
+
+/* =========================================================
+   MAIN BASE
+========================================================= */
+
+box(
+    19,
+    1.2,
+    5.6,
+    blackMetal,
+    0,
+    2.1,
+    0
+);
+
+
+/* lower supports */
+
+box(
+    17,
+    2.8,
+    4.8,
+    metalDark,
+    0,
+    .8,
+    0
+);
+
+
+/* feet */
+
+for(let x of [-7.5,-3.7,0,3.7,7.5]){
+
+    box(
+        1.1,
+        .8,
+        4.7,
+        blackMetal,
+        x,
+        -.8,
+        0
+    );
+
+}
+
+
+/* =========================================================
+   PRINTING SECTIONS
+========================================================= */
+
+const sections = [-6,-2,2,6];
+
+sections.forEach((x,i)=>{
+
+    /* section body */
+
+    box(
+        3.4,
+        6,
+        5.2,
+        i % 2 === 0
+            ? metalLight
+            : metalDark,
+        x,
+        5.3,
+        0
+    );
+
+
+    /* red side panel */
+
+    box(
+        .22,
+        5.4,
+        5.25,
+        redMetal,
+        x-1.72,
+        5.3,
+        0
+    );
+
+
+    /* top cover */
+
+    box(
+        3.6,
+        .45,
+        5.45,
+        metalDark,
+        x,
+        8.35,
+        0
+    );
+
+
+    /* top highlight */
+
+    box(
+        2.8,
+        .12,
+        4.8,
+        metalLight,
+        x,
+        8.62,
+        0
+    );
+
+
+    /* visible rollers */
+
+    cylinder(
+        .75,
+        4.8,
+        rubber,
+        x,
+        5.0,
+        0,
+        Math.PI/2,
+        0,
+        0
+    );
+
+
+    cylinder(
+        .55,
+        4.9,
+        metalLight,
+        x,
+        6.35,
+        0,
+        Math.PI/2,
+        0,
+        0
+    );
+
+
+    cylinder(
+        .4,
+        4.9,
+        redMetal,
+        x,
+        3.8,
+        0,
+        Math.PI/2,
+        0,
+        0
+    );
+
+
+    /* front inspection window */
+
+    box(
+        2.5,
+        1.8,
+        .18,
+        glass,
+        x,
+        6.6,
+        2.65
+    );
+
+
+    /* small control strip */
+
+    box(
+        2.5,
+        .25,
+        .25,
+        blackMetal,
+        x,
+        7.7,
+        2.72
+    );
+
+});
+
+
+/* =========================================================
+   FEED SECTION
+========================================================= */
+
+box(
+    5.5,
+    .7,
+    5.8,
+    metalLight,
+    10.8,
+    3.1,
+    0
+);
+
+box(
+    4.7,
+    .3,
+    5.2,
+    metalDark,
+    11,
+    3.55,
+    0
+);
+
+
+/* feed rollers */
+
+for(let i=0;i<5;i++){
+
+    cylinder(
+        .35,
+        4.9,
+        rubber,
+        9.3 + i*.8,
+        4.0,
+        0,
+        Math.PI/2,
+        0,
+        0
+    );
+
+}
+
+
+/* =========================================================
+   OUTPUT SECTION
+========================================================= */
+
+box(
+    5.5,
+    .7,
+    5.8,
+    metalLight,
+    -10.8,
+    3.1,
+    0
+);
+
+box(
+    4.7,
+    .3,
+    5.2,
+    metalDark,
+    -11,
+    3.55,
+    0
+);
+
+
+/* =========================================================
+   PAPER TRAYS
+========================================================= */
+
+box(
+    6,
+    .18,
+    5.6,
+    metalLight,
+    13,
+    5.1,
+    0
+);
+
+box(
+    6,
+    .18,
+    5.6,
+    metalLight,
+    -13,
+    5.1,
+    0
+);
+
+
+/* =========================================================
+   CONTROL PANEL
+========================================================= */
+
+box(
+    2.5,
+    2.2,
+    .35,
+    blackMetal,
+    9,
+    5.8,
+    3.1
+);
+
+box(
+    1.8,
+    1.2,
+    .12,
+    glass,
+    9,
+    6.1,
+    3.35
+);
+
+
+/* buttons */
+
+for(let i=0;i<6;i++){
+
+    const material =
+        i === 0
+        ? redMetal
+        : metalLight;
+
+    cylinder(
+        .09,
+        .15,
+        material,
+        8.3 + (i%3)*.6,
+        5.35 + Math.floor(i/3)*.45,
+        3.38,
+        Math.PI/2,
+        0,
+        0
+    );
+
+}
+
+
+/* =========================================================
+   PAPER
+========================================================= */
+
+const paper = new THREE.Group();
+
+scene.add(paper);
+
+paper.position.set(
+    13,
+    5.35,
+    0
+);
+
+
+const paperSheet = new THREE.Mesh(
+    new THREE.BoxGeometry(
+        4.5,
+        .05,
+        6
+    ),
+    whitePaper
+);
+
+paperSheet.castShadow = true;
+
+paper.add(paperSheet);
+
+
+/* printed red graphic */
+
+const printMaterial =
+    new THREE.MeshBasicMaterial({
+        color:0xd71920
+    });
+
+
+const printBlock =
+    new THREE.Mesh(
+        new THREE.BoxGeometry(
+            2.8,
+            .03,
+            .55
+        ),
+        printMaterial
+    );
+
+printBlock.position.y=.04;
+
+paper.add(printBlock);
+
+
+/* second print */
+
+const printBlock2 =
+    new THREE.Mesh(
+        new THREE.BoxGeometry(
+            1.8,
+            .03,
+            .22
+        ),
+        blackMetal
+    );
+
+printBlock2.position.set(
+    0,
+    .045,
+    -.9
+);
+
+paper.add(printBlock2);
+
+
+/* =========================================================
+   FLOOR
+========================================================= */
+
+const floorMaterial =
+    new THREE.MeshStandardMaterial({
+        color:0x303438,
+        metalness:.35,
+        roughness:.65
+    });
+
+const floor =
+    new THREE.Mesh(
+        new THREE.PlaneGeometry(
+            120,
+            120
+        ),
+        floorMaterial
+    );
+
+floor.rotation.x=-Math.PI/2;
+floor.position.y=-1.2;
+
+floor.receiveShadow=true;
+
+scene.add(floor);
+
+
+/* =========================================================
+   FLOOR GRID
+========================================================= */
+
+const grid =
+    new THREE.GridHelper(
+        100,
+        50,
+        0x55595c,
+        0x34383b
+    );
+
+grid.position.y=-1.18;
+
+scene.add(grid);
+
+
+/* =========================================================
+   CEILING LIGHTS
+========================================================= */
+
+for(let x=-20;x<=20;x+=8){
+
+    const light =
+        new THREE.Mesh(
+            new THREE.BoxGeometry(
+                5,
+                .08,
+                .6
+            ),
+            new THREE.MeshBasicMaterial({
+                color:0xffffff
+            })
+        );
+
+    light.position.set(
+        x,
+        16,
+        -4
+    );
+
+    scene.add(light);
+
+}
+
+
+/* =========================================================
+   CAMERA
+========================================================= */
+
+const cameraPositions = [
+
+    {
+        pos:[20,12,27],
+        look:[0,4,0]
+    },
+
+    {
+        pos:[16,10,25],
+        look:[0,4.5,0]
+    },
+
+    {
+        pos:[10,9,27],
+        look:[0,4,0]
+    },
+
+    {
+        pos:[0,10,29],
+        look:[0,4.5,0]
+    },
+
+    {
+        pos:[-10,9,27],
+        look:[0,4,0]
+    },
+
+    {
+        pos:[-16,10,25],
+        look:[0,4.5,0]
+    },
+
+    {
+        pos:[-20,12,27],
+        look:[0,4,0]
+    }
+
+];
+
+
+/* =========================================================
+   SCENES
+========================================================= */
+
+const scenes = [
+
+    {
+    title:"PREPRESS DESIGNER",
+    description:
+    "I’m Evgeniy Bogatyrev — a prepress specialist and graphic designer. I prepare visual projects for real print production, combining design knowledge with practical prepress experience."
+},
+
+    {
+        title:"DESIGN",
+        description:
+        "I create visual designs for packaging, labels, cards, promotional materials, logos and other printed products. Every layout is built with clear composition, typography and the final application in mind."
+    },
+
+    {
+        title:"PREPRESS",
+        description:
+        "I prepare and technically check artwork before it goes to print: document size, bleeds, CMYK and spot colours, image resolution, fonts, overprint, trapping and PDF settings. My job is to catch technical problems before they reach production."
+    },
+
+    {
+        title:"PRODUCTION",
+        description:
+        "A file can look perfect on screen and still cause problems in production. I prepare artwork according to the requirements of the printing process, materials, dimensions and finishing, so the production team can work with the file correctly."
+    },
+
+    {
+        title:"PRINT",
+        description:
+        "The final goal is not a perfect file on a monitor. It is a correctly produced physical result — packaging, labels, cards, signs and other printed products. I work with artwork knowing that it will eventually become something real."
+    },
+
+    {
+        title:"EXPERIENCE",
+        description:
+        "I have 6+ years of practical experience in prepress and print production. I work with Adobe Illustrator and Photoshop and understand the technical details that can affect the final result before a file reaches the press."
+    },
+
+    {
+        title:"LET'S WORK",
+        description:
+        "Have an existing design that needs professional prepress? Need a new design prepared correctly for production? I can take your artwork from the initial file to a print-ready result."
+    }
+
+];
+
+
+let progress = 0;
+let currentScene = 0;
+
+let targetScroll = 0;
+let scrollTarget = 0;
+
+let scrollLocked = false;
+let scrollTimer = null;
+
+const sectionCount = 7;
+const sectionStep = 1 / (sectionCount - 1);
+
+let hasScrolled = false;
+
+const scrollHint =
+    document.getElementById("scrollHint");
+/* =========================================================
+   SCROLL
+========================================================= */
+window.addEventListener(
+    "wheel",
+    function(e){
+
+        e.preventDefault();
+
+
+        /*
+        ========================================
+        FIRST SCROLL — HIDE SCROLL HINT
+        ========================================
+        */
+
+        if(
+            !hasScrolled &&
+            Math.abs(e.deltaY) > 2
+        ){
+
+            hasScrolled = true;
+
+            scrollHint.style.opacity = "0";
+
+            scrollHint.style.transform =
+                "translateX(-50%) translateY(-12px)";
+
+        }
+
+
+        /*
+        ========================================
+        SECTION SCROLL
+        ========================================
+        */
+
+        if(scrollLocked) return;
+
+        scrollLocked = true;
+
+
+        if(e.deltaY > 0){
+
+            currentScene =
+                Math.min(
+                    6,
+                    currentScene + 1
+                );
+
+        }else{
+
+            currentScene =
+                Math.max(
+                    0,
+                    currentScene - 1
+                );
+
+        }
+
+
+        /*
+        ========================================
+        MOVE TO EXACT SECTION
+        ========================================
+        */
+
+        targetScroll =
+            currentScene / 6;
+
+
+        /*
+        ========================================
+        UNLOCK AFTER ANIMATION
+        ========================================
+        */
+
+        clearTimeout(scrollTimer);
+
+        scrollTimer = setTimeout(
+            function(){
+
+                scrollLocked = false;
+
+            },
+            650
+        );
+
+    },
+    {
+        passive:false
+    }
+);
+
+/* =========================================================
+   TOUCH
+========================================================= */
+
+let touchStart=0;
+
+window.addEventListener(
+    "touchstart",
+    e=>{
+        touchStart=e.touches[0].clientY;
+    }
+);
+
+window.addEventListener(
+    "touchmove",
+    e=>{
+
+        const current =
+            e.touches[0].clientY;
+
+        const delta =
+            touchStart-current;
+
+        targetScroll += delta*.001;
+
+        targetScroll =
+            Math.max(
+                0,
+                Math.min(
+                    1,
+                    targetScroll
+                )
+            );
+
+        touchStart=current;
+
+    }
+);
+
+
+/* =========================================================
+   MOUSE
+========================================================= */
+
+let mouseX=0;
+let mouseY=0;
+
+window.addEventListener(
+    "mousemove",
+    e=>{
+
+        mouseX =
+            (e.clientX/window.innerWidth-.5);
+
+        mouseY =
+            (e.clientY/window.innerHeight-.5);
+
+    }
+);
+
+
+/* =========================================================
+   UI UPDATE
+========================================================= */
+
+const title =
+    document.getElementById(
+        "sceneTitle"
+    );
+
+const description =
+    document.getElementById(
+        "sceneDescription"
+    );
+
+const number =
+    document.getElementById(
+        "sceneNumber"
+    );
+
+
+function updateScene(){
+
+   const index = Math.min(
+    6,
+    Math.round(progress * 6)
+);
+
+    if(index !== currentScene){
+
+        currentScene=index;
+
+        title.innerHTML =
+            scenes[index].title;
+
+        description.innerHTML =
+            scenes[index].description;
+
+        number.innerHTML =
+            String(index+1).padStart(2,"0")
+            +
+            " / 07";
+
+    }
+
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+const clock =
+    new THREE.Clock();
+
+
+function animate(){
+
+    requestAnimationFrame(
+        animate
+    );
+
+
+    progress +=
+        (targetScroll-progress)
+        * .055;
+
+
+    updateScene();
+
+
+    /* -----------------------------------------------------
+       PAPER MOVEMENT
+    ----------------------------------------------------- */
+
+    const paperProgress = progress;
+
+    paper.position.x =
+        13 -
+        paperProgress*26;
+
+
+    /* -----------------------------------------------------
+       PAPER ROTATION
+    ----------------------------------------------------- */
+
+    paper.rotation.z =
+        Math.sin(
+            progress*Math.PI*3
+        )*.025;
+
+
+    /* -----------------------------------------------------
+       MACHINE DETAIL MOVEMENT
+    ----------------------------------------------------- */
+
+    machine.rotation.y =
+        Math.sin(
+            progress*Math.PI*2
+        )*.025;
+
+
+    /* -----------------------------------------------------
+       CAMERA
+    ----------------------------------------------------- */
+
+    const exact =
+        progress*6;
+
+    const a =
+        Math.floor(exact);
+
+    const b =
+        Math.min(
+            a+1,
+            6
+        );
+
+    const t =
+        exact-a;
+
+
+    const A =
+        cameraPositions[a];
+
+    const B =
+        cameraPositions[b];
+
+
+    const x =
+        THREE.MathUtils.lerp(
+            A.pos[0],
+            B.pos[0],
+            t
+        );
+
+    const y =
+        THREE.MathUtils.lerp(
+            A.pos[1],
+            B.pos[1],
+            t
+        );
+
+    const z =
+        THREE.MathUtils.lerp(
+            A.pos[2],
+            B.pos[2],
+            t
+        );
+
+
+    const isMobile =
+    window.innerWidth <= 700;
+
+let mobileCameraOffset = 0;
+
+if(isMobile){
+
+    if(window.innerWidth <= 320){
+
+        mobileCameraOffset = 16;
+
+    }
+    else if(window.innerWidth <= 375){
+
+        mobileCameraOffset = 27;
+
+    }
+    else if(window.innerWidth <= 425){
+
+        mobileCameraOffset = 24;
+
+    }
+    else{
+
+        mobileCameraOffset = 21;
+
+    }
+
+}
+
+
+
+    const lookX =
+        THREE.MathUtils.lerp(
+            A.look[0],
+            B.look[0],
+            t
+        );
+
+    const lookY =
+        THREE.MathUtils.lerp(
+            A.look[1],
+            B.look[1],
+            t
+        );
+
+    if(isMobile){
+
+    /*
+     * MOBILE PAPER FOCUS
+     * Лист является главным объектом кадра.
+     */
+
+    const paperFocusX =
+        paper.position.x;
+
+    camera.position.x =
+        paperFocusX;
+
+    camera.position.y =
+        y + 20;
+
+    camera.position.z =
+        z + mobileCameraOffset - 20;
+
+    // Поворот взгляда камеры вдоль прохождения листа
+const viewProgress = THREE.MathUtils.clamp(
+    (13 - paper.position.x) / 26,
+    0,
+    1
+);
+
+// В начале смотрим левее,
+// после прохождения половины станка — правее
+const lookOffset = THREE.MathUtils.lerp(
+    -3,
+    3,
+    viewProgress
+);
+
+camera.lookAt(
+    paperFocusX + lookOffset,
+    5.35,
+    0
+);
+
+}else{
+
+    camera.position.x =
+        x + mouseX * 1.2;
+
+    camera.position.y =
+        y - mouseY * 0.7;
+
+    camera.position.z =
+        z;
+
+    camera.lookAt(
+        lookX,
+        lookY,
+        0
+    );
+
+}
+
+
+    /* subtle roller movement */
+
+    machine.children.forEach(
+        object=>{
+
+            if(
+                object.geometry &&
+                object.geometry.type ===
+                "CylinderGeometry"
+            ){
+
+                object.rotation.y +=
+                    .002;
+
+            }
+
+        }
+    );
+
+
+    renderer.render(
+        scene,
+        camera
+    );
+
+}
+
+
+animate();
+
+
+/* =========================================================
+   RESIZE
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    ()=>{
+
+        camera.aspect =
+            window.innerWidth/
+            window.innerHeight;
+
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(
+            window.innerWidth,
+            window.innerHeight
+        );
+
+    }
+);
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+setTimeout(
+    ()=>{
+        document
+            .getElementById("loading")
+            .classList.add("hide");
+    },
+    900
+);
+
+</script>
+
+</body>
+</html>
