@@ -564,10 +564,6 @@ if ("ontouchstart" in window) {
     // Обновляем кнопку просмотра проектов
     const btnKey = isVisible ? 'hide' : 'show';
     toggleBtn.innerHTML = translations[lang][btnKey];
-
-    const btnKeyAbout = isAboutVisible ? 'aboutHide' : 'aboutShow';
-     toggleAboutBtn.innerHTML = translations[lang][btnKeyAbout];
-
     const btnKeySkills = isSkillsVisible ? 'skillsHide' : 'skillsShow';
     toggleSkillsBtn.innerHTML = translations[lang][btnKeySkills];
   }
