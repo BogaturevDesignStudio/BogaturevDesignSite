@@ -1,23 +1,4 @@
-
-  const targetWords = ["Designer", "Дизайнер"];
-  const scrollTextElements = document.querySelectorAll('.scroll-text');
-
-  scrollTextElements.forEach(el => {
-    let html = el.innerHTML;
-
-    targetWords.forEach(word => {
-      const regex = new RegExp(word, 'g');
-      const colored = word.split('').map((char, i) =>
-        `<span class="colored-letter-${i % 8}">${char}</span>`
-      ).join('');
-      html = html.replace(regex, colored);
-    });
-
-    el.innerHTML = html;
-  });
-
-
-  window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".main-header");
     const headerHeight = header.offsetHeight;
     document.body.style.paddingTop = headerHeight + "px";
