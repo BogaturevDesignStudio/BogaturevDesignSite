@@ -597,7 +597,7 @@ aboutScene7Description: "У вас уже є дизайн, якому потрі
       footer: "&copy; 2025 Євгеній Богатирьов"
     }
   };
-
+window.siteTranslations = translations;
   let lang = localStorage.getItem('lang') || 'ru';
 
   function setLanguage(newLang) {
