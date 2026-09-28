@@ -388,33 +388,10 @@ footer {
 .about {
   display: none;
 }
-.scroll-text-wrapper:first-of-type {
-}
-/*.scroll-text-wrapper::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: #333;
-  opacity: 0.3;
-  margin: 0;*/
-}
 .center-btn-wrapper {
   display: flex;
   justify-content: center;  /* Центрирует кнопку по горизонтали */
   margin-top: 40px;         /* Отступ сверху */
-}
-.scroll-text-wrapper {
-  width: 100%;
-  height: 33vh;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  font-size: 8vw;
-  font-weight: bold;
-  color: #ffffff;
-  white-space:nowrap;
-  background-color: #000;
-
 }
 /*вверху часть 4 адаптация сайта */
 /* === АДАПТИВНОСТЬ === */
@@ -427,10 +404,6 @@ footer {
   .header-photo {
     width: 80px;
     height: 80px;
-  }
-  .scroll-text-wrapper {
-    font-size: 6vw; /* уменьшаем текст */
-    height: 28vh;
   }
 }
 
@@ -449,11 +422,6 @@ footer {
   transform: translateY(50%); /* 👉 перемещение изображения вниз, не растягивает контейнер */
 
 }
-  .scroll-text-wrapper {
-    font-size: 8vw;
-    height: 25vh;
-    text-align: center; /* центрируем текст */
-  }
 }
 
 /* Очень маленькие экраны (до 480px) */
@@ -461,53 +429,9 @@ footer {
   .header-photo {
     display: none;
   }
-  .scroll-text-wrapper {
-    font-size: 10vw;
-    height: 20vh;
-  }
 }
 
 /*закончилась адаптация 4*/
-
-.scroll-text {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 64s linear infinite;
-   align-items: center;
-}
-.scroll-text.reverse {
-  animation: scroll-left 32s linear infinite;
-   align-items: center;
-}
-
-@keyframes scroll-left {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-50%); } /* высота текста на 4 строки, если больше — увеличь */
-}
-@keyframes scroll-right {
-  0%   { transform: translateX(-50%); }
-  100% { transform: translateX(0%); }
-}
-.scroll-text span {
-  display: inline-block;
-  margin-right: 50px;
-}
-.multicolor span:nth-child(1) { color: #e74c3c; } /* красный */
-.multicolor span:nth-child(2) { color: #f39c12; } /* оранжевый */
-.multicolor span:nth-child(3) { color: #f1c40f; } /* желтый */
-.multicolor span:nth-child(4) { color: #2ecc71; } /* зеленый */
-.multicolor span:nth-child(5) { color: #3498db; } /* синий */
-.multicolor span:nth-child(6) { color: #9b59b6; } /* фиолетовый */
-.multicolor span:nth-child(7) { color: #1abc9c; } /* бирюзовый */
-.multicolor span:nth-child(8) { color: #e67e22; }
-.colored-letter-0 { color: #e74c3c; } /* красный */
-.colored-letter-1 { color: #f39c12; } /* оранжевый */
-.colored-letter-2 { color: #f1c40f; } /* жёлтый */
-.colored-letter-3 { color: #2ecc71; } /* зелёный */
-.colored-letter-4 { color: #3498db; } /* синий */
-.colored-letter-5 { color: #9b59b6; } /* фиолетовый */
-.colored-letter-6 { color: #1abc9c; } /* бирюзовый */
-.colored-letter-7 { color: #e67e22; } /* оранжево-коричневый */
 .main-header {
   position: absolute;
   top: 0;
@@ -528,48 +452,11 @@ footer {
 }
 /*вверху часть 5 адаптация сайта */
 /* === АДАПТИВНОСТЬ SCROLL-TEXT и MAIN-HEADER === */
-
-/* Планшеты (до 1024px) */
-@media (max-width: 1024px) {
-  .scroll-text-wrapper {
-    font-size: 6vw; /* уменьшаем текст */
-    height: 28vh;   /* уменьшаем блок */
-  }
-
-  .scroll-text span {
-    margin-right: 30px; /* уменьшаем расстояние между словами */
-  }
-}
-
 /* Смартфоны (до 768px) */
-@media (max-width: 768px) {
-  .scroll-text-wrapper {
-    font-size: 8vw; /* текст читаемый на телефоне */
-    height: 25vh;
-    text-align: center;
-  }
-
-  .scroll-text {
-    animation-duration: 48s; /* ускоряем анимацию для меньшего экрана */
-  }
-
-  .scroll-text.reverse {
-    animation-duration: 24s;
-  }
-}
-
 /* Очень маленькие экраны (до 480px) */
 @media (max-width: 480px) {
   .main-header {
     height: 60dvh; /* уменьшаем высоту, но без черной полосы */
-  }
-  .scroll-text-wrapper {
-    font-size: 10vw;
-    height: 20vh;
-  }
-
-  .scroll-text span {
-    margin-right: 20px;
   }
   .background-video {
     height: 60dvh;
@@ -3201,23 +3088,6 @@ html, body {
   max-width: 100%;
   overflow-x: hidden; /* запрещаем горизонтальный скролл */
 }
-
-
-/* Блок с бегущим текстом */
-.scroll-text-wrapper {
-  width: 100%;
-  overflow: hidden;  /* чтобы слова не вылезали за экран */
-  white-space: nowrap;
-}
-
-/* Слова внутри бегущего текста */
-.scroll-text span {
-  display: inline-block;
-  white-space: nowrap; /* не переносим на новую строку */
-}
-
-
-
 /* Для адаптивных заголовков и текстов */
 .main-header
  {
