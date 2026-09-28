@@ -461,6 +461,26 @@ aboutScene7Description: "У вас уже есть дизайн, котором�
       hide: "Hide Projects",
       language: "Language",
       about: "About Me",
+      aboutScene1Title: "PREPRESS DESIGNER",
+aboutScene1Description: "I’m Evgeniy Bogatyrev — a prepress specialist and graphic designer. I prepare visual projects for real print production, combining design knowledge with practical prepress experience.",
+
+aboutScene2Title: "DESIGN",
+aboutScene2Description: "I create visual designs for packaging, labels, cards, promotional materials, logos and other printed products. Every layout is built with clear composition, typography and the final application in mind.",
+
+aboutScene3Title: "PREPRESS",
+aboutScene3Description: "I prepare and technically check artwork before it goes to print: document size, bleeds, CMYK and spot colours, image resolution, fonts, overprint, trapping and PDF settings. My job is to catch technical problems before they reach production.",
+
+aboutScene4Title: "PRODUCTION",
+aboutScene4Description: "A file can look perfect on screen and still cause problems in production. I prepare artwork according to the requirements of the printing process, materials, dimensions and finishing, so the production team can work with the file correctly.",
+
+aboutScene5Title: "PRINT",
+aboutScene5Description: "The final goal is not a perfect file on a monitor. It is a correctly produced physical result — packaging, labels, cards, signs and other printed products. I work with artwork knowing that it will eventually become something real.",
+
+aboutScene6Title: "EXPERIENCE",
+aboutScene6Description: "I have 6+ years of practical experience in prepress and print production. I work with Adobe Illustrator and Photoshop and understand the technical details that can affect the final result before a file reaches the press.",
+
+aboutScene7Title: "LET'S WORK",
+aboutScene7Description: "Have an existing design that needs professional prepress? Need a new design prepared correctly for production? I can take your artwork from the initial file to a print-ready result.",
       contactMe: "Contact Me",
       watchProjects: "See Projects",
       mySkills: "My Skills",
@@ -530,6 +550,26 @@ aboutScene7Description: "У вас уже есть дизайн, котором�
       hide: "Сховати роботи",
       language: "Мова",
       about: "Про мене",
+      aboutScene1Title: "ДОДРУКАРСЬКА ПІДГОТОВКА",
+aboutScene1Description: "Я — Євгеній Богатирьов, спеціаліст із додрукарської підготовки та графічний дизайнер. Я готую візуальні проєкти до реального виробництва, поєднуючи знання дизайну з практичним досвідом додрукарської підготовки.",
+
+aboutScene2Title: "ДИЗАЙН",
+aboutScene2Description: "Я створюю дизайн пакування, етикеток, візиток, рекламних матеріалів, логотипів та іншої поліграфічної продукції. Кожен макет створюється з урахуванням композиції, типографіки та його подальшого застосування.",
+
+aboutScene3Title: "ДОДРУКАРСЬКА ПІДГОТОВКА",
+aboutScene3Description: "Я готую та технічно перевіряю макети перед друком: розмір документа, вильоти, CMYK і плашкові кольори, роздільну здатність зображень, шрифти, оверпринт, трепінг та налаштування PDF. Моє завдання — виявити технічні проблеми до того, як файл потрапить у виробництво.",
+
+aboutScene4Title: "ВИРОБНИЦТВО",
+aboutScene4Description: "Файл може ідеально виглядати на екрані й водночас створити проблеми у виробництві. Я готую макети з урахуванням вимог друкарського процесу, матеріалів, розмірів та післядрукарської обробки, щоб виробництво могло коректно працювати з файлом.",
+
+aboutScene5Title: "ДРУК",
+aboutScene5Description: "Кінцева мета — не ідеальний файл на моніторі. Це правильно виготовлений фізичний результат — пакування, етикетки, візитки, вивіски та інша поліграфічна продукція. Я працюю з макетом, розуміючи, що зрештою він має перетворитися на реальний продукт.",
+
+aboutScene6Title: "ДОСВІД",
+aboutScene6Description: "Я маю понад 6 років практичного досвіду в додрукарській підготовці та поліграфічному виробництві. Я працюю в Adobe Illustrator і Photoshop та розумію технічні деталі, які можуть вплинути на кінцевий результат ще до того, як файл потрапить у друк.",
+
+aboutScene7Title: "ПРАЦЮЙМО РАЗОМ",
+aboutScene7Description: "У вас уже є дизайн, якому потрібна професійна додрукарська підготовка? Потрібен новий макет, правильно підготовлений до виробництва? Я можу провести ваш проєкт від початкового файлу до готового до друку результату.",
       contactMe: "Зв'язатися зі мною",
       watchProjects: "Переглянути роботи",
       mySkills: "Мої навички",
