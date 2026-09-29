@@ -127,6 +127,22 @@ toggleSkillsBtn.addEventListener("click", () => {
     skillsSection.scrollIntoView({ behavior: "smooth" });
   }
 });
+// Открытие навыков через боковую навигацию
+const navSkillsLink = document.getElementById("nav-skills-link");
+
+if (navSkillsLink) {
+  navSkillsLink.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Если карусель закрыта — открываем её
+    if (!isSkillsVisible) {
+      toggleSkillsBtn.click();
+    } else {
+      // Если уже открыта — просто прокручиваем к ней
+      skillsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}
 /*джава скрипт*/
     const container = document.getElementById('skillsContainer');
     const section = document.getElementById('skillsSection');
