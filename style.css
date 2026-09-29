@@ -384,7 +384,7 @@ footer {
 .center-btn-wrapper {
   display: flex;
   justify-content: center;  /* Центрирует кнопку по горизонтали */
-  margin-top: 40px;         /* Отступ сверху */
+  /*margin-top: 40px;          Отступ сверху */
 }
 /*вверху часть 4 адаптация сайта */
 /* === АДАПТИВНОСТЬ === */
