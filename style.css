@@ -855,7 +855,7 @@ justify-content: center;
   .lang-box {
     position: absolute;
     top: 50%;
-    left: 0;
+    /*left: 0;*/
     right: auto;
     transform: translateY(-50%);
     margin-left: 0;
