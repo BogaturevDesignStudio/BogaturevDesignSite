@@ -7,13 +7,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Graphic design services by Bogaturev Design: logo design, business cards, flyers, banners, labels, brochures, menus and presentation design. Print-ready design for businesses and brands.">
 <style>
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
 
-body{
-margin:0;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-background:#050505;
-color:#fff;
-overflow-x:hidden;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+    background: #050505;
+    color: #fff;
 }
 
 /* HERO */
@@ -255,7 +259,169 @@ font-size:13px;
 
     pointer-events:none;
 }
+/* ==================================================
+   3.6 — ОБЩАЯ МОБИЛЬНАЯ АДАПТАЦИЯ
+   320 × 568
+   ================================================== */
+
+@media (max-width: 320px) {
+
+    /* ===== ОСНОВНАЯ СТРАНИЦА ===== */
+
+
+    /* ===== HERO ===== */
+
+    .hero {
+        padding: 90px 15px 40px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.1;
+        letter-spacing: 0;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 14px;
+    }
+
+
+    /* ===== СВЕТ ===== */
+
+    .glow {
+        width: 400px;
+        height: 400px;
+        top: -120px;
+    }
+
+
+    /* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 35px 15px;
+    }
+
+
+    /* ===== СЕТКА ===== */
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    /* ===== КАРТОЧКИ ===== */
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 22px;
+        border-radius: 15px;
+    }
+
+    .card h3 {
+        font-size: 19px;
+        line-height: 1.25;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+
+    /* ===== ТЕГИ ===== */
+
+    .tag {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* ===== КНОПКИ ===== */
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 12px 14px;
+        margin-top: 18px;
+
+        font-size: 14px;
+    }
+
+
+    /* ===== ЛИНИЯ ===== */
+
+    .line {
+        width: calc(100% - 30px);
+    }
+
+
+    /* ==================================================
+   3.11 — КНОПКА НАЗАД
+   ================================================== */
+
+.back-arrow {
+    position: fixed;
+
+    top: 8px;
+    left: 8px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    z-index: 2147483647;
+
+    text-decoration: none;
+
+    font-size: 26px;
+    line-height: 1;
+
+    color: #fff;
+
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transform: none;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    transition: none;
+
+    overflow: hidden;
 }
+
+    /* ===== FOOTER ===== */
+
+    footer {
+        padding: 40px 15px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+
+
 </style>
 </head>
 
@@ -343,5 +509,6 @@ font-size:13px;
 <footer>
 © 2026 — Bogaturev Design
 </footer>
+
 </body>
 </html>
