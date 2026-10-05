@@ -821,9 +821,9 @@ justify-content: center;
   @media (max-width: 375px) {
   .lang-box {
   position: absolute;       
-    top: 0px;             /* Отступ сверху */
-    left: auto;           /* Отступ справа */
-    right: 3vh; 
+    top: 45%;             /* Отступ сверху */
+    /*left: auto;            Отступ справа */
+    right: auto; 
     margin-left: 0;        /* Сбрасываем левый отступ */
     z-index: 9999;         /* Поверх всех элементов */
     padding: 5px 10px;
