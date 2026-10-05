@@ -423,7 +423,7 @@ footer {
     .back-arrow{
         position:fixed;
 
-        left:8px;
+        left:3vh;
         top:8vh;
 
         width:50px;
