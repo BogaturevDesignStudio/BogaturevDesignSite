@@ -43,7 +43,7 @@
       language: "Язык",
       about: "Обо мне",
       aboutScene1Title: "ДОПЕЧАТНАЯ ПОДГОТОВКА",
-aboutScene1Description: "Я — Евгений Богатырев, специалист по допечатной подготовке и графический дизайнер. Я подготавливаю визуальные проекты для реального производства, объединяя знания в дизайне с практическим опытом допечатной подготовки.",
+aboutScene1Description: "Я — специалист по допечатной подготовке и графический дизайнер. Я подготавливаю визуальные проекты для реального производства, объединяя знания в дизайне с практическим опытом допечатной подготовки.",
 aboutScene2Title: "ДИЗАЙН",
 aboutScene2Description: "Я создаю дизайн упаковки, этикеток, визиток, рекламных материалов, логотипов и другой полиграфической продукции. Каждый макет создаётся с учётом композиции, типографики и его дальнейшего применения.",
 aboutScene3Title: "ДОПЕЧАТНАЯ ПОДГОТОВКА",
@@ -127,7 +127,7 @@ aboutScene7Description: "У вас уже есть дизайн, котором�
       language: "Language",
       about: "About Me",
       aboutScene1Title: "PREPRESS DESIGNER",
-aboutScene1Description: "I’m Evgeniy Bogatyrev — a prepress specialist and graphic designer. I prepare visual projects for real print production, combining design knowledge with practical prepress experience.",
+aboutScene1Description: "I’m a prepress specialist and graphic designer. I prepare visual projects for real print production, combining design knowledge with practical prepress experience.",
 
 aboutScene2Title: "DESIGN",
 aboutScene2Description: "I create visual designs for packaging, labels, cards, promotional materials, logos and other printed products. Every layout is built with clear composition, typography and the final application in mind.",
@@ -216,7 +216,7 @@ aboutScene7Description: "Have an existing design that needs professional prepres
       language: "Мова",
       about: "Про мене",
       aboutScene1Title: "ДОДРУКАРСЬКА ПІДГОТОВКА",
-aboutScene1Description: "Я — Євгеній Богатирьов, спеціаліст із додрукарської підготовки та графічний дизайнер. Я готую візуальні проєкти до реального виробництва, поєднуючи знання дизайну з практичним досвідом додрукарської підготовки.",
+aboutScene1Description: "Я — спеціаліст із додрукарської підготовки та графічний дизайнер. Я готую візуальні проєкти до реального виробництва, поєднуючи знання дизайну з практичним досвідом додрукарської підготовки.",
 
 aboutScene2Title: "ДИЗАЙН",
 aboutScene2Description: "Я створюю дизайн пакування, етикеток, візиток, рекламних матеріалів, логотипів та іншої поліграфічної продукції. Кожен макет створюється з урахуванням композиції, типографіки та його подальшого застосування.",
