@@ -1722,9 +1722,12 @@ filter: blur(40px);
   .dropdown-content a:hover {
     background-color: #f0f0f0;
   }
+   .design-header{
+    top: 45px;
+    }
   .design-header h1 {
     font-size: clamp(16px, 5vw, 36px);
-    white-space: nowrap;    /* запрет переноса */
+    white-space: normal;    /* запрет переноса */
   }
   .design-title-bg {
     min-width: 200px;
