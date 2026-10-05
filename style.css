@@ -788,9 +788,9 @@ justify-content: center;
   @media (max-width: 425px) {
   .lang-box {
   position: absolute;       
-    top: 0px;             /* Отступ сверху */
+    top: 45%;             /* Отступ сверху */
     left: auto;           /* Отступ справа */
-    right: 2vh; 
+    right: auto; 
     margin-left: 0;        /* Сбрасываем левый отступ */
     z-index: 9999;         /* Поверх всех элементов */
     padding: 5px 10px;
@@ -810,7 +810,8 @@ justify-content: center;
   }
 
   .lang-select-options {
-    right: 0;            /* Сбрасываем левый отступ */
+    right: 0;  
+   left: 20px; /* Сбрасываем левый отступ */
   }
   .divider {
     display: none;
