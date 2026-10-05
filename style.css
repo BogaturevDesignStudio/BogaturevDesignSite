@@ -843,7 +843,8 @@ justify-content: center;
   }
 
   .lang-select-options {
-    right: 0;            /* Сбрасываем левый отступ */
+    right: 0;    
+   left: 10px; /* Сбрасываем левый отступ */
   }
   .divider {
     display: none;
