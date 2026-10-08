@@ -1592,7 +1592,7 @@ filter: blur(40px);
     padding: 15px 20px;
   }
   .dropdown-content a {
-    height: 5vh;          /* регулируешь высоту пункта */
+    height: 4vh;          /* регулируешь высоту пункта */
     padding: 8px 12px;
     color: #fff;
     text-decoration: none;
