@@ -1583,8 +1583,9 @@ filter: blur(40px);
     height: 45px;
   }
   .design-header h1 {
-    font-size: 24px;
-    white-space: nowrap;    /* запрет переноса */
+   transform: translateY(10px);
+        font-size: clamp(24px, 4vw, 32px);
+        white-space: normal;
   }
   .design-title-bg {
     min-width: 200px;
