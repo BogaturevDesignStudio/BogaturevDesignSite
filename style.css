@@ -1647,7 +1647,7 @@ filter: blur(40px);
   }
 
   .dropdown-content a {
-    height: 5vh;          /* регулируешь высоту пункта */
+    height: 3vh;          /* регулируешь высоту пункта */
     padding: 8px 12px;
     color: #fff;
     text-decoration: none;
