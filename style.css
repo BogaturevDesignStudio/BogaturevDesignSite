@@ -3344,7 +3344,7 @@ box-shadow:0 0 0 0 rgba(29,255,92,0);
     .contact-btn{
         position: fixed;
 
-        right: 15px;
+        right: auto;
         bottom: 15px;
         top: auto;
         transform: none;
