@@ -3254,7 +3254,9 @@ box-shadow:0 0 0 0 rgba(29,255,92,0);
 ========================= */
 
 @media (min-width: 1440px)  {
-
+header h1{
+font-size: 50px;
+ }
     .contact-btn{
         right:25px;
         bottom:25px;
