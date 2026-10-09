@@ -3295,6 +3295,13 @@ box-shadow:0 0 0 0 rgba(29,255,92,0);
     }
 
 }
+@media (min-width: 1025px) and (max-width: 1439px) {
+.contact-btn {
+position: fixed;
+
+    right: auto;
+ }
+ }
 @media (max-width: 1024px) 
 {
 .contact-btn{
