@@ -3438,12 +3438,7 @@ position: fixed;
     scroll-margin-top: -80px;
   }
 }
-/* ТЕСТ CLS — кнопка «Обо мне» */
-.btn.wave-button {
-  height: auto;
-  min-height: 44px;
-  box-sizing: border-box;
-}
+
 
 
 
