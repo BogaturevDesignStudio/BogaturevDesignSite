@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
-   // const header = document.querySelector(".main-header");
-   // const headerHeight = header.offsetHeight;
-   // document.body.style.paddingTop = headerHeight + "px";
+    const header = document.querySelector(".main-header");
+    const headerHeight = header.offsetHeight;
+    document.body.style.paddingTop = headerHeight + "px";
   });
 
 
