@@ -1,8 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".main-header");
-    const headerHeight = header.offsetHeight;
-    document.body.style.paddingTop = headerHeight + "px";
-  });
+
+    if (!header) return;
+
+    console.log("Высота шапки:", header.offsetHeight);
+    console.log("Отступ body до изменения:", getComputedStyle(document.body).paddingTop);
+});
 
 
 // Функция для отслеживания прокрутки и добавления/удаления класса "visible"
