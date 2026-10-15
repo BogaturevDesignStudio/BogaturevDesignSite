@@ -3438,7 +3438,11 @@ position: fixed;
     scroll-margin-top: -80px;
   }
 }
-
+/* Временный тест высоты шапки */
+.main-header {
+    height: 100vh !important;
+    max-height: 100vh !important;
+}
 
 
 
