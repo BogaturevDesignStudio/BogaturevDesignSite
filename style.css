@@ -34,10 +34,9 @@ header p {
 }
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    height: 30vh;
+    width: 100%;
+    display: block;
     padding: 12px 25px;
     background: #00b894;
     color: #fff;
