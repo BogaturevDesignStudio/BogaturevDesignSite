@@ -1,10 +1,28 @@
 window.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".main-header");
 
-    if (!header) return;
+    if (!header) {
+        console.log("Элемент .main-header не найден");
+        return;
+    }
 
-    console.log("Высота шапки:", header.offsetHeight);
-    console.log("Отступ body до изменения:", getComputedStyle(document.body).paddingTop);
+    const rect = header.getBoundingClientRect();
+    const style = getComputedStyle(header);
+
+    console.table({
+        offsetHeight: header.offsetHeight,
+        clientHeight: header.clientHeight,
+        scrollHeight: header.scrollHeight,
+        width: rect.width,
+        height: rect.height,
+        position: style.position,
+        display: style.display,
+        minHeight: style.minHeight,
+        heightCSS: style.height,
+        paddingTop: style.paddingTop,
+        paddingBottom: style.paddingBottom,
+        overflow: style.overflow
+    });
 });
 
 
