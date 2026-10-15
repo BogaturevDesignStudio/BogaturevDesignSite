@@ -491,7 +491,7 @@ footer {
   color: white;
   font-size: 20px;
   padding: 6px 10px;
-  border-radius.main-header: 4px;
+  border-radius: 4px;
   cursor: pointer;
   transform: translateX(20px);
 }
