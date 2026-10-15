@@ -2714,7 +2714,7 @@ filter: blur(40px);
   z-index: 1;
 }
 
-* Сам блик */
+/* Сам блик */
 .slider-section .slider-trigger-wrapper::before {
   content: "";
   position: absolute;
