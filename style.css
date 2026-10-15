@@ -2683,6 +2683,7 @@ filter: blur(40px);
 }
 .slider-section {
   position: relative; /* теперь псевдоэлемент ::after будет ограничен этой секцией */
+ isolation: isolate;
   background: black;
   background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* мелкий шум */
   background-blend-mode: overlay;
