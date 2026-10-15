@@ -1,28 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".main-header");
-
-    if (!header) {
-        console.log("Элемент .main-header не найден");
-        return;
-    }
-
-    const rect = header.getBoundingClientRect();
-    const style = getComputedStyle(header);
-
-    console.table({
-        offsetHeight: header.offsetHeight,
-        clientHeight: header.clientHeight,
-        scrollHeight: header.scrollHeight,
-        width: rect.width,
-        height: rect.height,
-        position: style.position,
-        display: style.display,
-        minHeight: style.minHeight,
-        heightCSS: style.height,
-        paddingTop: style.paddingTop,
-        paddingBottom: style.paddingBottom,
-        overflow: style.overflow
-    });
+    const headerHeight = header.offsetHeight;
+    document.body.style.paddingTop = headerHeight + "px";
 });
 
 
