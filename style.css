@@ -3438,7 +3438,10 @@ position: fixed;
     scroll-margin-top: -80px;
   }
 }
-
+/* ВРЕМЕННЫЙ ТЕСТ CLS — не менять размеры кнопок */
+body {
+    padding-top: 0 !important;
+}
 
 
 
