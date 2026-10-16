@@ -3439,22 +3439,29 @@ position: fixed;
   }
 }
 
-/* CLS TEST 1 — кнопка «Обо мне» */
+
+/* CLS TEST 2 — диагностика кнопок и отступов */
+
+/* Проверяем кнопку «Обо мне» */
 a.btn.wave-button[data-i18n="aboutShow"] {
-    box-sizing: border-box;
+    margin-block: 0 !important;
+    box-sizing: border-box !important;
     min-height: 56px;
-    position: relative;
 }
 
-/* SVG не должен менять размеры кнопки */
-a.btn.wave-button[data-i18n="aboutShow"] svg {
+/* Проверяем обе основные кнопки */
+.btn {
+    box-sizing: border-box;
+}
+
+/* Убираем внешние отступы между кнопками */
+.btn + .btn {
+    margin-block-start: 0 !important;
+}
+
+/* Не позволяем SVG влиять на размеры кнопки */
+.btn svg {
     flex-shrink: 0;
-    max-width: 100%;
-}
-
-/* Убираем влияние SVG-фильтров на геометрию */
-a.btn.wave-button[data-i18n="aboutShow"] svg {
-    overflow: hidden;
 }
 
 
