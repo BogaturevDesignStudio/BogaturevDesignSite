@@ -3440,24 +3440,11 @@ position: fixed;
 }
 
 
-
-/* CLS TEST 3 — временно отключаем анимации кнопок */
-
-a.btn.wave-button[data-i18n="aboutShow"],
-a.btn.wave-button[data-i18n="aboutShow"] *,
-a.btn.wave-button[data-i18n="aboutShow"]::before,
-a.btn.wave-button[data-i18n="aboutShow"]::after {
-    animation: none !important;
-    transition: none !important;
+/* CLS TEST 4 — высота главной секции */
+.main-header {
+    height: 100vh !important;
+    max-height: 100vh !important;
 }
-
-/* Отключаем анимацию вложенных SVG */
-a.btn.wave-button[data-i18n="aboutShow"] svg,
-a.btn.wave-button[data-i18n="aboutShow"] svg * {
-    animation: none !important;
-    transition: none !important;
-}
-
 
 
 
