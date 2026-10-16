@@ -2729,7 +2729,7 @@ filter: blur(40px);
     rgba(255, 255, 255, 0) 100%
   );
   transform: skewX(-25deg);
-  animation: shine 3s infinite;
+ /* animation: shine 3s infinite;*/
   pointer-events: none;
   z-index: 2;
 }
