@@ -3439,6 +3439,24 @@ position: fixed;
   }
 }
 
+/* CLS TEST 1 — кнопка «Обо мне» */
+a.btn.wave-button[data-i18n="aboutShow"] {
+    box-sizing: border-box;
+    min-height: 56px;
+    position: relative;
+}
+
+/* SVG не должен менять размеры кнопки */
+a.btn.wave-button[data-i18n="aboutShow"] svg {
+    flex-shrink: 0;
+    max-width: 100%;
+}
+
+/* Убираем влияние SVG-фильтров на геометрию */
+a.btn.wave-button[data-i18n="aboutShow"] svg {
+    overflow: hidden;
+}
+
 
 
 
