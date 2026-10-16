@@ -3440,29 +3440,24 @@ position: fixed;
 }
 
 
-/* CLS TEST 2 — диагностика кнопок и отступов */
 
-/* Проверяем кнопку «Обо мне» */
-a.btn.wave-button[data-i18n="aboutShow"] {
-    margin-block: 0 !important;
-    box-sizing: border-box !important;
-    min-height: 56px;
+/* CLS TEST 3 — временно отключаем анимации кнопок */
+
+a.btn.wave-button[data-i18n="aboutShow"],
+a.btn.wave-button[data-i18n="aboutShow"] *,
+a.btn.wave-button[data-i18n="aboutShow"]::before,
+a.btn.wave-button[data-i18n="aboutShow"]::after {
+    animation: none !important;
+    transition: none !important;
 }
 
-/* Проверяем обе основные кнопки */
-.btn {
-    box-sizing: border-box;
+/* Отключаем анимацию вложенных SVG */
+a.btn.wave-button[data-i18n="aboutShow"] svg,
+a.btn.wave-button[data-i18n="aboutShow"] svg * {
+    animation: none !important;
+    transition: none !important;
 }
 
-/* Убираем внешние отступы между кнопками */
-.btn + .btn {
-    margin-block-start: 0 !important;
-}
-
-/* Не позволяем SVG влиять на размеры кнопки */
-.btn svg {
-    flex-shrink: 0;
-}
 
 
 
