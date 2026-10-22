@@ -292,7 +292,7 @@ footer {
 ==================================================*/
 /* ===== АДАПТАЦИЯ 375 × 667 ===== */
 
-@media (max-width:375px)  {
+@media (min-width:321px) and (max-width:375px)  {
 
     html,
     body{
