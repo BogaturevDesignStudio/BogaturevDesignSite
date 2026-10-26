@@ -866,7 +866,7 @@ footer {
 }
 /* ===== АДАПТАЦИЯ 768 × 600 ===== */
 
-@media (min-width:768px)  {
+@media (min-width: 481px) and (max-width: 768px)  {
 
     html,
     body{
