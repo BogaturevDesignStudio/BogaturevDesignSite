@@ -1132,7 +1132,7 @@ footer {
 }
 /* ===== АДАПТАЦИЯ 1440 × 900 ===== */
 
-@media (min-width:1440px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
 
     html,
     body{
