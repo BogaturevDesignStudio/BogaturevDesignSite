@@ -81,7 +81,7 @@ aboutScene7Description: "У вас уже есть дизайн, котором�
       contactTitle: "Связаться со мной",
       contactText : "Свяжись со мной любым удобным способом — письмом, звонком или сообщением. Обещаю ответить лично в течение 24 часов.",
       contactButton: "Написать письмо",
-      footer: "&copy; 2025 Евгений Богатырёв"
+      footer: "&copy; 2026 Евгений Богатырёв"
     },
     en: {
        aboutShow: "About Me",
@@ -170,7 +170,7 @@ aboutScene7Description: "Have an existing design that needs professional prepres
       contactTitle: "Contact Me",
       contactText : "Contact me in any convenient way — by email, call, or message. I promise to respond personally within 24 hours.",
       contactButton: "Send Email",
-      footer: "&copy; 2025 Evgeniy Bogaturev "
+      footer: "&copy; 2026 Evgeniy Bogaturev "
     },
     uk: {
       aboutShow: "Про мене",
@@ -259,7 +259,7 @@ aboutScene7Description: "У вас уже є дизайн, якому потрі
       contactTitle: "Зв'язатися зі мною",
       contactText : "Зв’яжіться зі мною будь-яким зручним способом — листом, дзвінком або повідомленням. Обіцяю відповісти особисто протягом 24 годин.",
       contactButton: "Написати листа",
-      footer: "&copy; 2025 Євгеній Богатирьов"
+      footer: "&copy; 2026 Євгеній Богатирьов"
     }
   };
 window.siteTranslations = translations;
