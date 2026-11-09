@@ -95,4 +95,16 @@ role: "Graphic Designer",
 url: "retro-envelope-design.html",
 hero: "images/retro-envelope/retro-envelope-design1.jpg"
 },  
+    {
+    id: "canopy-assembly-instructions",
+    title: "Canopy Assembly Instructions",
+    category: "graphic",
+    categoryName: "Graphic Design",
+    client: "Client Project",
+    year: "2026",
+    type: "Technical Illustration",
+    role: "Graphic Designer",
+    url: "canopy-assembly-instructions.html",
+    hero: "images/canopy-assembly/canopy-assembly-instructions.jpg"
+},
 ];
