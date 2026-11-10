@@ -20,7 +20,17 @@ function renderProjects(filter = "all") {
         filter === "all"
             ? projects
             : projects.filter(project => project.category === filter);
+// EMPTY CATEGORY
+if (filteredProjects.length === 0) {
 
+    projectsGrid.innerHTML = `
+        <p class="portfolio-empty" role="status">
+            Projects coming soon.
+        </p>
+    `;
+
+    return;
+}
 
     projectsGrid.innerHTML = filteredProjects
         .map(project => {
