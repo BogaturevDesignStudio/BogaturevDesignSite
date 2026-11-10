@@ -1,13 +1,64 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Главная -->
   <url>
     <loc>https://bogaturevdesign.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
+
+  <!-- Основные разделы услуг -->
   <url>
     <loc>https://bogaturevdesign.com/graphic-design.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/services.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/branding.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/marketplace-design.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/packaging-design.html</loc>
+  </url>
+
+  <!-- Дизайн упаковки -->
+  <url>
+    <loc>https://bogaturevdesign.com/carton-packaging.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/premium-packaging.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/food-packaging.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/beverage-packaging.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/household-packaging.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/product-label-design.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/flexible-packaging.html</loc>
+  </url>
+
+  <url>
+    <loc>https://bogaturevdesign.com/ecommerce-packaging.html</loc>
+  </url>
+
 </urlset>
