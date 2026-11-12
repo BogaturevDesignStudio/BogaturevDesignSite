@@ -933,6 +933,226 @@ font-size:13px;
         line-height: 1.5;
     }
 }
+    /* ==================================================
+   АДАПТАЦИЯ 769–1024 PX
+   1024 × 768
+   ================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* ===== БАЗА ===== */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ===== HERO ===== */
+
+    .hero {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 100px 40px 50px;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        margin: 0;
+
+        font-size: 52px;
+        line-height: 1.1;
+        letter-spacing: 0;
+    }
+
+    .hero p {
+        margin: 15px auto 0;
+
+        max-width: 760px;
+
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* ===== СВЕТ ===== */
+
+    .glow {
+        width: 560px;
+        height: 560px;
+
+        top: -170px;
+    }
+
+
+    /* ===== ЛИНИЯ ===== */
+
+    .line {
+        width: calc(100% - 80px);
+
+        max-width: 900px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0 auto;
+
+        padding: 50px 40px;
+    }
+
+
+    /* ===== СЕТКА ===== */
+
+    .grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 24px;
+    }
+
+
+    /* ===== КАРТОЧКИ ===== */
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 26px 24px;
+
+        border-radius: 17px;
+    }
+
+    .card h3 {
+        margin: 0;
+
+        font-size: 21px;
+        line-height: 1.25;
+    }
+
+    .card p {
+        margin-top: 10px;
+
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+
+    /* ===== ТЕГИ ===== */
+
+    .tag {
+        margin-bottom: 10px;
+
+        font-size: 10px;
+        line-height: 1.3;
+
+        letter-spacing: 1.6px;
+    }
+
+
+    /* ===== КНОПКИ ===== */
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        margin-top: 19px;
+
+        padding: 13px 16px;
+
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+
+    /* ==================================================
+       КНОПКА НАЗАД
+       ================================================== */
+
+    .back-arrow {
+        position: fixed;
+
+        top: 12px;
+        left: 10px;
+
+        width: 56px;
+        height: 56px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 0;
+
+        z-index: 2147483647;
+
+        transform: none;
+
+        font-size: 28px;
+        line-height: 1;
+
+        color: #fff;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 50%;
+
+        text-decoration: none;
+
+        cursor: pointer;
+
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+
+        transition: none;
+
+        overflow: hidden;
+    }
+
+
+    /* ===== КНОПКА НЕ ДВИГАЕТСЯ ===== */
+
+    .back-arrow:hover,
+    .back-arrow:active {
+        transform: none;
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 50px 40px;
+
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
 </style>
 
 </head>
