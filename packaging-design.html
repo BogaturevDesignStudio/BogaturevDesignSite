@@ -1966,7 +1966,7 @@ font-size:13px;
     transform: translateY(-50%);
 
     width: 100px;
-    height: 200px;
+    height: 150px;
 
     display: flex;
     justify-content: center;
@@ -2078,16 +2078,10 @@ font-size:13px;
 .card::before { pointer-events: none; }
 .card > * { position: relative; z-index: 1; }
 .btn:focus-visible, .back-arrow:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
-@media (max-width: 1024px) {
-  .back-arrow { top: 12px; left: 10px; transform: none; }
-  .back-arrow:hover, .back-arrow:active { transform: none; }
-}
 @media (min-width: 1025px) and (max-width: 1440px) {
   .back-arrow:hover { transform: scale(1.05); }
   .back-arrow:active { transform: scale(.97); }
 }
-@media (min-width: 1441px) {
-  .back-arrow { top: 50%; transform: translateY(-50%); }
 }
 @media (prefers-reduced-motion: reduce) {
   .card, .btn, .back-arrow { transition: none; }
