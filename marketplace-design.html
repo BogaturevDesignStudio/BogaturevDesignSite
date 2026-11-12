@@ -260,6 +260,838 @@ font-size:13px;
 
     pointer-events:none;
 }
+    
+/* ==================================================
+   АДАПТАЦИЯ ДО 320 PX
+   ================================================== */
+
+@media (max-width: 320px) {
+    .hero { padding: 90px 15px 40px; }
+    .hero h1 { font-size: 38px; line-height: 1.1; letter-spacing: 0; }
+    .hero p { font-size: 14px; line-height: 1.5; margin-top: 14px; }
+
+    .glow { width: 400px; height: 400px; top: -120px; }
+    .line { width: calc(100% - 30px); }
+
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 35px 15px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 22px;
+        border-radius: 15px;
+    }
+
+    .card h3 { font-size: 19px; line-height: 1.25; }
+    .card p { font-size: 14px; line-height: 1.55; }
+    .tag { font-size: 10px; letter-spacing: 1.5px; }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        margin-top: 18px;
+        font-size: 14px;
+    }
+
+    .back-arrow {
+        position: fixed;
+        top: 10px;
+        left: 8px;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 2147483647;
+        text-decoration: none;
+        font-size: 26px;
+        line-height: 1;
+        color: #fff;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 50%;
+        cursor: pointer;
+        transform: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: none;
+        overflow: hidden;
+    }
+
+    .back-arrow:hover,
+    .back-arrow:active {
+        transform: none;
+    }
+
+    footer {
+        padding: 40px 15px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* ==================================================
+   АДАПТАЦИЯ 321–376 PX
+   ================================================== */
+
+@media (min-width: 321px) and (max-width: 376px) {
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+
+    .hero { width: 100%; box-sizing: border-box; padding: 95px 20px 45px; text-align: center; }
+    .hero h1 { margin: 0; font-size: 42px; line-height: 1.1; letter-spacing: 0; }
+    .hero p { margin: 15px 0 0; font-size: 15px; line-height: 1.5; }
+
+    .glow { width: 450px; height: 450px; top: -130px; }
+
+    .line {
+        width: calc(100% - 40px);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .grid { width: 100%; display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 24px 20px;
+        border-radius: 15px;
+    }
+
+    .card h3 { margin: 0; font-size: 20px; line-height: 1.25; }
+    .card p { margin-top: 10px; font-size: 14px; line-height: 1.55; }
+    .tag { margin-bottom: 10px; font-size: 10px; line-height: 1.3; letter-spacing: 1.4px; }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 18px;
+        padding: 13px 15px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .back-arrow {
+        position: fixed;
+        top: 10px;
+        left: 8px;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 2147483647;
+        transform: none;
+        font-size: 26px;
+        line-height: 1;
+        color: #fff;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 50%;
+        text-decoration: none;
+        cursor: pointer;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: none;
+        overflow: hidden;
+    }
+
+    .back-arrow:hover,
+    .back-arrow:active { transform: none; }
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 45px 20px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* ==================================================
+   АДАПТАЦИЯ 376–425 PX
+   ================================================== */
+
+@media (min-width: 376px) and (max-width: 425px) {
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+
+    .hero { width: 100%; box-sizing: border-box; padding: 105px 25px 50px; text-align: center; }
+    .hero h1 { margin: 0; font-size: 46px; line-height: 1.1; letter-spacing: 0; }
+    .hero p { margin: 16px 0 0; font-size: 16px; line-height: 1.5; }
+
+    .glow { width: 500px; height: 500px; top: -145px; }
+
+    .line {
+        width: calc(100% - 50px);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 45px 25px;
+    }
+
+    .grid { width: 100%; display: grid; grid-template-columns: 1fr; gap: 22px; }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 26px 22px;
+        border-radius: 16px;
+    }
+
+    .card h3 { margin: 0; font-size: 21px; line-height: 1.25; }
+    .card p { margin-top: 10px; font-size: 15px; line-height: 1.55; }
+    .tag { margin-bottom: 10px; font-size: 10px; line-height: 1.3; letter-spacing: 1.5px; }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 20px;
+        padding: 13px 16px;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .back-arrow {
+        position: fixed;
+        top: 12px;
+        left: 10px;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 2147483647;
+        transform: none;
+        font-size: 27px;
+        line-height: 1;
+        color: #fff;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 50%;
+        text-decoration: none;
+        cursor: pointer;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: none;
+        overflow: hidden;
+    }
+
+    .back-arrow:hover,
+    .back-arrow:active { transform: none; }
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 50px 25px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ==================================================
+   АДАПТАЦИЯ 426–480 PX
+   ================================================== */
+
+@media (min-width: 426px) and (max-width: 480px) {
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+
+    .hero { width: 100%; box-sizing: border-box; padding: 115px 30px 55px; text-align: center; }
+    .hero h1 { margin: 0; font-size: 50px; line-height: 1.1; letter-spacing: 0; }
+    .hero p { margin: 17px 0 0; font-size: 16px; line-height: 1.55; }
+
+    .glow { width: 550px; height: 550px; top: -160px; }
+
+    .line {
+        width: calc(100% - 60px);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 50px 30px;
+    }
+
+    .grid { width: 100%; display: grid; grid-template-columns: 1fr; gap: 24px; }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 28px 24px;
+        border-radius: 17px;
+    }
+
+    .card h3 { margin: 0; font-size: 22px; line-height: 1.25; }
+    .card p { margin-top: 11px; font-size: 15px; line-height: 1.6; }
+    .tag { margin-bottom: 11px; font-size: 11px; line-height: 1.3; letter-spacing: 1.6px; }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 21px;
+        padding: 14px 17px;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .back-arrow {
+        position: fixed;
+        top: 12px;
+        left: 10px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 2147483647;
+        transform: none;
+        font-size: 28px;
+        line-height: 1;
+        color: #fff;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 50%;
+        text-decoration: none;
+        cursor: pointer;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: none;
+        overflow: hidden;
+    }
+
+    .back-arrow:hover,
+    .back-arrow:active { transform: none; }
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 55px 30px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ==================================================
+   АДАПТАЦИЯ 481–768 PX
+   ================================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+
+    .hero { width: 100%; box-sizing: border-box; padding: 80px 30px 40px; text-align: center; }
+    .hero h1 { margin: 0; font-size: 46px; line-height: 1.1; letter-spacing: 0; }
+    .hero p { margin: 14px auto 0; max-width: 650px; font-size: 15px; line-height: 1.5; }
+
+    .glow { width: 500px; height: 500px; top: -150px; }
+
+    .line {
+        width: calc(100% - 60px);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 40px 30px;
+    }
+
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 22px 20px;
+        border-radius: 16px;
+    }
+
+    .card h3 { margin: 0; font-size: 19px; line-height: 1.25; }
+    .card p { margin-top: 9px; font-size: 14px; line-height: 1.5; }
+    .tag { margin-bottom: 9px; font-size: 10px; line-height: 1.3; letter-spacing: 1.5px; }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 17px;
+        padding: 12px 14px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .back-arrow {
+        position: fixed;
+        top: 12px;
+        left: 10px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 2147483647;
+        transform: none;
+        font-size: 28px;
+        line-height: 1;
+        color: #fff;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 50%;
+        text-decoration: none;
+        cursor: pointer;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: none;
+        overflow: hidden;
+    }
+
+    .back-arrow:hover,
+    .back-arrow:active { transform: none; }
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 45px 30px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ==================================================
+   АДАПТАЦИЯ 769–1024 PX
+   ================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+
+    .hero { width: 100%; box-sizing: border-box; padding: 100px 40px 50px; text-align: center; }
+    .hero h1 { margin: 0; font-size: 52px; line-height: 1.1; letter-spacing: 0; }
+    .hero p { margin: 15px auto 0; max-width: 760px; font-size: 16px; line-height: 1.5; }
+
+    .glow { width: 560px; height: 560px; top: -170px; }
+
+    .line {
+        width: calc(100% - 80px);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 26px 24px;
+        border-radius: 17px;
+    }
+
+    .card h3 { margin: 0; font-size: 21px; line-height: 1.25; }
+    .card p { margin-top: 10px; font-size: 14px; line-height: 1.55; }
+    .tag { margin-bottom: 10px; font-size: 10px; line-height: 1.3; letter-spacing: 1.6px; }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 19px;
+        padding: 13px 16px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .back-arrow {
+        position: fixed;
+        top: 12px;
+        left: 10px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 2147483647;
+        transform: none;
+        font-size: 28px;
+        line-height: 1;
+        color: #fff;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 50%;
+        text-decoration: none;
+        cursor: pointer;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: none;
+        overflow: hidden;
+    }
+
+    .back-arrow:hover,
+    .back-arrow:active { transform: none; }
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 50px 40px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ==================================================
+   АДАПТАЦИЯ 1025–1440 PX
+   3 КОЛОНКИ
+   ================================================== */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+
+    .hero { width: 100%; box-sizing: border-box; padding: 115px 40px 60px; text-align: center; }
+    .hero h1 { margin: 0; font-size: 56px; line-height: 1.1; letter-spacing: 1px; }
+    .hero p { margin: 16px auto 0; max-width: 850px; font-size: 16px; line-height: 1.55; }
+
+    .glow { width: 600px; height: 600px; top: -200px; }
+
+    .line {
+        width: calc(100% - 120px);
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1280px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 28px;
+        border-radius: 18px;
+    }
+
+    .card h3 { margin: 0; font-size: 20px; line-height: 1.25; }
+    .card p { margin-top: 10px; font-size: 14px; line-height: 1.6; }
+    .tag { margin-bottom: 10px; font-size: 11px; line-height: 1.3; letter-spacing: 2px; }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 20px;
+        padding: 12px 16px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .back-arrow {
+        position: fixed;
+        top: 12px;
+        left: 10px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        z-index: 2147483647;
+        transform: none;
+        font-size: 28px;
+        line-height: 1;
+        color: rgba(255,255,255,.95);
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 42px;
+        text-decoration: none;
+        cursor: pointer;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        transition:
+            transform .35s cubic-bezier(.2,.8,.2,1),
+            background .35s,
+            box-shadow .35s,
+            color .35s;
+        overflow: hidden;
+    }
+
+    .back-arrow::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(255,255,255,.22),
+            transparent 35%,
+            transparent 70%,
+            rgba(255,255,255,.06)
+        );
+        pointer-events: none;
+    }
+
+    .back-arrow::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 40px;
+        border: 1px solid rgba(255,255,255,.15);
+        opacity: .8;
+        pointer-events: none;
+    }
+
+    .back-arrow:hover {
+        transform: scale(1.05);
+        background: rgba(255,255,255,.14);
+        color: #fff;
+        box-shadow:
+            0 25px 55px rgba(0,0,0,.42),
+            inset 0 1px 2px rgba(255,255,255,.45),
+            0 0 35px rgba(255,255,255,.08);
+    }
+
+    .back-arrow:active {
+        transform: scale(.97);
+        background: rgba(255,255,255,.18);
+        transition: .08s;
+    }
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 60px 40px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ==================================================
+   АДАПТАЦИЯ 1441–2560 PX
+   3 КОЛОНКИ
+   ================================================== */
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+
+    .hero { width: 100%; box-sizing: border-box; padding: 150px 60px 75px; text-align: center; }
+    .hero h1 { margin: 0; font-size: 64px; line-height: 1.1; letter-spacing: 1px; }
+    .hero p { margin: 20px auto 0; max-width: 950px; font-size: 18px; line-height: 1.55; }
+
+    .glow { width: 750px; height: 750px; top: -250px; }
+
+    .line {
+        width: calc(100% - 200px);
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1500px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 80px 50px;
+    }
+
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 32px;
+        border-radius: 20px;
+    }
+
+    .card h3 { margin: 0; font-size: 23px; line-height: 1.25; }
+    .card p { margin-top: 12px; font-size: 15px; line-height: 1.65; }
+    .tag { margin-bottom: 12px; font-size: 12px; line-height: 1.3; letter-spacing: 2px; }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 22px;
+        padding: 14px 18px;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .back-arrow {
+        position: fixed;
+        left: 25px;
+        top: 10%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 34px;
+        color: rgba(255,255,255,.95);
+        border-radius: 50px;
+        background: rgba(255,255,255,.08);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255,255,255,.18);
+        box-shadow:
+            0 20px 45px rgba(0,0,0,.35),
+            inset 0 1px 1px rgba(255,255,255,.35),
+            inset 0 -1px 2px rgba(255,255,255,.05);
+        cursor: pointer;
+        transition:
+            transform .35s cubic-bezier(.2,.8,.2,1),
+            background .35s,
+            box-shadow .35s,
+            color .35s;
+        overflow: hidden;
+        z-index: 9999;
+    }
+
+    .back-arrow::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(255,255,255,.22),
+            transparent 35%,
+            transparent 70%,
+            rgba(255,255,255,.06)
+        );
+        pointer-events: none;
+    }
+
+    .back-arrow:hover {
+        transform: translateY(-50%) scale(1.05);
+        background: rgba(255,255,255,.14);
+        color: #fff;
+        box-shadow:
+            0 25px 55px rgba(0,0,0,.42),
+            inset 0 1px 2px rgba(255,255,255,.45),
+            0 0 35px rgba(255,255,255,.08);
+    }
+
+    .back-arrow:active {
+        transform: translateY(-50%) scale(.97);
+        background: rgba(255,255,255,.18);
+        transition: .08s;
+    }
+
+    .back-arrow::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 48px;
+        border: 1px solid rgba(255,255,255,.15);
+        opacity: .8;
+        pointer-events: none;
+    }
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 70px 50px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
 </style>
 </head>
 
