@@ -1439,6 +1439,273 @@ font-size:13px;
         line-height: 1.5;
     }
 }
+    /* ==================================================
+   АДАПТАЦИЯ 1441–2560 PX
+   2560 × 1440
+   3 КОЛОНКИ
+   ================================================== */
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+
+    /* ===== БАЗА ===== */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ===== HERO ===== */
+
+    .hero {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 150px 60px 75px;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        margin: 0;
+
+        font-size: 64px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        margin: 20px auto 0;
+
+        max-width: 950px;
+
+        font-size: 18px;
+        line-height: 1.55;
+    }
+
+
+    /* ===== СВЕТ ===== */
+
+    .glow {
+        width: 750px;
+        height: 750px;
+
+        top: -250px;
+    }
+
+
+    /* ===== ЛИНИЯ ===== */
+
+    .line {
+        width: calc(100% - 200px);
+
+        max-width: 1400px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+
+    .container {
+        width: 100%;
+        max-width: 1500px;
+
+        box-sizing: border-box;
+
+        margin: 0 auto;
+
+        padding: 80px 50px;
+    }
+
+
+    /* ===== СЕТКА ===== */
+
+    .grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 30px;
+    }
+
+
+    /* ===== КАРТОЧКИ ===== */
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 32px;
+
+        border-radius: 20px;
+    }
+
+    .card h3 {
+        margin: 0;
+
+        font-size: 23px;
+        line-height: 1.25;
+    }
+
+    .card p {
+        margin-top: 12px;
+
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+
+    /* ===== ТЕГИ ===== */
+
+    .tag {
+        margin-bottom: 12px;
+
+        font-size: 12px;
+        line-height: 1.3;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* ===== КНОПКИ ===== */
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        margin-top: 22px;
+
+        padding: 14px 18px;
+
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+
+    /*==================================================
+                КНОПКА НАЗАД
+         ==================================================*/
+
+        .back-arrow{
+    position: fixed;
+    left: 25px;
+    top: 10%;
+    transform: translateY(-50%);
+
+    width: 100px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 34px;
+    color: rgba(255,255,255,.95);
+
+    border-radius: 50px;
+
+    /* Стекло Apple */
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    /* Светлая рамка */
+    border: 1px solid rgba(255,255,255,.18);
+
+    /* Тени */
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        inset 0 1px 1px rgba(255,255,255,.35),
+        inset 0 -1px 2px rgba(255,255,255,.05);
+
+    cursor: pointer;
+
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        background .35s,
+        box-shadow .35s,
+        color .35s;
+
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Блик */
+.back-arrow::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.22),
+        transparent 35%,
+        transparent 70%,
+        rgba(255,255,255,.06)
+    );
+
+    pointer-events:none;
+}
+
+.back-arrow:hover{
+
+    transform:translateY(-50%) scale(1.05);
+
+    background:rgba(255,255,255,.14);
+
+    color:#fff;
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,.42),
+        inset 0 1px 2px rgba(255,255,255,.45),
+        0 0 35px rgba(255,255,255,.08);
+}
+
+.back-arrow:active{
+
+    transform:translateY(-50%) scale(.97);
+
+    background:rgba(255,255,255,.18);
+
+    transition:.08s;
+}
+.back-arrow::after{
+    content:"";
+    position:absolute;
+    inset:2px;
+    border-radius:48px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    opacity:.8;
+
+    pointer-events:none;
+}
+
+    /* ===== FOOTER ===== */
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 70px 50px;
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
 </style>
 
 </head>
