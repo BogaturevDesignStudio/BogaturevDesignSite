@@ -1099,7 +1099,8 @@ footer {
     box-sizing:border-box;
     border-radius:15px;
 }
-/* ===== КНОПКА НАЗАД 768px ===== */
+
+/* ===== КНОПКА НАЗАД 481–768px ===== */
 
 .back-arrow {
     position: fixed;
@@ -1110,10 +1111,15 @@ footer {
     width: 54px;
     height: 54px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     box-sizing: border-box;
     border-radius: 50%;
 
     font-size: 28px;
+    line-height: 1;
 
     transform: none;
 
