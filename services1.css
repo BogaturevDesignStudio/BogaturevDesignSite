@@ -1321,6 +1321,21 @@ footer {
         transform: none;
     }
 
+/* ===== КОНТАКТНЫЕ КНОПКИ 769–1024px ===== */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.buttons .btn {
+    flex: 1 1 180px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 }
 /* ===== АДАПТАЦИЯ 1440 × 900 ===== */
 
