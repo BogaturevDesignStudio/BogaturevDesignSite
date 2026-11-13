@@ -1099,7 +1099,41 @@ footer {
     box-sizing:border-box;
     border-radius:15px;
 }
+/* ===== КНОПКА НАЗАД 480px ===== */
 
+.back-arrow {
+    position: fixed;
+
+    top: 15px;
+    left: 15px;
+
+    width: 52px;
+    height: 52px;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    transform: none;
+
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    z-index: 9999;
+}
+
+.back-arrow:hover,
+.back-arrow:active {
+    transform: none;
+}
+
+.back-arrow::after {
+    border-radius: 50%;
+}
 
 
 
