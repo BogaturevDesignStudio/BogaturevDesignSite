@@ -1816,6 +1816,40 @@ font-size:13px;
     }
 }
 
+/* ==========================================
+   АДАПТАЦИЯ 2560–2800 PX
+   КНОПКА НАЗАД
+========================================== */
+
+@media (min-width: 2560px) and (max-width: 2800px) {
+
+    .back-arrow {
+        position: fixed;
+        left: 45px;
+        top: 10%;
+
+        width: 100px;
+        height: 150px;
+
+        font-size: 34px;
+        border-radius: 50px;
+
+        transform: translateY(-50%);
+    }
+
+    .back-arrow:hover {
+        transform: translateY(-50%) scale(1.05);
+    }
+
+    .back-arrow:active {
+        transform: translateY(-50%) scale(.97);
+    }
+
+    .back-arrow::after {
+        border-radius: 48px;
+    }
+}
+
 </style>
 
 </head>
