@@ -1756,8 +1756,11 @@ function updateScene(){
         Math.round(progress * 6)
     );
 
-    const lang =
-    localStorage.getItem("lang") || "uk";
+    const savedLang = localStorage.getItem("lang");
+
+const lang = ["uk", "ru", "en"].includes(savedLang)
+    ? savedLang
+    : "uk";
     document.documentElement.lang = lang;
     const pageTitles = {
     uk: "Про мене — дизайнер додрукарської підготовки",
