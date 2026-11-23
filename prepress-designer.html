@@ -1739,6 +1739,14 @@ function updateScene(){
     const lang =
     localStorage.getItem("lang") || "uk";
     document.documentElement.lang = lang;
+    const pageTitles = {
+    uk: "Про мене — дизайнер додрукарської підготовки",
+    en: "About Me — Prepress Designer",
+    ru: "Обо мне — дизайнер допечатной подготовки"
+};
+
+document.getElementById("pageTitle").textContent =
+    pageTitles[lang] || pageTitles.uk;
 
     const translations =
         window.siteTranslations;
