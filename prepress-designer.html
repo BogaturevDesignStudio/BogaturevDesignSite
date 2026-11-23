@@ -1749,6 +1749,8 @@ function updateAboutTranslations() {
 }
 
 updateAboutTranslations();
+    let lastSceneIndex = -1;
+let lastLanguage = "";
 function updateScene(){
 
     const index = Math.min(
@@ -1761,6 +1763,12 @@ function updateScene(){
 const lang = ["uk", "ru", "en"].includes(savedLang)
     ? savedLang
     : "uk";
+    if (index === lastSceneIndex && lang === lastLanguage) {
+    return;
+}
+
+lastSceneIndex = index;
+lastLanguage = lang;
     document.documentElement.lang = lang;
     const pageTitles = {
     uk: "Про мене — дизайнер додрукарської підготовки",
