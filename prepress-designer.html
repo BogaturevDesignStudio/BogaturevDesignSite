@@ -1723,6 +1723,7 @@ function updateScene(){
 
     const lang =
     localStorage.getItem("lang") || "uk";
+    document.documentElement.lang = lang;
 
     const translations =
         window.siteTranslations;
