@@ -1767,8 +1767,6 @@ const lang = ["uk", "ru", "en"].includes(savedLang)
     return;
 }
 
-lastSceneIndex = index;
-lastLanguage = lang;
     document.documentElement.lang = lang;
     const pageTitles = {
     uk: "Про мене — дизайнер додрукарської підготовки",
@@ -1786,6 +1784,12 @@ document.getElementById("pageTitle").textContent =
         return;
     }
 
+
+if (lang !== previousLanguage) {
+    updateAboutTranslations();
+}
+    lastSceneIndex = index;
+lastLanguage = lang;
     title.innerHTML =
         translations[lang][scenes[index].titleKey];
 
