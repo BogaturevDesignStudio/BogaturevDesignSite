@@ -1729,7 +1729,26 @@ const number =
         "sceneNumber"
     );
 
+function updateAboutTranslations() {
+    const savedLang = localStorage.getItem("lang");
+    const lang = ["uk", "ru", "en"].includes(savedLang)
+        ? savedLang
+        : "uk";
 
+    const dictionary = window.siteTranslations?.[lang];
+
+    if (!dictionary) return;
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.getAttribute("data-i18n");
+
+        if (dictionary[key] !== undefined) {
+            element.textContent = dictionary[key];
+        }
+    });
+}
+
+updateAboutTranslations();
 function updateScene(){
 
     const index = Math.min(
