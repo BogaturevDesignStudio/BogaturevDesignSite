@@ -332,7 +332,7 @@ if ("ontouchstart" in window) {
    
   
 const translations = window.siteTranslations;
-  let lang = localStorage.getItem('lang') || 'ru';
+ let lang = localStorage.getItem('lang') || 'uk';
 
   function setLanguage(newLang) {
     lang = newLang;
