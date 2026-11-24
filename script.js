@@ -337,7 +337,7 @@ const translations = window.siteTranslations;
   function setLanguage(newLang) {
     lang = newLang;
     localStorage.setItem('lang', lang);
-
+    document.documentElement.lang = lang;
     // Обновляем все элементы с data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
