@@ -94,6 +94,8 @@ navMarketplace: "Маркетплейсы",
 navDiscuss: "ОБСУДИТЬ ПРОЕКТ",
      firstName: "Евгений",
 lastName: "Богатырёв",
+     whatsappTitle: "Написать мне",
+whatsappSubtitle: "Быстрая связь",
     },
     en: {
        aboutShow: "About Me",
@@ -196,6 +198,8 @@ navMarketplace: "Marketplaces",
 navDiscuss: "DISCUSS YOUR PROJECT",
      firstName: "Evgeniy",
 lastName: "Bogaturev",
+     whatsappTitle: "Message me",
+whatsappSubtitle: "Quick contact",
     },
     uk: {
       aboutShow: "Про мене",
@@ -298,6 +302,8 @@ navMarketplace: "Маркетплейси",
 navDiscuss: "ОБГОВОРИТИ ПРОЄКТ",
      firstName: "Євгеній",
 lastName: "Богатирьов",
+     whatsappTitle: "Написати мені",
+whatsappSubtitle: "Швидкий зв'язок",
     }
   };
 window.siteTranslations = translations;
