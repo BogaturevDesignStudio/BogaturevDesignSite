@@ -265,6 +265,15 @@ aboutScene7Description: "У вас уже є дизайн, якому потрі
      aboutLoading: "ЗАВАНТАЖЕННЯ",
 aboutScroll: "ПРОКРУЧУЙТЕ ДЛЯ ПЕРЕГЛЯДУ",
 aboutDrag: "ПЕРЕТЯГНІТЬ ДЛЯ ПЕРЕГЛЯДУ",
+navTitle: "НАВІГАЦІЯ",
+navHome: "Головна",
+navPortfolio: "Портфоліо",
+navSkills: "Навички",
+navPrice: "Прайс",
+navContacts: "Контакти",
+navBranding: "Брендинг",
+navMarketplace: "Маркетплейси",
+navDiscuss: "ОБГОВОРИТИ ПРОЄКТ",
     }
   };
 window.siteTranslations = translations;
