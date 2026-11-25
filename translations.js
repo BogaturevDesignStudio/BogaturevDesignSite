@@ -92,6 +92,8 @@ navContacts: "Контакты",
 navBranding: "Брендинг",
 navMarketplace: "Маркетплейсы",
 navDiscuss: "ОБСУДИТЬ ПРОЕКТ",
+     firstName: "Евгений",
+lastName: "Богатырёв",
     },
     en: {
        aboutShow: "About Me",
@@ -192,6 +194,8 @@ navContacts: "Contacts",
 navBranding: "Branding",
 navMarketplace: "Marketplaces",
 navDiscuss: "DISCUSS YOUR PROJECT",
+     firstName: "Evgeniy",
+lastName: "Bogaturev",
     },
     uk: {
       aboutShow: "Про мене",
@@ -292,6 +296,8 @@ navContacts: "Контакти",
 navBranding: "Брендинг",
 navMarketplace: "Маркетплейси",
 navDiscuss: "ОБГОВОРИТИ ПРОЄКТ",
+     firstName: "Євгеній",
+lastName: "Богатирьов",
     }
   };
 window.siteTranslations = translations;
