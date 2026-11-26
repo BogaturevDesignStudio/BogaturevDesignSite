@@ -6,6 +6,8 @@ const portfolioTranslations = {
         openProject: "Відкрити проєкт",
         kraftTitle: "Крафтова упаковка",
         shawarmaTentTitle: "Додрукарська підготовка намету для шаурми",
+        shawarmaTentSeoTitle: "Додрукарська підготовка намету для шаурми | Bogaturev Design",
+shawarmaTentSeoDescription: "Проєкт додрукарської підготовки намету для шаурми від Bogaturev Design. Коригування сумарного покриття фарбами, трепінг, поділ макета на панелі та підготовка файлів до друку.",
 tentProductionLogoTitle: "Логотип виробника наметів",
 tentLetteringTitle: "Оформлення намету",
 stickerSheetTitle: "Аркуш наліпок — додрукарська підготовка",
@@ -71,8 +73,7 @@ productionFilePreparation: "Підготовка файлів до виробн�
         shawarmaTentTitle: "Shawarma Tent Prepress",
         shawarmaTentSeoTitle: "Shawarma Tent Prepress — Prepress | Bogaturev Design",
 shawarmaTentSeoDescription: "Shawarma tent prepress project by Bogaturev Design. Ink coverage adjustment, trapping, panel splitting and print-ready file preparation.",
-        shawarmaTentSeoTitle: "Додрукарська підготовка намету для шаурми | Bogaturev Design",
-shawarmaTentSeoDescription: "Проєкт додрукарської підготовки намету для шаурми від Bogaturev Design. Коригування сумарного покриття фарбами, трепінг, поділ макета на панелі та підготовка файлів до друку.",
+        
 tentProductionLogoTitle: "Tent Production Logo",
 tentLetteringTitle: "Tent Lettering",
 stickerSheetTitle: "Sticker Sheet — Prepress",
