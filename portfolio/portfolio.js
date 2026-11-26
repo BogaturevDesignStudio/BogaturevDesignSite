@@ -25,7 +25,7 @@ if (filteredProjects.length === 0) {
 
     projectsGrid.innerHTML = `
         <p class="portfolio-empty" role="status">
-            Projects coming soon.
+            ${portfolioTranslate("comingSoon")}
         </p>
     `;
 
@@ -35,11 +35,14 @@ if (filteredProjects.length === 0) {
     projectsGrid.innerHTML = filteredProjects
         .map(project => {
 
-            return `
+    const title = portfolioTranslate(project.titleKey);
+    const categoryName = portfolioTranslate(project.category);
+
+    return `
                 <a
                     class="project-card"
                     href="${project.url}"
-                    aria-label="Open project ${project.title}"
+                   aria-label="${portfolioTranslate("openProject")} ${title}"
                 >
 
                     <div class="project-image-wrapper">
@@ -47,7 +50,7 @@ if (filteredProjects.length === 0) {
                         <img
                             class="project-image"
                             src="${project.hero}"
-                            alt="${project.title} — ${project.categoryName}"
+                            alt="${title} — ${categoryName}"
                             loading="lazy"
                         >
 
