@@ -61,12 +61,12 @@ if (filteredProjects.length === 0) {
                         <div>
 
                             <div class="project-category">
-                                ${project.categoryName}
-                            </div>
+    ${categoryName}
+</div>
 
                             <h2 class="project-title">
-                                ${project.title}
-                            </h2>
+    ${title}
+</h2>
 
                         </div>
 
