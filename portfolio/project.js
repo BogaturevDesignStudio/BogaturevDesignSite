@@ -487,9 +487,9 @@ viewerTriggers.forEach(image => {
     image.addEventListener("click", () => {
 
         openImageViewer(
-            image.dataset.viewerImage,
-            image.alt
-        );
+    image.dataset.viewerImage,
+    image.querySelector("img")?.alt || image.alt || ""
+);
 
     });
 
@@ -556,7 +556,7 @@ if (currentProjectIndex !== -1) {
         if (previousTitle) {
 
             previousTitle.textContent =
-                previousProject.title;
+    portfolioTranslate(previousProject.titleKey);
 
         }
 
@@ -583,8 +583,7 @@ if (currentProjectIndex !== -1) {
         if (nextTitle) {
 
             nextTitle.textContent =
-                nextProject.title;
-
+    portfolioTranslate(nextProject.titleKey);
         }
 
     }
