@@ -30,6 +30,8 @@ function portfolioTranslate(key) {
 
 function translatePortfolioPage() {
 
+    /* COMMON TEXT */
+
     document.querySelectorAll("[data-i18n]").forEach(element => {
 
         const key = element.dataset.i18n;
@@ -38,6 +40,8 @@ function translatePortfolioPage() {
 
     });
 
+
+    /* COMMON ARIA */
 
     document.querySelectorAll("[data-i18n-aria]").forEach(element => {
 
@@ -48,6 +52,8 @@ function translatePortfolioPage() {
     });
 
 
+    /* COMMON ALT */
+
     document.querySelectorAll("[data-i18n-alt]").forEach(element => {
 
         const key = element.dataset.i18nAlt;
@@ -57,6 +63,8 @@ function translatePortfolioPage() {
     });
 
 
+    /* COMMON META CONTENT */
+
     document.querySelectorAll("[data-i18n-content]").forEach(element => {
 
         const key = element.dataset.i18nContent;
@@ -64,6 +72,45 @@ function translatePortfolioPage() {
         element.setAttribute("content", portfolioTranslate(key));
 
     });
+
+
+    /* INDIVIDUAL PROJECT TRANSLATIONS */
+
+    if (portfolioLang !== "uk") {
+
+        /* PROJECT TEXT */
+
+        document.querySelectorAll(`[data-${portfolioLang}]`).forEach(element => {
+
+            element.textContent = element.getAttribute(`data-${portfolioLang}`);
+
+        });
+
+
+        /* PROJECT ALT */
+
+        document.querySelectorAll(`[data-alt-${portfolioLang}]`).forEach(element => {
+
+            element.setAttribute(
+                "alt",
+                element.getAttribute(`data-alt-${portfolioLang}`)
+            );
+
+        });
+
+
+        /* PROJECT META CONTENT */
+
+        document.querySelectorAll(`[data-content-${portfolioLang}]`).forEach(element => {
+
+            element.setAttribute(
+                "content",
+                element.getAttribute(`data-content-${portfolioLang}`)
+            );
+
+        });
+
+    }
 
 }
 
