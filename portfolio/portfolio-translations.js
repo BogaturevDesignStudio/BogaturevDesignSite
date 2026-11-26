@@ -3,6 +3,9 @@ const portfolioTranslations = {
     uk: {
 
         home: "Головна",
+        kraftTitle: "Крафтова упаковка",
+        clientProject: "Клієнтський проєкт",
+        graphicDesignerPrepress: "Графічний дизайнер та фахівець із додрукарської підготовки",
         portfolio: "Портфоліо",
         selectedWorks: "Bogaturev Design / Вибрані роботи",
 
@@ -43,6 +46,9 @@ const portfolioTranslations = {
     en: {
 
         home: "Home",
+        kraftTitle: "Kraft Packaging",
+clientProject: "Client Project",
+graphicDesignerPrepress: "Graphic Designer & Prepress",
         portfolio: "Portfolio",
         selectedWorks: "Bogaturev Design / Selected Works",
 
@@ -83,6 +89,9 @@ const portfolioTranslations = {
     ru: {
 
         home: "Главная",
+        kraftTitle: "Крафтовая упаковка",
+clientProject: "Клиентский проект",
+graphicDesignerPrepress: "Графический дизайнер и специалист по допечатной подготовке",
         portfolio: "Портфолио",
         selectedWorks: "Bogaturev Design / Избранные работы",
 
