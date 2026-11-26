@@ -4,6 +4,7 @@ const portfolioTranslations = {
 
         home: "Головна",
         kraftTitle: "Крафтова упаковка",
+        kraftAbout: "У межах цього проєкту було розроблено дизайн упаковки відповідно до спеціальних вимог друку на крафтовому картоні. Макет створено в чорно-білому виконанні для друку чорною фарбою з урахуванням особливостей та обмежень друку на крафтовому матеріалі. Елементи дизайну розроблено спеціально для конструкції упаковки та підготовлено до подальшого виробництва. Фінальний макет адаптовано до необхідних розмірів і підготовлено у вигляді готового до виробництва файлу відповідно до технічних вимог друку.",
         clientProject: "Клієнтський проєкт",
         graphicDesignerPrepress: "Графічний дизайнер та фахівець із додрукарської підготовки",
         portfolio: "Портфоліо",
@@ -47,6 +48,7 @@ const portfolioTranslations = {
 
         home: "Home",
         kraftTitle: "Kraft Packaging",
+        kraftAbout: "This project involved developing a packaging design according to specific printing requirements for kraft cardboard. The artwork was created in black and white for production using black ink, taking into account the characteristics and limitations of printing on kraft material. The design elements were developed specifically for the packaging structure and prepared for further production. The final artwork was adjusted to the required dimensions and prepared as a production-ready file according to the printing specifications.",
 clientProject: "Client Project",
 graphicDesignerPrepress: "Graphic Designer & Prepress",
         portfolio: "Portfolio",
@@ -90,6 +92,7 @@ graphicDesignerPrepress: "Graphic Designer & Prepress",
 
         home: "Главная",
         kraftTitle: "Крафтовая упаковка",
+        сполнении для печати чёрной краской с учётом особенностей и ограничений печати на крафтовом материале. Элементы дизайна разработаны специально для конструкции упаковки и подготовлены к дальнейшему производству. Финальный макет адаптирован под необходимые размеры и подготовлен в виде готового к производству файла в соответствии с техническими требованиями печати.",
 clientProject: "Клиентский проект",
 graphicDesignerPrepress: "Графический дизайнер и специалист по допечатной подготовке",
         portfolio: "Портфолио",
