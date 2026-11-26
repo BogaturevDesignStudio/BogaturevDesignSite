@@ -4,6 +4,8 @@ const portfolioTranslations = {
 
         home: "Головна",
         kraftTitle: "Крафтова упаковка",
+        kraftSeoTitle: "Дизайн крафтової упаковки та додрукарська підготовка | Bogaturev Design",
+kraftSeoDescription: "Проєкт дизайну крафтової упаковки та додрукарської підготовки від Bogaturev Design. Чорно-білий макет, розроблений для друку чорною фарбою на крафтовому картоні.",
         kraftHeroAlt: "Упаковка з крафтового картону з графічним дизайном, надрукованим чорною фарбою",
 kraftArtworkAlt: "Дизайн крафтової упаковки, розроблений в Adobe Illustrator",
         kraftAbout: "У межах цього проєкту було розроблено дизайн упаковки відповідно до спеціальних вимог друку на крафтовому картоні. Макет створено в чорно-білому виконанні для друку чорною фарбою з урахуванням особливостей та обмежень друку на крафтовому матеріалі. Елементи дизайну розроблено спеціально для конструкції упаковки та підготовлено до подальшого виробництва. Фінальний макет адаптовано до необхідних розмірів і підготовлено у вигляді готового до виробництва файлу відповідно до технічних вимог друку.",
@@ -53,6 +55,8 @@ productionFilePreparation: "Підготовка файлів до виробн�
 
         home: "Home",
         kraftTitle: "Kraft Packaging",
+        kraftSeoTitle: "Kraft Packaging — Graphic Design & Prepress | Bogaturev Design",
+kraftSeoDescription: "Kraft packaging design and prepress project by Bogaturev Design. Black and white artwork developed for black ink printing on kraft cardboard.",
         kraftHeroAlt: "Kraft cardboard packaging with black ink graphic design",
 kraftArtworkAlt: "Kraft packaging design developed in Adobe Illustrator",
         kraftAbout: "This project involved developing a packaging design according to specific printing requirements for kraft cardboard. The artwork was created in black and white for production using black ink, taking into account the characteristics and limitations of printing on kraft material. The design elements were developed specifically for the packaging structure and prepared for further production. The final artwork was adjusted to the required dimensions and prepared as a production-ready file according to the printing specifications.",
@@ -102,6 +106,8 @@ productionFilePreparation: "Production File Preparation",
 
         home: "Главная",
         kraftTitle: "Крафтовая упаковка",
+        kraftSeoTitle: "Дизайн крафтовой упаковки и допечатная подготовка | Bogaturev Design",
+kraftSeoDescription: "Проект дизайна крафтовой упаковки и допечатной подготовки от Bogaturev Design. Чёрно-белый макет, разработанный для печати чёрной краской на крафтовом картоне.",
         kraftHeroAlt: "Упаковка из крафтового картона с графическим дизайном, напечатанным чёрной краской",
 kraftArtworkAlt: "Дизайн крафтовой упаковки, разработанный в Adobe Illustrator",
         kraftAbout: "В рамках этого проекта был разработан дизайн упаковки в соответствии со специальными требованиями печати на крафтовом картоне. Макет создан в чёрно-белом исполнении для печати чёрной краской с учётом особенностей и ограничений печати на крафтовом материале. Элементы дизайна разработаны специально для конструкции упаковки и подготовлены к дальнейшему производству. Финальный макет адаптирован под необходимые размеры и подготовлен в виде готового к производству файла в соответствии с техническими требованиями печати.",
