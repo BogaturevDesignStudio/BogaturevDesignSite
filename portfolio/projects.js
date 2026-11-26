@@ -2,6 +2,7 @@ const projects = [
     {
     id: "kraft-packaging",
     title: "Kraft Packaging",
+        titleKey: "kraftTitle",
     category: "packaging",
     categoryName: "Packaging Design",
     client: "Client Project",
@@ -14,6 +15,7 @@ const projects = [
     {
         id: "shawarma-tent-prepress",
         title: "Shawarma Tent Prepress",
+        titleKey: "shawarmaTentTitle",
         category: "prepress",
         categoryName: "Prepress",
         client: "Commercial Project",
@@ -26,6 +28,7 @@ const projects = [
     {
     id: "tent-production-logo",
     title: "Tent Production Logo",
+        titleKey: "tentProductionLogoTitle",
     category: "logo",
     categoryName: "Logo Design",
     client: "Private Client",
@@ -38,6 +41,7 @@ const projects = [
     {
     id: "tent-lettering",
     title: "Tent Lettering",
+        titleKey: "tentLetteringTitle",
     category: "prepress",
     categoryName: "Prepress",
     client: "Client Project",
@@ -50,6 +54,7 @@ const projects = [
  {
     id: "sticker-sheet-prepress",
     title: "Sticker Sheet — Prepress",
+     titleKey: "stickerSheetTitle",
     category: "prepress",
     categoryName: "Prepress",
     client: "Client Project",
@@ -62,6 +67,7 @@ const projects = [
     {
     id: "gift-card-prepress",
     title: "Gift Card",
+        titleKey: "giftCardTitle",
     category: "prepress",
     categoryName: "Prepress",
     client: "Client Project",
@@ -74,6 +80,7 @@ const projects = [
     {
     id: "oro-professional",
     title: "ORO Professional",
+        titleKey: "oroProfessionalTitle",
     category: "logo",
     categoryName: "Logo Design",
     client: "ORO Professional",
@@ -86,6 +93,7 @@ const projects = [
     {
 id: "retro-envelope-design",
 title: "Retro Envelope Design",
+        titleKey: "retroEnvelopeTitle",
 category: "graphic",
 categoryName: "Graphic Design",
 client: "Client Project",
@@ -98,6 +106,7 @@ hero: "images/retro-envelope/retro-envelope-design1.jpg"
     {
     id: "canopy-assembly-instructions",
     title: "Canopy Assembly Instructions",
+        titleKey: "canopyAssemblyTitle",
     category: "graphic",
     categoryName: "Graphic Design",
     client: "Client Project",
