@@ -3,6 +3,7 @@ const portfolioTranslations = {
     uk: {
 
         home: "Головна",
+        openProject: "Відкрити проєкт",
         kraftTitle: "Крафтова упаковка",
         shawarmaTentTitle: "Додрукарська підготовка намету для шаурми",
 tentProductionLogoTitle: "Логотип виробника наметів",
@@ -62,6 +63,7 @@ productionFilePreparation: "Підготовка файлів до виробн�
     en: {
 
         home: "Home",
+        openProject: "Open project",
         kraftTitle: "Kraft Packaging",
         shawarmaTentTitle: "Shawarma Tent Prepress",
 tentProductionLogoTitle: "Tent Production Logo",
@@ -121,6 +123,7 @@ productionFilePreparation: "Production File Preparation",
     ru: {
 
         home: "Главная",
+        openProject: "Открыть проект",
         kraftTitle: "Крафтовая упаковка",
         shawarmaTentTitle: "Допечатная подготовка палатки для шаурмы",
 tentProductionLogoTitle: "Логотип производителя палаток",
